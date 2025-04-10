@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -9,8 +10,8 @@ import ComparisonTable from '@/components/ComparisonTable';
 import { ArrowRight, BarChart3, LineChart, Rocket, ArrowDown } from 'lucide-react';
 
 const Index = () => {
-  const scrollToPhases = () => {
-    document.getElementById('phases')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToQuote = () => {
+    document.getElementById('quote-section')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -36,9 +37,9 @@ const Index = () => {
                   Build a powerful, omnichannel lead-gen engine in 90 days with immediate results starting from Day 1.
                 </p>
                 
-                <Button onClick={scrollToPhases} variant="outline" size="lg" className="flex items-center justify-center gap-2">
+                <Button onClick={scrollToQuote} variant="outline" size="lg" className="flex items-center justify-center gap-2">
                   <ArrowDown className="h-5 w-5" />
-                  <span className="sr-only">Scroll to phases</span>
+                  <span className="sr-only">Scroll to quote</span>
                 </Button>
               </div>
             </motion.div>
@@ -72,7 +73,7 @@ const Index = () => {
       </section>
 
       {/* Quote Section */}
-      <section className="bg-card py-12">
+      <section id="quote-section" className="bg-card py-12">
         <div className="container mx-auto px-4">
           <QuoteHighlight 
             quote="We need to ensure that we hit our revenue target. And in order for us to achieve revenue target is we break it down by funnels. That is coming. And how do we ensure we have effective funnels and efficient P and L in terms of cost?"
