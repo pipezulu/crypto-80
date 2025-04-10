@@ -6,9 +6,13 @@ import SphereCanvas from '@/components/SphereCanvas';
 import PhaseCard from '@/components/PhaseCard';
 import QuoteHighlight from '@/components/QuoteHighlight';
 import ComparisonTable from '@/components/ComparisonTable';
-import { ArrowRight, BarChart3, LineChart, Rocket, Calendar } from 'lucide-react';
+import { ArrowRight, BarChart3, LineChart, Rocket, ArrowDown } from 'lucide-react';
 
 const Index = () => {
+  const scrollToPhases = () => {
+    document.getElementById('phases')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -32,17 +36,10 @@ const Index = () => {
                   Build a powerful, omnichannel lead-gen engine in 90 days with immediate results starting from Day 1.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button asChild size="lg" className="bg-gradient-tech hover:opacity-90 transition-opacity">
-                    <a href="https://meet.manymangoes.com/felipe" target="_blank" rel="noopener noreferrer">
-                      <Calendar className="mr-2 h-5 w-5" />
-                      Schedule a Meeting
-                    </a>
-                  </Button>
-                  <Button asChild variant="outline" size="lg">
-                    <Link to="/use-cases">View Use Cases</Link>
-                  </Button>
-                </div>
+                <Button onClick={scrollToPhases} variant="outline" size="lg" className="flex items-center justify-center gap-2">
+                  <ArrowDown className="h-5 w-5" />
+                  <span className="sr-only">Scroll to phases</span>
+                </Button>
               </div>
             </motion.div>
             
