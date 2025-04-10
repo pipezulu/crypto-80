@@ -19,18 +19,20 @@ interface SphereCanvasProps {
   className?: string;
   interactive?: boolean;
   intensity?: number;
+  glow?: boolean;
 }
 
 const SphereCanvas: React.FC<SphereCanvasProps> = ({ 
   color = '#9b87f5', 
-  particleCount = 100, 
-  size = 300,
+  particleCount = 150, 
+  size = 400,
   className = '',
   interactive = true,
-  intensity = 1
+  intensity = 2,
+  glow = true
 }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const sphereRadius = size / 2.5; // Increased sphere radius for bigger effect
+  const sphereRadius = size / 2.2; // Increased sphere radius for bigger effect
   const points = useRef<Point[]>([]);
   const mousePos = useRef({ x: 0, y: 0 });
   
@@ -54,11 +56,11 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
       
       points.current.push({
         x, y, z,
-        size: Math.random() * 3 + 1.5, // Larger particles
+        size: Math.random() * 4 + 2, // Larger particles
         color,
-        vx: (Math.random() - 0.5) * 0.8 * intensity,
-        vy: (Math.random() - 0.5) * 0.8 * intensity,
-        vz: (Math.random() - 0.5) * 0.8 * intensity,
+        vx: (Math.random() - 0.5) * 1.2 * intensity,
+        vy: (Math.random() - 0.5) * 1.2 * intensity,
+        vz: (Math.random() - 0.5) * 1.2 * intensity,
       });
     }
     
@@ -72,6 +74,17 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
     
     if (interactive) {
       canvas.addEventListener('mousemove', handleMouseMove);
+      // Add touch support for mobile
+      canvas.addEventListener('touchmove', (e) => {
+        if (e.touches.length > 0) {
+          const rect = canvas.getBoundingClientRect();
+          mousePos.current = {
+            x: e.touches[0].clientX - rect.left - canvas.width / 2,
+            y: e.touches[0].clientY - rect.top - canvas.height / 2,
+          };
+        }
+        e.preventDefault();
+      });
     }
     
     // Animation loop
@@ -80,22 +93,60 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       // Draw glow effect
-      const gradient = ctx.createRadialGradient(
-        canvas.width / 2, 
-        canvas.height / 2, 
-        0, 
-        canvas.width / 2, 
-        canvas.height / 2, 
-        sphereRadius
-      );
-      gradient.addColorStop(0, `${color}20`); // Inner color with transparency
-      gradient.addColorStop(0.8, `${color}05`); // Outer color with more transparency
-      gradient.addColorStop(1, 'transparent');
+      if (glow) {
+        const gradient = ctx.createRadialGradient(
+          canvas.width / 2, 
+          canvas.height / 2, 
+          0, 
+          canvas.width / 2, 
+          canvas.height / 2, 
+          sphereRadius * 1.5
+        );
+        gradient.addColorStop(0, `${color}40`); // Inner color with more opacity
+        gradient.addColorStop(0.6, `${color}20`); // Middle color with medium opacity
+        gradient.addColorStop(1, 'transparent');
+        
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(canvas.width / 2, canvas.height / 2, sphereRadius * 1.8, 0, Math.PI * 2);
+        ctx.fill();
+      }
       
-      ctx.fillStyle = gradient;
-      ctx.beginPath();
-      ctx.arc(canvas.width / 2, canvas.height / 2, sphereRadius * 1.2, 0, Math.PI * 2);
-      ctx.fill();
+      // Sort points by z-index to create proper depth effect
+      points.current.sort((a, b) => a.z - b.z);
+      
+      // Connect nearby particles with lines
+      if (particleCount > 80) {
+        ctx.lineWidth = 0.3;
+        for (let i = 0; i < points.current.length; i++) {
+          const pointA = points.current[i];
+          const scaleA = (sphereRadius * 2) / (sphereRadius * 2 + pointA.z);
+          const x2dA = pointA.x * scaleA + canvas.width / 2;
+          const y2dA = pointA.y * scaleA + canvas.height / 2;
+          
+          // Check distance with other particles
+          for (let j = i + 1; j < points.current.length; j++) {
+            const pointB = points.current[j];
+            const scaleB = (sphereRadius * 2) / (sphereRadius * 2 + pointB.z);
+            const x2dB = pointB.x * scaleB + canvas.width / 2;
+            const y2dB = pointB.y * scaleB + canvas.height / 2;
+            
+            const dx = x2dA - x2dB;
+            const dy = y2dA - y2dB;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            
+            // Draw line if particles are close enough
+            if (distance < sphereRadius / 3) {
+              const opacity = (1 - distance / (sphereRadius / 3)) * 0.4;
+              ctx.strokeStyle = `${color}${Math.floor(opacity * 255).toString(16).padStart(2, '0')}`;
+              ctx.beginPath();
+              ctx.moveTo(x2dA, y2dA);
+              ctx.lineTo(x2dB, y2dB);
+              ctx.stroke();
+            }
+          }
+        }
+      }
       
       // Update and render points
       for (const point of points.current) {
@@ -123,7 +174,7 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
           const dy = mousePos.current.y - point.y;
           const dist = Math.sqrt(dx*dx + dy*dy);
           if (dist < sphereRadius * 2) {
-            const force = 0.08 * intensity;
+            const force = 0.12 * intensity;
             point.vx += (dx / dist) * force;
             point.vy += (dy / dist) * force;
           }
@@ -179,7 +230,7 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
         canvas.removeEventListener('mousemove', handleMouseMove);
       }
     };
-  }, [color, particleCount, size, interactive, intensity]);
+  }, [color, particleCount, size, interactive, intensity, glow]);
   
   return (
     <canvas 

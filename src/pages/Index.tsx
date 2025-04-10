@@ -13,9 +13,9 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-grid">
-        <div className="absolute left-1/2 top-1/4 transform -translate-x-1/2 -translate-y-1/2 blur-3xl opacity-20 bg-gradient-radial-tech w-96 h-96"></div>
-        <div className="absolute right-0 bottom-0 blur-3xl opacity-20 bg-gradient-radial-mango w-96 h-96"></div>
+      <section className="relative overflow-hidden bg-grid py-24">
+        <div className="absolute left-1/2 top-1/4 transform -translate-x-1/2 -translate-y-1/2 blur-3xl opacity-30 bg-gradient-radial-tech w-96 h-96"></div>
+        <div className="absolute right-0 bottom-0 blur-3xl opacity-30 bg-gradient-radial-mango w-96 h-96"></div>
         
         <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
@@ -53,18 +53,19 @@ const Index = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="lg:w-1/2 flex justify-center relative"
             >
-              <div className="relative w-[400px] h-[400px]">
+              <div className="relative w-[500px] h-[500px]">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <SphereCanvas 
                     color="#9b87f5" 
-                    particleCount={200}
-                    size={400}
-                    intensity={1.5}
+                    particleCount={250}
+                    size={500}
+                    intensity={2.5}
+                    glow={true}
                   />
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center z-10 bg-background/30 backdrop-blur-sm px-6 py-4 rounded-full">
-                    <h3 className="font-bold text-3xl">5-10x</h3>
+                  <div className="text-center z-10 bg-background/30 backdrop-blur-sm px-8 py-6 rounded-full shadow-lg border border-primary/20">
+                    <h3 className="font-bold text-4xl text-gradient">5-10x</h3>
                     <p className="text-sm text-muted-foreground">Output After 90 Days</p>
                   </div>
                 </div>
@@ -88,12 +89,12 @@ const Index = () => {
 
       {/* Phases Section */}
       <section id="phases" className="py-20 relative overflow-hidden">
-        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10">
+        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-15">
           <SphereCanvas 
             color="#F97316" 
-            particleCount={120}
-            size={600}
-            intensity={0.8}
+            particleCount={180}
+            size={800}
+            intensity={1.2}
             interactive={false}
           />
         </div>
@@ -177,13 +178,14 @@ const Index = () => {
 
       {/* Comparison Section */}
       <section className="py-20 bg-card relative overflow-hidden">
-        <div className="absolute right-0 top-0 opacity-10">
+        <div className="absolute right-0 top-0 opacity-15">
           <SphereCanvas 
             color="#9b87f5" 
-            particleCount={100}
-            size={500}
-            intensity={0.7}
+            particleCount={150}
+            size={600}
+            intensity={1}
             interactive={false}
+            glow={true}
           />
         </div>
         
@@ -205,15 +207,16 @@ const Index = () => {
 
       {/* CTA Section */}
       <section className="py-20 relative overflow-hidden">
-        <div className="absolute left-0 bottom-0 blur-3xl opacity-20 bg-gradient-radial-tech w-96 h-96"></div>
-        <div className="absolute right-0 top-0 blur-3xl opacity-20 bg-gradient-radial-mango w-96 h-96"></div>
-        <div className="absolute left-1/2 bottom-1/2 transform -translate-x-1/2 translate-y-1/2 opacity-10">
+        <div className="absolute left-0 bottom-0 blur-3xl opacity-30 bg-gradient-radial-tech w-96 h-96"></div>
+        <div className="absolute right-0 top-0 blur-3xl opacity-30 bg-gradient-radial-mango w-96 h-96"></div>
+        <div className="absolute left-1/2 bottom-1/2 transform -translate-x-1/2 translate-y-1/2 opacity-15">
           <SphereCanvas 
             color="#F97316" 
-            particleCount={80}
-            size={400}
-            intensity={0.6}
+            particleCount={120}
+            size={500}
+            intensity={1.2}
             interactive={false}
+            glow={true}
           />
         </div>
         
@@ -221,7 +224,7 @@ const Index = () => {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-card border border-border rounded-xl p-8 max-w-4xl mx-auto text-center"
+            className="bg-card border border-border rounded-xl p-8 max-w-4xl mx-auto text-center shadow-lg"
           >
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Lead Generation?</h2>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">

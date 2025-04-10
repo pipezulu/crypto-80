@@ -34,7 +34,7 @@ const Phase2 = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-grid">
-        <div className="absolute left-1/3 top-1/4 transform -translate-x-1/2 -translate-y-1/2 blur-3xl opacity-20 bg-gradient-radial-tech w-96 h-96"></div>
+        <div className="absolute left-1/3 top-1/4 transform -translate-x-1/2 -translate-y-1/2 blur-3xl opacity-30 bg-gradient-radial-tech w-96 h-96"></div>
         
         <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
@@ -60,15 +60,16 @@ const Phase2 = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="lg:w-1/3 flex justify-center"
             >
-              <div className="relative w-[200px] h-[200px]">
+              <div className="relative w-[280px] h-[280px]">
                 <SphereCanvas 
                   color="#F97316" 
-                  particleCount={80}
-                  size={200}
+                  particleCount={150}
+                  size={280}
+                  intensity={2}
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="bg-tech-900/80 rounded-full h-16 w-16 flex items-center justify-center border border-mango-400/30">
-                    <span className="text-2xl font-bold">2</span>
+                  <div className="bg-tech-900/80 rounded-full h-20 w-20 flex items-center justify-center border border-mango-400/30 shadow-lg shadow-mango-400/20">
+                    <span className="text-3xl font-bold">2</span>
                   </div>
                 </div>
               </div>
@@ -78,8 +79,18 @@ const Phase2 = () => {
       </section>
 
       {/* Process Timeline */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
+      <section className="py-16 relative">
+        <div className="absolute -right-40 top-1/3 opacity-15 z-0">
+          <SphereCanvas 
+            color="#F97316" 
+            particleCount={100}
+            size={300}
+            intensity={1}
+            interactive={false}
+          />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -144,8 +155,18 @@ const Phase2 = () => {
       </section>
 
       {/* Testimonial */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
+      <section className="py-16 relative overflow-hidden">
+        <div className="absolute left-0 bottom-0 opacity-10 z-0">
+          <SphereCanvas 
+            color="#F97316" 
+            particleCount={80}
+            size={300}
+            intensity={0.8}
+            interactive={false}
+          />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
