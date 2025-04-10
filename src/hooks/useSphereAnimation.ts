@@ -214,6 +214,7 @@ export function useSphereAnimation({
         canvas.removeEventListener('mouseenter', handleMouseEnter);
         canvas.removeEventListener('mouseleave', handleMouseLeave);
         
+        // Fixed: Added proper references to touch event handlers
         canvas.removeEventListener('touchmove', handleTouchMove);
         canvas.removeEventListener('touchstart', handleTouchStart);
         canvas.removeEventListener('touchend', handleTouchEnd);
