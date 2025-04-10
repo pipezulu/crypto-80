@@ -1,3 +1,4 @@
+
 export interface Point {
   x: number;
   y: number;
@@ -17,7 +18,7 @@ export function createSpherePoints(
 ): Point[] {
   const points: Point[] = [];
   for (let i = 0; i < particleCount; i++) {
-    // Create points distributed on a sphere surface
+    // Create points distributed evenly on a sphere surface using golden spiral method
     const phi = Math.acos(-1 + (2 * i) / particleCount);
     const theta = Math.sqrt(particleCount * Math.PI) * phi;
     
@@ -29,9 +30,9 @@ export function createSpherePoints(
       x, y, z,
       size: Math.random() * 4 + 2, // Larger particles
       color,
-      vx: (Math.random() - 0.5) * 1.2 * intensity,
-      vy: (Math.random() - 0.5) * 1.2 * intensity,
-      vz: (Math.random() - 0.5) * 1.2 * intensity,
+      vx: (Math.random() - 0.5) * 1.5 * intensity,
+      vy: (Math.random() - 0.5) * 1.5 * intensity,
+      vz: (Math.random() - 0.5) * 1.5 * intensity,
     });
   }
   return points;
@@ -81,10 +82,10 @@ export function updatePointPosition(
     point.y = (point.y / distance) * sphereRadius;
     point.z = (point.z / distance) * sphereRadius;
     
-    // Reverse velocity with slight dampening
-    point.vx *= -0.85;
-    point.vy *= -0.85;
-    point.vz *= -0.85;
+    // Reverse velocity with less dampening for more responsiveness
+    point.vx *= -0.9;
+    point.vy *= -0.9;
+    point.vz *= -0.9;
   }
   
   // Enhanced mouse interaction - increased force and radius of influence
@@ -93,21 +94,22 @@ export function updatePointPosition(
     const dy = mousePos.y - point.y;
     const dist = Math.sqrt(dx*dx + dy*dy);
     
-    // Stronger force and wider influence radius (increased even more)
-    if (dist < sphereRadius * 4) {
-      const force = 0.55 * intensity * (1 - dist / (sphereRadius * 4));
+    // Stronger force and wider influence radius
+    if (dist < sphereRadius * 5) {
+      // Increased force factor for more responsive movement
+      const force = 0.75 * intensity * (1 - dist / (sphereRadius * 5));
       point.vx += (dx / dist) * force;
       point.vy += (dy / dist) * force;
     }
   } else {
-    // Apply gravity toward center when mouse is inactive
-    point.vx += -point.x * 0.001;
-    point.vy += -point.y * 0.001;
-    point.vz += -point.z * 0.001;
+    // Apply gentler gravity toward center when mouse is inactive
+    point.vx += -point.x * 0.0008;
+    point.vy += -point.y * 0.0008;
+    point.vz += -point.z * 0.0008;
   }
   
   // Even less friction for smoother, more responsive movement
-  point.vx *= 0.975;
-  point.vy *= 0.975;
-  point.vz *= 0.975;
+  point.vx *= 0.98;
+  point.vy *= 0.98;
+  point.vz *= 0.98;
 }
