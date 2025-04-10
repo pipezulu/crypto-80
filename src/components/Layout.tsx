@@ -11,7 +11,8 @@ import {
   Settings, 
   ChevronRight, 
   Menu, 
-  X 
+  X,
+  Calendar
 } from 'lucide-react';
 
 interface NavItemProps {
@@ -87,6 +88,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             />
           ))}
         </div>
+        
+        {/* Schedule Meeting Button */}
+        <div className="mt-auto pt-4 border-t border-border mt-6">
+          <a href="https://meet.manymangoes.com/felipe" target="_blank" rel="noopener noreferrer">
+            <Button variant="default" className="w-full bg-gradient-tech hover:opacity-90 transition-opacity">
+              <Calendar className="h-5 w-5 mr-2" />
+              Schedule a Meeting
+            </Button>
+          </a>
+        </div>
       </div>
 
       {/* Mobile navigation menu */}
@@ -114,6 +125,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 active={location.pathname === item.to}
               />
             ))}
+          </div>
+          
+          {/* Schedule Meeting Button for mobile */}
+          <div className="mt-auto pt-4 border-t border-border mt-6">
+            <a href="https://meet.manymangoes.com/felipe" target="_blank" rel="noopener noreferrer">
+              <Button variant="default" className="w-full bg-gradient-tech hover:opacity-90 transition-opacity">
+                <Calendar className="h-5 w-5 mr-2" />
+                Schedule a Meeting
+              </Button>
+            </a>
           </div>
         </motion.div>
       )}

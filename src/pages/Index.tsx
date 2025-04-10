@@ -7,7 +7,7 @@ import SphereCanvas from '@/components/SphereCanvas';
 import PhaseCard from '@/components/PhaseCard';
 import QuoteHighlight from '@/components/QuoteHighlight';
 import ComparisonTable from '@/components/ComparisonTable';
-import { ArrowRight, BarChart3, LineChart, Rocket } from 'lucide-react';
+import { ArrowRight, BarChart3, LineChart, Rocket, Calendar } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -35,10 +35,10 @@ const Index = () => {
                 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button asChild size="lg" className="bg-gradient-tech hover:opacity-90 transition-opacity">
-                    <Link to="/phase-1">
-                      Start Now
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
+                    <a href="https://meet.manymangoes.com/felipe" target="_blank" rel="noopener noreferrer">
+                      <Calendar className="mr-2 h-5 w-5" />
+                      Schedule a Meeting
+                    </a>
                   </Button>
                   <Button asChild variant="outline" size="lg">
                     <Link to="/use-cases">View Use Cases</Link>
@@ -233,10 +233,10 @@ const Index = () => {
             </p>
             
             <Button asChild size="lg" className="bg-gradient-tech hover:opacity-90 transition-opacity">
-              <Link to="/phase-1">
-                Explore the 90-Day Plan
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              <a href="https://meet.manymangoes.com/felipe" target="_blank" rel="noopener noreferrer">
+                <Calendar className="mr-2 h-5 w-5" />
+                Schedule a Meeting with a Mango
+              </a>
             </Button>
           </motion.div>
         </div>
