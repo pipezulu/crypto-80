@@ -1,3 +1,4 @@
+
 import { useRef, useEffect } from 'react';
 import { Point, createSpherePoints, drawGlowEffect, updatePointPosition } from '@/utils/sphereUtils';
 
@@ -51,6 +52,7 @@ export function useSphereAnimation({
     };
 
     const handleMouseLeave = () => {
+      // Don't immediately deactivate to allow smooth transition
       setTimeout(() => {
         isMouseActive.current = false;
       }, 500);
@@ -72,11 +74,13 @@ export function useSphereAnimation({
     };
     
     const handleTouchEnd = () => {
+      // Don't immediately deactivate to allow smooth transition
       setTimeout(() => {
         isMouseActive.current = false;
       }, 500);
     };
     
+    // Setup event listeners
     if (interactive) {
       canvas.addEventListener('mousemove', handleMouseMove, { passive: true });
       canvas.addEventListener('mouseenter', handleMouseEnter, { passive: true });
@@ -89,17 +93,22 @@ export function useSphereAnimation({
     
     const animate = (timestamp: number) => {
       const elapsed = timestamp - lastFrameTime.current;
+      // Limit frame rate for performance
       if (elapsed > 1000 / targetFPS) {
         lastFrameTime.current = timestamp;
         
+        // Clear canvas
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         
+        // Draw glow effect if enabled
         if (glow) {
           drawGlowEffect(ctx, canvas.width, canvas.height, sphereRadius, color);
         }
         
+        // Sort points by z-index for proper rendering
         points.current.sort((a, b) => a.z - b.z);
         
+        // Draw connections between particles for denser spheres
         if (particleCount > 80) {
           ctx.lineWidth = 0.3;
           for (let i = 0; i < points.current.length; i++) {
@@ -130,7 +139,9 @@ export function useSphereAnimation({
           }
         }
         
+        // Update and draw each point
         for (const point of points.current) {
+          // Update point position based on mouse interaction
           updatePointPosition(
             point, 
             sphereRadius, 
@@ -139,18 +150,22 @@ export function useSphereAnimation({
             intensity
           );
           
+          // Calculate 2D position from 3D
           const scale = (sphereRadius * 2) / (sphereRadius * 2 + point.z);
           const x2d = point.x * scale + canvas.width / 2;
           const y2d = point.y * scale + canvas.height / 2;
           
+          // Calculate opacity based on z-position
           const opacity = (point.z + sphereRadius) / (sphereRadius * 2);
           const opacityHex = Math.floor(opacity * 255).toString(16).padStart(2, '0');
           
+          // Draw main particle
           ctx.fillStyle = point.color + opacityHex;
           ctx.beginPath();
           ctx.arc(x2d, y2d, point.size * scale, 0, Math.PI * 2);
           ctx.fill();
           
+          // Draw highlight effect
           ctx.fillStyle = '#ffffff' + opacityHex;
           ctx.beginPath();
           ctx.arc(x2d, y2d, point.size * scale * 0.25, 0, Math.PI * 2);
@@ -158,9 +173,11 @@ export function useSphereAnimation({
         }
       }
       
+      // Continue animation loop
       animationRef.current = requestAnimationFrame(animate);
     };
     
+    // Handle window resize
     let resizeTimeout: ReturnType<typeof setTimeout>;
     const handleResize = () => {
       clearTimeout(resizeTimeout);
@@ -171,15 +188,21 @@ export function useSphereAnimation({
     };
     
     window.addEventListener('resize', handleResize);
-    handleResize();
     
+    // Set initial canvas size
+    canvas.width = size;
+    canvas.height = size;
+    
+    // Start animation loop
     lastFrameTime.current = performance.now();
     animationRef.current = requestAnimationFrame(animate);
     
+    // Cleanup function
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
+      
       window.removeEventListener('resize', handleResize);
       clearTimeout(resizeTimeout);
       

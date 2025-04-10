@@ -83,9 +83,9 @@ export function updatePointPosition(
     point.z = (point.z / distance) * sphereRadius;
     
     // Reverse velocity with less dampening for more responsiveness
-    point.vx *= -0.9;
-    point.vy *= -0.9;
-    point.vz *= -0.9;
+    point.vx *= -0.8;
+    point.vy *= -0.8;
+    point.vz *= -0.8;
   }
   
   // Enhanced mouse interaction - increased force and radius of influence
@@ -95,21 +95,21 @@ export function updatePointPosition(
     const dist = Math.sqrt(dx*dx + dy*dy);
     
     // Stronger force and wider influence radius
-    if (dist < sphereRadius * 5) {
+    if (dist < sphereRadius * 4) {
       // Increased force factor for more responsive movement
-      const force = 0.75 * intensity * (1 - dist / (sphereRadius * 5));
+      const force = 0.8 * intensity * (1 - dist / (sphereRadius * 4));
       point.vx += (dx / dist) * force;
       point.vy += (dy / dist) * force;
     }
   } else {
     // Apply gentler gravity toward center when mouse is inactive
-    point.vx += -point.x * 0.0008;
-    point.vy += -point.y * 0.0008;
-    point.vz += -point.z * 0.0008;
+    point.vx += -point.x * 0.0005;
+    point.vy += -point.y * 0.0005;
+    point.vz += -point.z * 0.0005;
   }
   
-  // Even less friction for smoother, more responsive movement
-  point.vx *= 0.98;
-  point.vy *= 0.98;
-  point.vz *= 0.98;
+  // Less friction for smoother, more responsive movement
+  point.vx *= 0.99;
+  point.vy *= 0.99;
+  point.vz *= 0.99;
 }
