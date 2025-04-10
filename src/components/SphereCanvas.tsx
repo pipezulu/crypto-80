@@ -66,8 +66,10 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
       });
     }
     
+    // Improved mouse event handling for better tracking
     const handleMouseMove = (e: MouseEvent) => {
       const rect = canvas.getBoundingClientRect();
+      // Calculate mouse position relative to canvas center
       mousePos.current = {
         x: e.clientX - rect.left - canvas.width / 2,
         y: e.clientY - rect.top - canvas.height / 2,
@@ -80,17 +82,20 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
     };
 
     const handleMouseLeave = () => {
+      // Smoother transition when mouse leaves
       setTimeout(() => {
         isMouseActive.current = false;
       }, 1000);
     };
     
+    // Setup event listeners for mouse and touch interactions
     if (interactive) {
+      // Mouse events
       canvas.addEventListener('mousemove', handleMouseMove);
       canvas.addEventListener('mouseenter', handleMouseEnter);
       canvas.addEventListener('mouseleave', handleMouseLeave);
       
-      // Add touch support for mobile
+      // Enhanced touch support for mobile
       canvas.addEventListener('touchmove', (e) => {
         if (e.touches.length > 0) {
           const rect = canvas.getBoundingClientRect();
@@ -103,7 +108,13 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
         e.preventDefault();
       });
       
+      canvas.addEventListener('touchstart', (e) => {
+        isMouseActive.current = true;
+        e.preventDefault();
+      });
+      
       canvas.addEventListener('touchend', () => {
+        // Smoother transition when touch ends
         setTimeout(() => {
           isMouseActive.current = false;
         }, 1000);
@@ -170,9 +181,9 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
         }
       }
       
-      // Update and render points
+      // Update and render points with improved interactive behavior
       for (const point of points.current) {
-        // Apply some movement
+        // Apply movement
         point.x += point.vx;
         point.y += point.vy;
         point.z += point.vz;
@@ -184,35 +195,35 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
           point.y = (point.y / distance) * sphereRadius;
           point.z = (point.z / distance) * sphereRadius;
           
-          // Reverse velocity slightly dampened
+          // Reverse velocity with slight dampening
           point.vx *= -0.85;
           point.vy *= -0.85;
           point.vz *= -0.85;
         }
         
-        // If interactive and mouse is active, apply stronger force toward mouse on x-y plane
+        // Enhanced mouse interaction - increased force and radius of influence
         if (interactive && isMouseActive.current) {
           const dx = mousePos.current.x - point.x;
           const dy = mousePos.current.y - point.y;
           const dist = Math.sqrt(dx*dx + dy*dy);
           
-          // Enhanced cursor influence radius and force for more dramatic effect
-          if (dist < sphereRadius * 3) {
-            const force = 0.35 * intensity * (1 - dist / (sphereRadius * 3));
+          // Stronger force and wider influence radius
+          if (dist < sphereRadius * 3.5) {
+            const force = 0.45 * intensity * (1 - dist / (sphereRadius * 3.5));
             point.vx += (dx / dist) * force;
             point.vy += (dy / dist) * force;
           }
         } else {
-          // Apply slight gravity toward center when mouse is inactive
+          // Apply gravity toward center when mouse is inactive
           point.vx += -point.x * 0.001;
           point.vy += -point.y * 0.001;
           point.vz += -point.z * 0.001;
         }
         
-        // Apply friction - reduced for smoother movement
-        point.vx *= 0.97;
-        point.vy *= 0.97;
-        point.vz *= 0.97;
+        // Reduced friction for smoother, more responsive movement
+        point.vx *= 0.965;
+        point.vy *= 0.965;
+        point.vz *= 0.965;
         
         // Simple 3D to 2D projection
         const scale = (sphereRadius * 2) / (sphereRadius * 2 + point.z);
@@ -247,6 +258,7 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
     handleResize();
     animate();
     
+    // Improved cleanup with animation frame cancellation
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
@@ -256,6 +268,9 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
         canvas.removeEventListener('mousemove', handleMouseMove);
         canvas.removeEventListener('mouseenter', handleMouseEnter);
         canvas.removeEventListener('mouseleave', handleMouseLeave);
+        canvas.removeEventListener('touchmove', (e) => e.preventDefault());
+        canvas.removeEventListener('touchstart', (e) => e.preventDefault());
+        canvas.removeEventListener('touchend', () => {});
       }
     };
   }, [color, particleCount, size, interactive, intensity, glow]);
