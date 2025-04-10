@@ -47,20 +47,19 @@ const Index = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="lg:w-1/2 flex justify-center"
+              className="lg:w-1/2 flex justify-center items-center"
             >
-              <div className="relative" style={{ width: '500px', height: '500px' }}>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <SphereCanvas 
-                    color="#9b87f5" 
-                    particleCount={250}
-                    size={500}
-                    intensity={2.5}
-                    glow={true}
-                  />
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center z-10 bg-background/30 backdrop-blur-sm px-8 py-6 rounded-full shadow-lg border border-primary/20">
+              <div className="flex items-center justify-center" style={{ width: '500px', height: '500px' }}>
+                <SphereCanvas 
+                  color="#9b87f5" 
+                  particleCount={250}
+                  size={500}
+                  intensity={2.5}
+                  glow={true}
+                  className="flex-shrink-0"
+                />
+                <div className="absolute z-10">
+                  <div className="text-center bg-background/30 backdrop-blur-sm px-8 py-6 rounded-full shadow-lg border border-primary/20">
                     <h3 className="font-bold text-4xl text-gradient">5-10x</h3>
                     <p className="text-sm text-muted-foreground">Output After 90 Days</p>
                   </div>
@@ -92,6 +91,7 @@ const Index = () => {
             size={800}
             intensity={1.2}
             interactive={false}
+            className="flex-shrink-0"
           />
         </div>
         
@@ -182,6 +182,7 @@ const Index = () => {
             intensity={1}
             interactive={false}
             glow={true}
+            className="flex-shrink-0"
           />
         </div>
         
@@ -213,6 +214,7 @@ const Index = () => {
             intensity={1.2}
             interactive={false}
             glow={true}
+            className="flex-shrink-0"
           />
         </div>
         

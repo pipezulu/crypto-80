@@ -1,3 +1,4 @@
+
 import { useRef, useEffect } from 'react';
 import { Point, createSpherePoints, drawGlowEffect, updatePointPosition } from '@/utils/sphereUtils';
 
@@ -36,6 +37,10 @@ export function useSphereAnimation({
     
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
+    
+    // Always set canvas dimensions to the specified size
+    canvas.width = size;
+    canvas.height = size;
     
     points.current = createSpherePoints(particleCount, sphereRadius, color, intensity);
     
@@ -102,6 +107,7 @@ export function useSphereAnimation({
         
         points.current.sort((a, b) => a.z - b.z);
         
+        // Draw connecting lines between points
         if (particleCount > 80) {
           ctx.lineWidth = 0.3;
           for (let i = 0; i < points.current.length; i++) {
@@ -132,6 +138,7 @@ export function useSphereAnimation({
           }
         }
         
+        // Draw individual points
         for (const point of points.current) {
           updatePointPosition(
             point, 
@@ -163,9 +170,6 @@ export function useSphereAnimation({
       animationRef.current = requestAnimationFrame(animate);
     };
     
-    canvas.width = size;
-    canvas.height = size;
-    
     lastFrameTime.current = performance.now();
     animationRef.current = requestAnimationFrame(animate);
     
@@ -173,6 +177,16 @@ export function useSphereAnimation({
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
+      
+      if (interactive) {
+        canvas.removeEventListener('mousemove', handleMouseMove);
+        canvas.removeEventListener('mouseenter', handleMouseEnter);
+        canvas.removeEventListener('mouseleave', handleMouseLeave);
+        
+        canvas.removeEventListener('touchmove', handleTouchMove);
+        canvas.removeEventListener('touchstart', handleTouchStart);
+        canvas.removeEventListener('touchend', handleTouchEnd);
+      }
     };
-  }, [color, particleCount, size, interactive, intensity, glow, sphereRadius, maintainSize]);
+  }, [color, particleCount, size, interactive, intensity, glow, sphereRadius]);
 }
