@@ -35,6 +35,7 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
   const sphereRadius = size / 2.2; // Increased sphere radius for bigger effect
   const points = useRef<Point[]>([]);
   const mousePos = useRef({ x: 0, y: 0 });
+  const isMouseActive = useRef(false);
   
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -70,10 +71,27 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
         x: e.clientX - rect.left - canvas.width / 2,
         y: e.clientY - rect.top - canvas.height / 2,
       };
+      isMouseActive.current = true;
+      
+      // Reset the inactive state after a delay if no mouse movement
+      setTimeout(() => {
+        isMouseActive.current = false;
+      }, 2000);
+    };
+
+    const handleMouseEnter = () => {
+      isMouseActive.current = true;
+    };
+
+    const handleMouseLeave = () => {
+      isMouseActive.current = false;
     };
     
     if (interactive) {
       canvas.addEventListener('mousemove', handleMouseMove);
+      canvas.addEventListener('mouseenter', handleMouseEnter);
+      canvas.addEventListener('mouseleave', handleMouseLeave);
+      
       // Add touch support for mobile
       canvas.addEventListener('touchmove', (e) => {
         if (e.touches.length > 0) {
@@ -82,8 +100,16 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
             x: e.touches[0].clientX - rect.left - canvas.width / 2,
             y: e.touches[0].clientY - rect.top - canvas.height / 2,
           };
+          isMouseActive.current = true;
         }
         e.preventDefault();
+      });
+      
+      canvas.addEventListener('touchend', () => {
+        // Add a delay before setting inactive to make animation smoother
+        setTimeout(() => {
+          isMouseActive.current = false;
+        }, 1000);
       });
     }
     
@@ -168,27 +194,29 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
           point.vz *= -0.85;
         }
         
-        // If interactive, apply subtle force toward mouse on x-y plane
-        if (interactive) {
+        // If interactive and mouse is active, apply stronger force toward mouse on x-y plane
+        if (interactive && isMouseActive.current) {
           const dx = mousePos.current.x - point.x;
           const dy = mousePos.current.y - point.y;
           const dist = Math.sqrt(dx*dx + dy*dy);
-          if (dist < sphereRadius * 2) {
-            const force = 0.12 * intensity;
+          
+          // Increased influence radius and force
+          if (dist < sphereRadius * 3) {
+            const force = 0.2 * intensity * (1 - dist / (sphereRadius * 3));
             point.vx += (dx / dist) * force;
             point.vy += (dy / dist) * force;
           }
+        } else {
+          // Apply slight gravity toward center when mouse is inactive
+          point.vx += -point.x * 0.001;
+          point.vy += -point.y * 0.001;
+          point.vz += -point.z * 0.001;
         }
         
-        // Apply slight gravity toward center
-        point.vx += -point.x * 0.0005;
-        point.vy += -point.y * 0.0005;
-        point.vz += -point.z * 0.0005;
-        
-        // Apply friction
-        point.vx *= 0.99;
-        point.vy *= 0.99;
-        point.vz *= 0.99;
+        // Apply friction - reduced for smoother movement
+        point.vx *= 0.98;
+        point.vy *= 0.98;
+        point.vz *= 0.98;
         
         // Simple 3D to 2D projection
         const scale = (sphereRadius * 2) / (sphereRadius * 2 + point.z);
@@ -228,6 +256,8 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
       window.removeEventListener('resize', handleResize);
       if (interactive) {
         canvas.removeEventListener('mousemove', handleMouseMove);
+        canvas.removeEventListener('mouseenter', handleMouseEnter);
+        canvas.removeEventListener('mouseleave', handleMouseLeave);
       }
     };
   }, [color, particleCount, size, interactive, intensity, glow]);
@@ -235,7 +265,7 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
   return (
     <canvas 
       ref={canvasRef} 
-      className={`${className}`}
+      className={`${className} cursor-move`}
       width={size} 
       height={size}
     />
