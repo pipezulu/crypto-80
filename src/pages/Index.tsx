@@ -58,6 +58,7 @@ const Index = () => {
                     size={500}
                     intensity={2.5}
                     glow={true}
+                    maintainSize={true} // Keep the sphere consistently large
                   />
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
