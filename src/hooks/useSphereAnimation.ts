@@ -163,19 +163,6 @@ export function useSphereAnimation({
       animationRef.current = requestAnimationFrame(animate);
     };
     
-    let resizeTimeout: ReturnType<typeof setTimeout>;
-    const handleResize = () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        if (!maintainSize) {
-          canvas.width = size;
-          canvas.height = size;
-        }
-      }, 100);
-    };
-    
-    window.addEventListener('resize', handleResize);
-    
     canvas.width = size;
     canvas.height = size;
     
@@ -185,19 +172,6 @@ export function useSphereAnimation({
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
-      }
-      
-      window.removeEventListener('resize', handleResize);
-      clearTimeout(resizeTimeout);
-      
-      if (interactive) {
-        canvas.removeEventListener('mousemove', handleMouseMove);
-        canvas.removeEventListener('mouseenter', handleMouseEnter);
-        canvas.removeEventListener('mouseleave', handleMouseLeave);
-        
-        canvas.removeEventListener('touchmove', handleTouchMove);
-        canvas.removeEventListener('touchstart', handleTouchStart);
-        canvas.removeEventListener('touchend', handleTouchEnd);
       }
     };
   }, [color, particleCount, size, interactive, intensity, glow, sphereRadius, maintainSize]);

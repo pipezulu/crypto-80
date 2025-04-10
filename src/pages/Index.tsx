@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -48,9 +47,9 @@ const Index = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="lg:w-1/2 flex justify-center relative"
+              className="lg:w-1/2 flex justify-center"
             >
-              <div className="relative w-[500px] h-[500px]">
+              <div className="relative" style={{ width: '500px', height: '500px' }}>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <SphereCanvas 
                     color="#9b87f5" 
@@ -58,7 +57,6 @@ const Index = () => {
                     size={500}
                     intensity={2.5}
                     glow={true}
-                    maintainSize={true} // Keep the sphere consistently large
                   />
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">

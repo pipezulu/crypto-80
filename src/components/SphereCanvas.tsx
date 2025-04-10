@@ -10,7 +10,7 @@ interface SphereCanvasProps {
   interactive?: boolean;
   intensity?: number;
   glow?: boolean;
-  maintainSize?: boolean; // New prop to maintain consistent size
+  maintainSize?: boolean;
 }
 
 const SphereCanvas: React.FC<SphereCanvasProps> = ({ 
@@ -21,7 +21,7 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
   interactive = true,
   intensity = 2,
   glow = true,
-  maintainSize = false // Default to false for backward compatibility
+  maintainSize = false
 }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   
@@ -45,9 +45,11 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
       height={size}
       style={{ 
         touchAction: 'none',
-        // If maintainSize is true, set min width and height to ensure it doesn't shrink
-        minWidth: maintainSize ? size : undefined,
-        minHeight: maintainSize ? size : undefined
+        // Force the canvas to maintain its full size regardless of container
+        width: size,
+        height: size,
+        minWidth: size,
+        minHeight: size
       }}
     />
   );
