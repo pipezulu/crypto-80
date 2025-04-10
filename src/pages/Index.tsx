@@ -81,7 +81,7 @@ const Index = () => {
           <QuoteHighlight 
             quote="We need to ensure that we hit our revenue target. And in order for us to achieve revenue target is we break it down by funnels. That is coming. And how do we ensure we have effective funnels and efficient P and L in terms of cost?"
             author="Galen Leslie"
-            role="Customer Success, JobStreet Express"
+            role="Segment Owner, JobStreet Express"
             delay={0.2}
           />
         </div>

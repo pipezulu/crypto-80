@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 
 interface Point {
@@ -72,11 +71,6 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
         y: e.clientY - rect.top - canvas.height / 2,
       };
       isMouseActive.current = true;
-      
-      // Reset the inactive state after a delay if no mouse movement
-      setTimeout(() => {
-        isMouseActive.current = false;
-      }, 2000);
     };
 
     const handleMouseEnter = () => {
@@ -84,7 +78,10 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
     };
 
     const handleMouseLeave = () => {
-      isMouseActive.current = false;
+      // Don't immediately set to false - create a slight delay for smoother transition
+      setTimeout(() => {
+        isMouseActive.current = false;
+      }, 1000);
     };
     
     if (interactive) {
@@ -200,9 +197,9 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
           const dy = mousePos.current.y - point.y;
           const dist = Math.sqrt(dx*dx + dy*dy);
           
-          // Increased influence radius and force
+          // Enhanced cursor influence radius and force for more dramatic effect
           if (dist < sphereRadius * 3) {
-            const force = 0.2 * intensity * (1 - dist / (sphereRadius * 3));
+            const force = 0.25 * intensity * (1 - dist / (sphereRadius * 3));
             point.vx += (dx / dist) * force;
             point.vy += (dy / dist) * force;
           }

@@ -147,7 +147,7 @@ const UseCases = () => {
                       <QuoteHighlight 
                         quote={useCase.quote} 
                         author="Galen Leslie" 
-                        role="JobStreet Express" 
+                        role="Segment Owner, JobStreet Express" 
                       />
                       
                       <div className="mt-8">
