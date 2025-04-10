@@ -56,31 +56,31 @@ export function useSphereAnimation({
       }, 500);
     };
     
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        const rect = canvas.getBoundingClientRect();
+        mousePos.current = {
+          x: (e.touches[0].clientX - rect.left - canvas.width / 2) * 1.5,
+          y: (e.touches[0].clientY - rect.top - canvas.height / 2) * 1.5,
+        };
+        isMouseActive.current = true;
+      }
+    };
+    
+    const handleTouchStart = (e: TouchEvent) => {
+      isMouseActive.current = true;
+    };
+    
+    const handleTouchEnd = () => {
+      setTimeout(() => {
+        isMouseActive.current = false;
+      }, 500);
+    };
+    
     if (interactive) {
       canvas.addEventListener('mousemove', handleMouseMove, { passive: true });
       canvas.addEventListener('mouseenter', handleMouseEnter, { passive: true });
       canvas.addEventListener('mouseleave', handleMouseLeave, { passive: true });
-      
-      const handleTouchMove = (e: TouchEvent) => {
-        if (e.touches.length > 0) {
-          const rect = canvas.getBoundingClientRect();
-          mousePos.current = {
-            x: (e.touches[0].clientX - rect.left - canvas.width / 2) * 1.5,
-            y: (e.touches[0].clientY - rect.top - canvas.height / 2) * 1.5,
-          };
-          isMouseActive.current = true;
-        }
-      };
-      
-      const handleTouchStart = (e: TouchEvent) => {
-        isMouseActive.current = true;
-      };
-      
-      const handleTouchEnd = () => {
-        setTimeout(() => {
-          isMouseActive.current = false;
-        }, 500);
-      };
       
       canvas.addEventListener('touchmove', handleTouchMove, { passive: true });
       canvas.addEventListener('touchstart', handleTouchStart, { passive: true });
@@ -188,15 +188,9 @@ export function useSphereAnimation({
         canvas.removeEventListener('mouseenter', handleMouseEnter);
         canvas.removeEventListener('mouseleave', handleMouseLeave);
         
-        if (typeof handleTouchMove === 'function') {
-          canvas.removeEventListener('touchmove', handleTouchMove);
-        }
-        if (typeof handleTouchStart === 'function') {
-          canvas.removeEventListener('touchstart', handleTouchStart);
-        }
-        if (typeof handleTouchEnd === 'function') {
-          canvas.removeEventListener('touchend', handleTouchEnd);
-        }
+        canvas.removeEventListener('touchmove', handleTouchMove);
+        canvas.removeEventListener('touchstart', handleTouchStart);
+        canvas.removeEventListener('touchend', handleTouchEnd);
       }
     };
   }, [color, particleCount, size, interactive, intensity, glow, sphereRadius]);
