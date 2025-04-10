@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 
 interface Point {
@@ -35,6 +36,7 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
   const points = useRef<Point[]>([]);
   const mousePos = useRef({ x: 0, y: 0 });
   const isMouseActive = useRef(false);
+  const animationRef = useRef<number | null>(null);
   
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -78,7 +80,6 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
     };
 
     const handleMouseLeave = () => {
-      // Don't immediately set to false - create a slight delay for smoother transition
       setTimeout(() => {
         isMouseActive.current = false;
       }, 1000);
@@ -103,7 +104,6 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
       });
       
       canvas.addEventListener('touchend', () => {
-        // Add a delay before setting inactive to make animation smoother
         setTimeout(() => {
           isMouseActive.current = false;
         }, 1000);
@@ -111,7 +111,6 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
     }
     
     // Animation loop
-    let animationId: number;
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
@@ -199,7 +198,7 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
           
           // Enhanced cursor influence radius and force for more dramatic effect
           if (dist < sphereRadius * 3) {
-            const force = 0.25 * intensity * (1 - dist / (sphereRadius * 3));
+            const force = 0.35 * intensity * (1 - dist / (sphereRadius * 3));
             point.vx += (dx / dist) * force;
             point.vy += (dy / dist) * force;
           }
@@ -211,9 +210,9 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
         }
         
         // Apply friction - reduced for smoother movement
-        point.vx *= 0.98;
-        point.vy *= 0.98;
-        point.vz *= 0.98;
+        point.vx *= 0.97;
+        point.vy *= 0.97;
+        point.vz *= 0.97;
         
         // Simple 3D to 2D projection
         const scale = (sphereRadius * 2) / (sphereRadius * 2 + point.z);
@@ -235,7 +234,7 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
         ctx.fill();
       }
       
-      animationId = requestAnimationFrame(animate);
+      animationRef.current = requestAnimationFrame(animate);
     };
     
     // Handle resize
@@ -249,7 +248,9 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
     animate();
     
     return () => {
-      cancelAnimationFrame(animationId);
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
       window.removeEventListener('resize', handleResize);
       if (interactive) {
         canvas.removeEventListener('mousemove', handleMouseMove);
@@ -265,6 +266,7 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
       className={`${className} cursor-move`}
       width={size} 
       height={size}
+      style={{ touchAction: 'none' }}
     />
   );
 };
