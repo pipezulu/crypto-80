@@ -12,7 +12,9 @@ import {
   ChevronRight, 
   Menu, 
   X,
-  Calendar
+  Calendar,
+  Star,
+  Check
 } from 'lucide-react';
 
 interface NavItemProps {
@@ -39,6 +41,24 @@ const NavItem = ({ to, icon, label, active }: NavItemProps) => (
   </Link>
 );
 
+interface ExternalLinkProps {
+  href: string;
+  icon: React.ReactNode;
+  label: string;
+}
+
+const ExternalLink = ({ href, icon, label }: ExternalLinkProps) => (
+  <a href={href} target="_blank" rel="noopener noreferrer">
+    <Button
+      variant="ghost"
+      className="w-full justify-start gap-2 mb-1 h-8 text-xs hover:bg-muted"
+    >
+      {icon}
+      <span>{label}</span>
+    </Button>
+  </a>
+);
+
 interface LayoutProps {
   children: React.ReactNode;
 }
@@ -53,6 +73,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { to: '/phase-2', icon: <Settings className="h-5 w-5" />, label: 'Phase 2: Optimize' },
     { to: '/phase-3', icon: <Rocket className="h-5 w-5" />, label: 'Phase 3: Scale' },
     { to: '/use-cases', icon: <UsersRound className="h-5 w-5" />, label: 'Use Cases' },
+  ];
+
+  const usefulLinks = [
+    { href: 'https://manymangoes.com/happy', icon: <Star className="h-4 w-4" />, label: 'Happy Clients' },
+    { href: 'https://manymangoes.com/success-stories', icon: <Check className="h-4 w-4" />, label: 'Success Stories' },
   ];
 
   return (
@@ -89,7 +114,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           ))}
         </div>
         
-        {/* Schedule Meeting Button - Now below Use Cases navigation */}
+        {/* Schedule Meeting Button */}
         <div className="pt-4 border-t border-border mt-6">
           <a href="https://meet.manymangoes.com/felipe" target="_blank" rel="noopener noreferrer">
             <Button variant="default" className="w-full bg-gradient-tech hover:opacity-90 transition-opacity">
@@ -97,6 +122,19 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               Schedule a Meeting
             </Button>
           </a>
+        </div>
+        
+        {/* Useful Links Section */}
+        <div className="pt-4 border-t border-border mt-4">
+          <h3 className="text-xs font-medium text-muted-foreground mb-2 px-2">Useful Links</h3>
+          {usefulLinks.map((link) => (
+            <ExternalLink 
+              key={link.href}
+              href={link.href}
+              icon={link.icon}
+              label={link.label}
+            />
+          ))}
         </div>
       </div>
 
@@ -127,7 +165,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             ))}
           </div>
           
-          {/* Schedule Meeting Button for mobile - Now below Use Cases navigation */}
+          {/* Schedule Meeting Button for mobile */}
           <div className="pt-4 border-t border-border mt-6">
             <a href="https://meet.manymangoes.com/felipe" target="_blank" rel="noopener noreferrer">
               <Button variant="default" className="w-full bg-gradient-tech hover:opacity-90 transition-opacity">
@@ -135,6 +173,19 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 Schedule a Meeting
               </Button>
             </a>
+          </div>
+          
+          {/* Useful Links Section for mobile */}
+          <div className="pt-4 border-t border-border mt-4">
+            <h3 className="text-xs font-medium text-muted-foreground mb-2 px-2">Useful Links</h3>
+            {usefulLinks.map((link) => (
+              <ExternalLink 
+                key={link.href}
+                href={link.href}
+                icon={link.icon}
+                label={link.label}
+              />
+            ))}
           </div>
         </motion.div>
       )}
