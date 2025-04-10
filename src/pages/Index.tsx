@@ -53,17 +53,18 @@ const Index = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="lg:w-1/2 flex justify-center relative"
             >
-              <div className="relative w-[350px] h-[350px]">
+              <div className="relative w-[400px] h-[400px]">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <SphereCanvas 
                     color="#9b87f5" 
-                    particleCount={150}
-                    size={350}
+                    particleCount={200}
+                    size={400}
+                    intensity={1.5}
                   />
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center z-10">
-                    <h3 className="font-bold text-2xl">5-10x</h3>
+                  <div className="text-center z-10 bg-background/30 backdrop-blur-sm px-6 py-4 rounded-full">
+                    <h3 className="font-bold text-3xl">5-10x</h3>
                     <p className="text-sm text-muted-foreground">Output After 90 Days</p>
                   </div>
                 </div>
@@ -86,8 +87,18 @@ const Index = () => {
       </section>
 
       {/* Phases Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section id="phases" className="py-20 relative overflow-hidden">
+        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10">
+          <SphereCanvas 
+            color="#F97316" 
+            particleCount={120}
+            size={600}
+            intensity={0.8}
+            interactive={false}
+          />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -101,51 +112,82 @@ const Index = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <PhaseCard 
-              phase={1}
-              title="Design & Build the Engine"
-              description="Days 1-30: Create the foundation for your lead generation strategy"
-              link="/phase-1"
-              outcomes={[
-                "Surge in profile views, comments, DMs",
-                "Your brand in all the right conversations",
-                "Visibility delivering measurable returns"
-              ]}
-              delay={0.1}
-            />
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              id="phase-1-card"
+            >
+              <PhaseCard 
+                phase={1}
+                title="Design & Build the Engine"
+                description="Days 1-30: Create the foundation for your lead generation strategy"
+                link="/phase-1"
+                outcomes={[
+                  "Surge in profile views, comments, DMs",
+                  "Your brand in all the right conversations",
+                  "Visibility delivering measurable returns"
+                ]}
+                delay={0.1}
+              />
+            </motion.div>
             
-            <PhaseCard 
-              phase={2}
-              title="Optimize & Personalize"
-              description="Days 31-60: Refine and enhance your lead generation process"
-              link="/phase-2"
-              outcomes={[
-                "Improved lead quality",
-                "Increased mid-funnel engagement",
-                "More conversations turn into meetings"
-              ]}
-              delay={0.2}
-            />
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              id="phase-2-card"
+            >
+              <PhaseCard 
+                phase={2}
+                title="Optimize & Personalize"
+                description="Days 31-60: Refine and enhance your lead generation process"
+                link="/phase-2"
+                outcomes={[
+                  "Improved lead quality",
+                  "Increased mid-funnel engagement",
+                  "More conversations turn into meetings"
+                ]}
+                delay={0.2}
+              />
+            </motion.div>
             
-            <PhaseCard 
-              phase={3}
-              title="Scale & Automate"
-              description="Days 61-90: Amplify results and create predictable growth"
-              link="/phase-3"
-              outcomes={[
-                "5-10x reach, leads, and meetings",
-                "Omnichannel dominance",
-                "Consistent lead flow and sales pipeline"
-              ]}
-              delay={0.3}
-            />
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              id="phase-3-card"
+            >
+              <PhaseCard 
+                phase={3}
+                title="Scale & Automate"
+                description="Days 61-90: Amplify results and create predictable growth"
+                link="/phase-3"
+                outcomes={[
+                  "5-10x reach, leads, and meetings",
+                  "Omnichannel dominance",
+                  "Consistent lead flow and sales pipeline"
+                ]}
+                delay={0.3}
+              />
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Comparison Section */}
-      <section className="py-20 bg-card">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-card relative overflow-hidden">
+        <div className="absolute right-0 top-0 opacity-10">
+          <SphereCanvas 
+            color="#9b87f5" 
+            particleCount={100}
+            size={500}
+            intensity={0.7}
+            interactive={false}
+          />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -165,6 +207,15 @@ const Index = () => {
       <section className="py-20 relative overflow-hidden">
         <div className="absolute left-0 bottom-0 blur-3xl opacity-20 bg-gradient-radial-tech w-96 h-96"></div>
         <div className="absolute right-0 top-0 blur-3xl opacity-20 bg-gradient-radial-mango w-96 h-96"></div>
+        <div className="absolute left-1/2 bottom-1/2 transform -translate-x-1/2 translate-y-1/2 opacity-10">
+          <SphereCanvas 
+            color="#F97316" 
+            particleCount={80}
+            size={400}
+            intensity={0.6}
+            interactive={false}
+          />
+        </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <motion.div 

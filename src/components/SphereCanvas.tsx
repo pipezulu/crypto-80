@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 
 interface Point {
@@ -17,6 +18,7 @@ interface SphereCanvasProps {
   size?: number;
   className?: string;
   interactive?: boolean;
+  intensity?: number;
 }
 
 const SphereCanvas: React.FC<SphereCanvasProps> = ({ 
@@ -24,10 +26,11 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
   particleCount = 100, 
   size = 300,
   className = '',
-  interactive = true
+  interactive = true,
+  intensity = 1
 }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const sphereRadius = size / 3;
+  const sphereRadius = size / 2.5; // Increased sphere radius for bigger effect
   const points = useRef<Point[]>([]);
   const mousePos = useRef({ x: 0, y: 0 });
   
@@ -51,11 +54,11 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
       
       points.current.push({
         x, y, z,
-        size: Math.random() * 2 + 1,
+        size: Math.random() * 3 + 1.5, // Larger particles
         color,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        vz: (Math.random() - 0.5) * 0.5,
+        vx: (Math.random() - 0.5) * 0.8 * intensity,
+        vy: (Math.random() - 0.5) * 0.8 * intensity,
+        vz: (Math.random() - 0.5) * 0.8 * intensity,
       });
     }
     
@@ -76,6 +79,24 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
+      // Draw glow effect
+      const gradient = ctx.createRadialGradient(
+        canvas.width / 2, 
+        canvas.height / 2, 
+        0, 
+        canvas.width / 2, 
+        canvas.height / 2, 
+        sphereRadius
+      );
+      gradient.addColorStop(0, `${color}20`); // Inner color with transparency
+      gradient.addColorStop(0.8, `${color}05`); // Outer color with more transparency
+      gradient.addColorStop(1, 'transparent');
+      
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(canvas.width / 2, canvas.height / 2, sphereRadius * 1.2, 0, Math.PI * 2);
+      ctx.fill();
+      
       // Update and render points
       for (const point of points.current) {
         // Apply some movement
@@ -91,9 +112,9 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
           point.z = (point.z / distance) * sphereRadius;
           
           // Reverse velocity slightly dampened
-          point.vx *= -0.8;
-          point.vy *= -0.8;
-          point.vz *= -0.8;
+          point.vx *= -0.85;
+          point.vy *= -0.85;
+          point.vz *= -0.85;
         }
         
         // If interactive, apply subtle force toward mouse on x-y plane
@@ -102,16 +123,16 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
           const dy = mousePos.current.y - point.y;
           const dist = Math.sqrt(dx*dx + dy*dy);
           if (dist < sphereRadius * 2) {
-            const force = 0.05;
+            const force = 0.08 * intensity;
             point.vx += (dx / dist) * force;
             point.vy += (dy / dist) * force;
           }
         }
         
         // Apply slight gravity toward center
-        point.vx += -point.x * 0.0003;
-        point.vy += -point.y * 0.0003;
-        point.vz += -point.z * 0.0003;
+        point.vx += -point.x * 0.0005;
+        point.vy += -point.y * 0.0005;
+        point.vz += -point.z * 0.0005;
         
         // Apply friction
         point.vx *= 0.99;
@@ -123,11 +144,18 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
         const x2d = point.x * scale + canvas.width / 2;
         const y2d = point.y * scale + canvas.height / 2;
         
-        // Draw point
+        // Draw point with trail effect
         const opacity = (point.z + sphereRadius) / (sphereRadius * 2);
-        ctx.fillStyle = point.color + Math.floor(opacity * 255).toString(16).padStart(2, '0');
+        const opacityHex = Math.floor(opacity * 255).toString(16).padStart(2, '0');
+        ctx.fillStyle = point.color + opacityHex;
         ctx.beginPath();
         ctx.arc(x2d, y2d, point.size * scale, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Add light point in center of particles
+        ctx.fillStyle = '#ffffff' + opacityHex;
+        ctx.beginPath();
+        ctx.arc(x2d, y2d, point.size * scale * 0.3, 0, Math.PI * 2);
         ctx.fill();
       }
       
@@ -151,7 +179,7 @@ const SphereCanvas: React.FC<SphereCanvasProps> = ({
         canvas.removeEventListener('mousemove', handleMouseMove);
       }
     };
-  }, [color, particleCount, size, interactive]);
+  }, [color, particleCount, size, interactive, intensity]);
   
   return (
     <canvas 

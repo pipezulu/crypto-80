@@ -1,13 +1,16 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, XCircle } from 'lucide-react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+
 interface ComparisonItem {
   feature: string;
   seo: string | React.ReactNode;
   linkedin: string | React.ReactNode;
   manymangoes: string | React.ReactNode;
 }
+
 const comparisons: ComparisonItem[] = [{
   feature: "Time to Results",
   seo: "3-6 months before results",
@@ -15,7 +18,7 @@ const comparisons: ComparisonItem[] = [{
   manymangoes: "Immediate traction from Day 1"
 }, {
   feature: "Community Engagement",
-  seo: <XCircle className="h-5 w-5 text-destructive" />,
+  seo: <div className="flex justify-center"><XCircle className="h-5 w-5 text-destructive" /></div>,
   linkedin: "One-channel, spammy outreach",
   manymangoes: "Multi-platform visibility & trust"
 }, {
@@ -25,10 +28,11 @@ const comparisons: ComparisonItem[] = [{
   manymangoes: "AI-enhanced human-led conversations"
 }, {
   feature: "Retargeting",
-  seo: <XCircle className="h-5 w-5 text-destructive" />,
+  seo: <div className="flex justify-center"><XCircle className="h-5 w-5 text-destructive" /></div>,
   linkedin: "Little funnel structure",
   manymangoes: "Full-funnel: Attract → Educate → Convert"
 }];
+
 const ComparisonTable: React.FC = () => {
   return <motion.div initial={{
     opacity: 0
@@ -50,7 +54,9 @@ const ComparisonTable: React.FC = () => {
         <TableBody>
           {comparisons.map((item, i) => <TableRow key={i} className="hover:bg-muted/5">
               <TableCell className="font-medium">{item.feature}</TableCell>
-              <TableCell className="text-center text-muted-foreground mx-0">{item.seo}</TableCell>
+              <TableCell className="text-center text-muted-foreground mx-0">
+                {typeof item.seo === 'string' ? item.seo : item.seo}
+              </TableCell>
               <TableCell className="text-center text-muted-foreground">{item.linkedin}</TableCell>
               <TableCell className="text-center font-medium bg-tech-900/10">
                 {typeof item.manymangoes === 'string' ? <span className="text-tech-300">{item.manymangoes}</span> : <div className="flex justify-center">
@@ -62,4 +68,5 @@ const ComparisonTable: React.FC = () => {
       </Table>
     </motion.div>;
 };
+
 export default ComparisonTable;
