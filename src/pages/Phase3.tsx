@@ -171,21 +171,21 @@ const Phase3 = () => {
           >
             <div className="relative bg-gradient-to-br from-tech-900 to-tech-900/60 border border-tech-500/20 rounded-lg p-8 shadow-lg">
               <div className="mb-6 text-center">
-                <h3 className="text-2xl font-bold mb-2">Fulfilling your goals</h3>
+                <h3 className="text-2xl font-bold mb-2">Fulfilling your needs</h3>
                 <p className="text-muted-foreground">
-                  Our Phase 3 approach delivers on your desire for scalable, efficient lead generation.
+                  Our Phase 3 approach delivers on your requirements for efficient lead generation.
                 </p>
               </div>
               
               <div className="mb-6">
                 <h4 className="font-medium mb-2 text-sm uppercase text-tech-300">Your goal:</h4>
                 <p className="italic text-muted-foreground mb-4">
-                  "We need to ensure that we hit our revenue target... how do we ensure we have enough in our funnel to ensure that we can hit our revenues targets?"
+                  "We try to find clients that are needing to either remodel or update or they're moving to a new space."
                 </p>
                 
                 <h4 className="font-medium mb-2 text-sm uppercase text-tech-300">Our solution:</h4>
                 <p className="text-foreground">
-                  By Phase 3, your lead generation engine will be fully optimized and ready to scale. The automation we implement ensures consistent pipeline growth without proportionally increasing costs. Your funnel will be filled with high-quality leads that convert predictably, giving you confidence in hitting revenue targets month after month.
+                  By Phase 3, your lead generation engine will be fully automated to identify companies planning remodels or relocations before your competitors know about them. Our system monitors company announcements, funding news, and real estate transactions to alert you to potential clients at the earliest planning stages.
                 </p>
               </div>
             </div>

@@ -177,19 +177,19 @@ const Phase1 = () => {
               <div className="mb-6 text-center">
                 <h3 className="text-2xl font-bold mb-2">Addressing your needs</h3>
                 <p className="text-muted-foreground">
-                  Our approach directly solves the challenges you mentioned during our conversation.
+                  Our approach directly solves the challenges you mentioned.
                 </p>
               </div>
               
               <div className="mb-6">
                 <h4 className="font-medium mb-2 text-sm uppercase text-tech-300">Your challenge:</h4>
                 <p className="italic text-muted-foreground mb-4">
-                  "If we spend one additional days to clean all the leads that is coming that we need to contact, maybe it's gone by the time that we call them."
+                  "We need to ensure that our ROI is manageable, our CAC is healthy, our unit economic is also good."
                 </p>
                 
                 <h4 className="font-medium mb-2 text-sm uppercase text-tech-300">Our solution:</h4>
                 <p className="text-foreground">
-                  ManyMangoes eliminates processing delays by providing real-time lead data with our proprietary engagement system. From the moment a lead interacts with your content, they're tracked and prioritized for immediate follow-up.
+                  ManyMangoes provides real-time lead data with our proprietary engagement system that helps you track ROI and maintains healthy CAC from day one. Our targeted approach ensures you're only spending resources on prospects with high conversion potential.
                 </p>
               </div>
             </div>

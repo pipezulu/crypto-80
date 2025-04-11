@@ -177,19 +177,19 @@ const Phase2 = () => {
               <div className="mb-6 text-center">
                 <h3 className="text-2xl font-bold mb-2">Addressing your priorities</h3>
                 <p className="text-muted-foreground">
-                  Our Phase 2 approach directly addresses your specific concerns about ROI and cost efficiency.
+                  Our Phase 2 approach directly addresses your specific concerns.
                 </p>
               </div>
               
               <div className="mb-6">
                 <h4 className="font-medium mb-2 text-sm uppercase text-tech-300">Your concern:</h4>
                 <p className="italic text-muted-foreground mb-4">
-                  "We need to ensure that our ROI is manageable, our CAC is healthy, our unit economic is also good."
+                  "If we spend one additional days to clean all the leads that is coming that we need to contact, maybe it's gone by the time that we call them."
                 </p>
                 
                 <h4 className="font-medium mb-2 text-sm uppercase text-tech-300">Our solution:</h4>
                 <p className="text-foreground">
-                  In Phase 2, we optimize your entire funnel by doubling down on high-performing segments, refining targeting, and implementing precise attribution tracking. This data-driven approach ensures your cost per acquisition decreases while conversion rates increase. Our sales enablement tools will also help your team convert more efficiently.
+                  In Phase 2, we optimize your entire funnel with real-time lead qualification and prioritization. Our system flags the most promising leads for immediate outreach, ensuring no opportunities are lost due to processing delays. Your team will be able to contact hot leads within hours, not days.
                 </p>
               </div>
             </div>
