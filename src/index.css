@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -152,10 +151,10 @@
   border: 1px solid #F1AB1C;
   padding: 0.75rem 0.5rem;
   gap: 0.75rem;
-  margin: 0 auto 1.5rem auto; /* Reduced bottom margin */
+  margin: 0 auto;
   width: 100%;
   position: relative;
-  z-index: 5;
+  z-index: 10;
 }
 
 .use-case-trigger {
@@ -191,8 +190,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   background-color: #16192B;
   border: 1px solid #363A4F;
@@ -207,8 +206,8 @@
 
 .use-case-trigger-icon svg {
   color: #9A9CA8;
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.1rem;
+  height: 1.1rem;
   transition: all 0.3s ease;
 }
 
@@ -221,7 +220,7 @@
   font-weight: 500;
   transition: all 0.3s ease;
   line-height: 1.1;
-  height: 2.4em;
+  height: 2.2em;
   width: 100%;
   display: flex;
   align-items: center;
@@ -229,26 +228,19 @@
 }
 
 .use-case-content {
-  margin-top: 1rem;
+  margin-top: 2rem;
   border: 1px solid rgba(241, 171, 28, 0.3);
   border-radius: 1.5rem;
   background-color: rgba(22, 25, 43, 0.7);
   backdrop-filter: blur(10px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
   position: relative;
-  z-index: 1;
-  /* Fixed position for the card to prevent covering other elements */
-  position: static;
-  overflow: visible;
+  z-index: 5;
 }
 
 @media (min-width: 640px) {
   .use-case-trigger-label {
     font-size: 0.7rem;
-  }
-  
-  .use-case-tabs {
-    margin-bottom: 2rem; /* Reduced space on larger screens */
   }
 }
 
@@ -256,9 +248,29 @@
   .use-case-tabs {
     gap: 1rem;
     padding: 1rem;
-    margin-bottom: 2.5rem; /* Reduced space on larger screens */
   }
   
+  .use-case-trigger {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .use-case-trigger-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+  
+  .use-case-trigger-icon svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  .use-case-trigger-label {
+    font-size: 0.75rem;
+    height: 2.4em;
+  }
+}
+
+@media (min-width: 1024px) {
   .use-case-trigger {
     padding: 0.75rem 0.5rem;
   }
@@ -271,27 +283,6 @@
   .use-case-trigger-icon svg {
     width: 1.35rem;
     height: 1.35rem;
-  }
-  
-  .use-case-trigger-label {
-    font-size: 0.75rem;
-    height: 2.6em;
-  }
-}
-
-@media (min-width: 1024px) {
-  .use-case-trigger {
-    padding: 0.75rem 0.5rem;
-  }
-  
-  .use-case-trigger-icon {
-    width: 2.75rem;
-    height: 2.75rem;
-  }
-  
-  .use-case-trigger-icon svg {
-    width: 1.4rem;
-    height: 1.4rem;
   }
   
   .use-case-trigger-label {

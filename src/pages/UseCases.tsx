@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -143,7 +142,7 @@ const UseCases = () => {
             className="max-w-5xl mx-auto"
           >
             <Tabs defaultValue="commercial-design" className="w-full flex flex-col">
-              <TabsList className="use-case-tabs mb-8">
+              <TabsList className="use-case-tabs">
                 {useCases.map((useCase) => (
                   <TabsTrigger 
                     key={useCase.id}
@@ -160,7 +159,7 @@ const UseCases = () => {
                 ))}
               </TabsList>
               
-              <div className="relative">
+              <div className="mt-4 relative">
                 {useCases.map((useCase) => (
                   <TabsContent key={useCase.id} value={useCase.id} className="use-case-content">
                     <Card className="border-none shadow-2xl bg-gradient-to-b from-card/80 to-card/40 backdrop-blur">
