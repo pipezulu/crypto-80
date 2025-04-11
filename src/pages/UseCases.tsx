@@ -14,7 +14,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import SphereCanvas from '@/components/SphereCanvas';
 import QuoteHighlight from '@/components/QuoteHighlight';
-import { ArrowRight, Check, Briefcase, Users, FileText, Building } from 'lucide-react';
+import { ArrowRight, Check, Briefcase, Users, FileText, Building, LayoutDashboard } from 'lucide-react';
 
 const UseCases = () => {
   const useCases = [
@@ -77,6 +77,21 @@ const UseCases = () => {
         "Offer consultation services for companies in transition"
       ],
       results: "Created a proactive lead generation system that identifies companies 3-6 months before they start their furniture procurement process."
+    },
+    {
+      id: "existing-clients",
+      title: "Existing Client Expansion",
+      icon: <LayoutDashboard />,
+      description: "Identify opportunities with existing clients for additional projects",
+      quote: "We need to better leverage our existing relationships for additional business opportunities.",
+      details: [
+        "Monitor existing clients for expansion announcements or new locations",
+        "Identify key stakeholders in different departments who might need services",
+        "Create targeted content addressing specific client industry challenges",
+        "Develop regular touchpoints to stay top-of-mind with past clients",
+        "Build a systematic approach to account-based marketing"
+      ],
+      results: "Increased repeat business by 40% through strategic relationship management and proactive identification of new opportunities within existing accounts."
     }
   ];
 
@@ -129,22 +144,24 @@ const UseCases = () => {
             className="max-w-5xl mx-auto"
           >
             <Tabs defaultValue="commercial-design" className="w-full">
-              <TabsList className="use-case-tabs mb-16">
-                {useCases.map((useCase) => (
-                  <TabsTrigger 
-                    key={useCase.id}
-                    value={useCase.id}
-                    className="use-case-trigger"
-                  >
-                    <div className="use-case-trigger-content">
-                      <div className="use-case-trigger-icon">
-                        {useCase.icon}
+              <div className="overflow-x-auto pb-4">
+                <TabsList className="use-case-tabs mb-16 flex">
+                  {useCases.map((useCase) => (
+                    <TabsTrigger 
+                      key={useCase.id}
+                      value={useCase.id}
+                      className="use-case-trigger"
+                    >
+                      <div className="use-case-trigger-content">
+                        <div className="use-case-trigger-icon">
+                          {useCase.icon}
+                        </div>
+                        <span className="use-case-trigger-label hidden sm:block">{useCase.title}</span>
                       </div>
-                      <span className="use-case-trigger-label hidden sm:block">{useCase.title}</span>
-                    </div>
-                  </TabsTrigger>
-                ))}
-              </TabsList>
+                    </TabsTrigger>
+                  ))}
+                </TabsList>
+              </div>
               
               {useCases.map((useCase) => (
                 <TabsContent key={useCase.id} value={useCase.id} className="use-case-content">
