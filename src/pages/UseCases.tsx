@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -144,24 +143,22 @@ const UseCases = () => {
             className="max-w-5xl mx-auto"
           >
             <Tabs defaultValue="commercial-design" className="w-full">
-              <div className="overflow-x-auto pb-4">
-                <TabsList className="use-case-tabs mb-16 flex">
-                  {useCases.map((useCase) => (
-                    <TabsTrigger 
-                      key={useCase.id}
-                      value={useCase.id}
-                      className="use-case-trigger"
-                    >
-                      <div className="use-case-trigger-content">
-                        <div className="use-case-trigger-icon">
-                          {useCase.icon}
-                        </div>
-                        <span className="use-case-trigger-label hidden sm:block">{useCase.title}</span>
+              <TabsList className="use-case-tabs mb-16">
+                {useCases.map((useCase) => (
+                  <TabsTrigger 
+                    key={useCase.id}
+                    value={useCase.id}
+                    className="use-case-trigger"
+                  >
+                    <div className="use-case-trigger-content">
+                      <div className="use-case-trigger-icon">
+                        {useCase.icon}
                       </div>
-                    </TabsTrigger>
-                  ))}
-                </TabsList>
-              </div>
+                      <span className="use-case-trigger-label">{useCase.title}</span>
+                    </div>
+                  </TabsTrigger>
+                ))}
+              </TabsList>
               
               {useCases.map((useCase) => (
                 <TabsContent key={useCase.id} value={useCase.id} className="use-case-content">

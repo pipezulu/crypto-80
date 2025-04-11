@@ -145,20 +145,18 @@
 
 /* Enhanced Use Case Tabs - Completely Redesigned */
 .use-case-tabs {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   background-color: rgba(14, 16, 21, 0.8);
-  border-radius: 5rem;
+  border-radius: 1rem;
   border: 1px solid #F1AB1C;
-  padding: 0.25rem;
+  padding: 0.5rem;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   box-shadow: 0 4px 30px rgba(241, 171, 28, 0.15);
   margin: 0 auto;
-  max-width: 100%;
-  min-width: max-content; /* Ensure tabs don't shrink below their content size */
-  justify-content: center;
-  flex-wrap: nowrap;
-  gap: 0.25rem;
+  width: 100%;
+  gap: 0.5rem;
 }
 
 .use-case-trigger {
@@ -170,19 +168,18 @@
   color: #9A9CA8;
   transition: all 0.3s ease;
   border: none;
-  border-radius: 5rem;
+  border-radius: 0.75rem;
   padding: 0.5rem;
   z-index: 1;
-  flex: 1;
-  min-width: auto;
-  white-space: nowrap;
+  height: 100%;
 }
 
 .use-case-trigger-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  white-space: nowrap;
+  text-align: center;
 }
 
 .use-case-trigger[data-state="active"] {
@@ -195,13 +192,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 2.5rem;
+  width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
   background-color: #16192B;
   border: 1px solid #363A4F;
   transition: all 0.3s ease;
-  flex-shrink: 0;
 }
 
 .use-case-trigger[data-state="active"] .use-case-trigger-icon {
@@ -222,21 +218,22 @@
 }
 
 .use-case-trigger-label {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 500;
   transition: all 0.3s ease;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 @media (min-width: 768px) {
+  .use-case-tabs {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
   .use-case-trigger {
     padding: 0.75rem;
   }
   
   .use-case-trigger-icon {
-    min-width: 3rem;
+    width: 3rem;
     height: 3rem;
   }
   
@@ -246,7 +243,8 @@
   }
   
   .use-case-trigger-label {
-    font-size: 1rem;
+    font-size: 0.875rem;
+    display: block;
   }
 }
 
@@ -256,13 +254,17 @@
   }
   
   .use-case-trigger-icon {
-    min-width: 3.5rem;
+    width: 3.5rem;
     height: 3.5rem;
   }
   
   .use-case-trigger-icon svg {
     width: 1.75rem;
     height: 1.75rem;
+  }
+  
+  .use-case-trigger-label {
+    font-size: 1rem;
   }
 }
 
