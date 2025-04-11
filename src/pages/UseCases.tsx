@@ -21,7 +21,7 @@ const UseCases = () => {
     {
       id: "commercial-design",
       title: "Commercial Interior Design",
-      icon: <Briefcase className="h-5 w-5" />,
+      icon: <Briefcase className="h-7 w-7" />,
       description: "Identify and engage with clients needing interior design services",
       quote: "We do commercial interior. Federal is our largest client.",
       details: [
@@ -36,7 +36,7 @@ const UseCases = () => {
     {
       id: "architect-partnerships",
       title: "Architect & Designer Partnerships",
-      icon: <Users className="h-5 w-5" />,
+      icon: <Users className="h-7 w-7" />,
       description: "Build strong referral relationships with architects and commercial realtors",
       quote: "You won't lease a space on your own. So one is the commercial realtor networking with those people that are building clients.",
       details: [
@@ -51,7 +51,7 @@ const UseCases = () => {
     {
       id: "government-contracts",
       title: "Government Contract Opportunities",
-      icon: <FileText className="h-5 w-5" />,
+      icon: <FileText className="h-7 w-7" />,
       description: "Stay ahead of government contract opportunities and decision makers",
       quote: "Where I'm located is where it's called Redstone Marshall. The federal agencies make decisions, furniture, Army Corps of Engineers, Missile Command.",
       details: [
@@ -66,7 +66,7 @@ const UseCases = () => {
     {
       id: "moving-clients",
       title: "New Space Identification",
-      icon: <Building className="h-5 w-5" />,
+      icon: <Building className="h-7 w-7" />,
       description: "Identify companies moving to or building new office spaces",
       quote: "We try to find clients that are needing to either remodel or update or they're moving to a new space.",
       details: [
@@ -83,11 +83,11 @@ const UseCases = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-grid">
+      <section className="relative overflow-hidden bg-grid py-12">
         <div className="absolute left-1/3 top-1/4 transform -translate-x-1/2 -translate-y-1/2 blur-3xl opacity-20 bg-gradient-radial-tech w-96 h-96"></div>
         <div className="absolute right-1/3 bottom-1/4 transform translate-x-1/2 translate-y-1/2 blur-3xl opacity-20 bg-gradient-radial-mango w-96 h-96"></div>
         
-        <div className="container mx-auto px-4 py-20 relative z-10">
+        <div className="container mx-auto px-4 py-12 relative z-10">
           <div className="flex flex-col items-center gap-8">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -121,7 +121,7 @@ const UseCases = () => {
       </section>
 
       {/* Tabs Section */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4 bg-card/30 backdrop-blur-sm">
         <div className="container mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -129,7 +129,7 @@ const UseCases = () => {
             className="max-w-5xl mx-auto"
           >
             <Tabs defaultValue="commercial-design" className="w-full">
-              <TabsList className="use-case-tabs mb-12">
+              <TabsList className="use-case-tabs mb-16">
                 {useCases.map((useCase) => (
                   <TabsTrigger 
                     key={useCase.id}
@@ -139,24 +139,24 @@ const UseCases = () => {
                     <div className="use-case-trigger-icon">
                       {useCase.icon}
                     </div>
-                    <span className="text-sm font-medium">{useCase.title}</span>
+                    <span className="text-base font-medium">{useCase.title}</span>
                   </TabsTrigger>
                 ))}
               </TabsList>
               
               {useCases.map((useCase) => (
                 <TabsContent key={useCase.id} value={useCase.id} className="use-case-content">
-                  <Card className="border border-muted/30 shadow-lg bg-card/60 backdrop-blur">
-                    <CardHeader>
-                      <CardTitle className="text-2xl flex items-center gap-3">
-                        <div className="bg-primary/20 p-2 rounded-full">
+                  <Card className="border-none shadow-2xl bg-gradient-to-b from-card/80 to-card/40 backdrop-blur">
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-3xl flex items-center gap-4">
+                        <div className="bg-primary/20 p-3 rounded-full">
                           {useCase.icon}
                         </div>
                         {useCase.title}
                       </CardTitle>
-                      <CardDescription className="text-base">{useCase.description}</CardDescription>
+                      <CardDescription className="text-lg mt-2">{useCase.description}</CardDescription>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="space-y-8">
                       <QuoteHighlight 
                         quote={useCase.quote} 
                         author="Brad Glover" 
@@ -164,22 +164,24 @@ const UseCases = () => {
                       />
                       
                       <div className="mt-8">
-                        <h3 className="text-xl font-semibold mb-4">How ManyMangoes' LinkedIn Strategy Can Help</h3>
-                        <ul className="space-y-3">
+                        <h3 className="text-2xl font-semibold mb-6 text-gradient">How ManyMangoes' LinkedIn Strategy Can Help</h3>
+                        <ul className="space-y-4">
                           {useCase.details.map((detail, index) => (
                             <li key={index} className="flex items-start">
-                              <div className="mr-3 mt-1">
-                                <Check className="h-5 w-5 text-primary" />
+                              <div className="mr-4 mt-1">
+                                <div className="rounded-full p-1 bg-primary/20">
+                                  <Check className="h-5 w-5 text-primary" />
+                                </div>
                               </div>
-                              <span>{detail}</span>
+                              <span className="text-base">{detail}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
                       
-                      <div className="mt-8 p-4 bg-muted/20 border border-primary/20 rounded-lg shadow-inner">
-                        <h4 className="font-semibold mb-2">Expected Results from LinkedIn Strategy</h4>
-                        <p>{useCase.results}</p>
+                      <div className="mt-8 p-6 bg-muted/20 border border-primary/30 rounded-xl shadow-inner">
+                        <h4 className="font-semibold text-xl mb-4 text-primary">Expected Results from LinkedIn Strategy</h4>
+                        <p className="text-base">{useCase.results}</p>
                       </div>
                     </CardContent>
                   </Card>
@@ -191,7 +193,7 @@ const UseCases = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-16 bg-card">
+      <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -200,15 +202,15 @@ const UseCases = () => {
             className="text-center max-w-3xl mx-auto"
           >
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your LinkedIn Lead Generation?</h2>
-            <p className="text-muted-foreground mb-8">
+            <p className="text-muted-foreground mb-10 text-lg">
               ManyMangoes is ready to implement these LinkedIn solutions specifically for Ori.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-tech hover:opacity-90 transition-opacity">
+            <div className="flex flex-col sm:flex-row gap-5 justify-center">
+              <Button size="lg" className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity text-lg py-6 px-8">
                 Request a Proposal
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" className="border-2 border-primary/50 text-lg py-6 px-8 hover:bg-primary/10">
                 Schedule a Demo
               </Button>
             </div>
