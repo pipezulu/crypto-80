@@ -21,7 +21,7 @@ const UseCases = () => {
     {
       id: "commercial-design",
       title: "Commercial Interior Design",
-      icon: <BriefcaseBusiness className="h-5 w-5 text-primary" />,
+      icon: <BriefcaseBusiness className="h-6 w-6" />,
       description: "Identify and engage with clients needing interior design services",
       quote: "We do commercial interior. Federal is our largest client.",
       details: [
@@ -36,7 +36,7 @@ const UseCases = () => {
     {
       id: "architect-partnerships",
       title: "Architect & Designer Partnerships",
-      icon: <Users className="h-5 w-5 text-primary" />,
+      icon: <Users className="h-6 w-6" />,
       description: "Build strong referral relationships with architects and commercial realtors",
       quote: "You won't lease a space on your own. So one is the commercial realtor networking with those people that are building clients.",
       details: [
@@ -51,7 +51,7 @@ const UseCases = () => {
     {
       id: "government-contracts",
       title: "Government Contract Opportunities",
-      icon: <GalleryVerticalEnd className="h-5 w-5 text-primary" />,
+      icon: <GalleryVerticalEnd className="h-6 w-6" />,
       description: "Stay ahead of government contract opportunities and decision makers",
       quote: "Where I'm located is where it's called Redstone Marshall. The federal agencies make decisions, furniture, Army Corps of Engineers, Missile Command.",
       details: [
@@ -66,7 +66,7 @@ const UseCases = () => {
     {
       id: "moving-clients",
       title: "New Space Identification",
-      icon: <Building className="h-5 w-5 text-primary" />,
+      icon: <Building className="h-6 w-6" />,
       description: "Identify companies moving to or building new office spaces",
       quote: "We try to find clients that are needing to either remodel or update or they're moving to a new space.",
       details: [
@@ -129,27 +129,31 @@ const UseCases = () => {
             className="max-w-4xl mx-auto"
           >
             <Tabs defaultValue="commercial-design" className="w-full">
-              <TabsList className="grid grid-cols-1 md:grid-cols-4 gap-3 mb-10 use-case-tabs">
+              <TabsList className="grid grid-cols-1 md:grid-cols-4 gap-0 mb-8 use-case-tabs">
                 {useCases.map((useCase) => (
                   <TabsTrigger 
                     key={useCase.id}
                     value={useCase.id}
                     className="use-case-trigger"
                   >
-                    <span className="flex flex-col items-center gap-2">
-                      {useCase.icon}
-                      {useCase.title}
-                    </span>
+                    <div className="flex flex-col items-center">
+                      <div className="use-case-trigger-icon mb-2">
+                        {useCase.icon}
+                      </div>
+                      <span className="font-semibold">{useCase.title}</span>
+                    </div>
                   </TabsTrigger>
                 ))}
               </TabsList>
               
               {useCases.map((useCase) => (
-                <TabsContent key={useCase.id} value={useCase.id}>
-                  <Card className="border border-muted/50 shadow-lg">
+                <TabsContent key={useCase.id} value={useCase.id} className="use-case-content">
+                  <Card className="border border-muted/30 shadow-lg bg-card/60 backdrop-blur">
                     <CardHeader>
                       <CardTitle className="text-2xl flex items-center gap-3">
-                        {useCase.icon}
+                        <div className="bg-primary/20 p-2 rounded-full">
+                          {useCase.icon}
+                        </div>
                         {useCase.title}
                       </CardTitle>
                       <CardDescription className="text-base">{useCase.description}</CardDescription>
@@ -162,7 +166,7 @@ const UseCases = () => {
                       />
                       
                       <div className="mt-8">
-                        <h3 className="text-xl font-semibold mb-4">How ManyMangoes Can Help</h3>
+                        <h3 className="text-xl font-semibold mb-4">How ManyMangoes' LinkedIn Strategy Can Help</h3>
                         <ul className="space-y-3">
                           {useCase.details.map((detail, index) => (
                             <li key={index} className="flex items-start">
@@ -175,8 +179,8 @@ const UseCases = () => {
                         </ul>
                       </div>
                       
-                      <div className="mt-8 p-4 bg-card border border-tech-300/10 rounded-lg shadow-inner">
-                        <h4 className="font-semibold mb-2">Expected Results</h4>
+                      <div className="mt-8 p-4 bg-muted/20 border border-primary/20 rounded-lg shadow-inner">
+                        <h4 className="font-semibold mb-2">Expected Results from LinkedIn Strategy</h4>
                         <p>{useCase.results}</p>
                       </div>
                     </CardContent>
