@@ -14,14 +14,14 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import SphereCanvas from '@/components/SphereCanvas';
 import QuoteHighlight from '@/components/QuoteHighlight';
-import { ArrowRight, Check, BriefcaseBusiness, Users, GalleryVerticalEnd, Building } from 'lucide-react';
+import { ArrowRight, Check, Briefcase, Users, FileText, Building } from 'lucide-react';
 
 const UseCases = () => {
   const useCases = [
     {
       id: "commercial-design",
       title: "Commercial Interior Design",
-      icon: <BriefcaseBusiness className="h-6 w-6" />,
+      icon: <Briefcase className="h-6 w-6" />,
       description: "Identify and engage with clients needing interior design services",
       quote: "We do commercial interior. Federal is our largest client.",
       details: [
@@ -51,7 +51,7 @@ const UseCases = () => {
     {
       id: "government-contracts",
       title: "Government Contract Opportunities",
-      icon: <GalleryVerticalEnd className="h-6 w-6" />,
+      icon: <FileText className="h-6 w-6" />,
       description: "Stay ahead of government contract opportunities and decision makers",
       quote: "Where I'm located is where it's called Redstone Marshall. The federal agencies make decisions, furniture, Army Corps of Engineers, Missile Command.",
       details: [
@@ -121,15 +121,15 @@ const UseCases = () => {
       </section>
 
       {/* Tabs Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="max-w-4xl mx-auto"
+            className="max-w-5xl mx-auto"
           >
             <Tabs defaultValue="commercial-design" className="w-full">
-              <TabsList className="use-case-tabs mb-8">
+              <TabsList className="use-case-tabs mb-12">
                 {useCases.map((useCase) => (
                   <TabsTrigger 
                     key={useCase.id}
@@ -139,7 +139,7 @@ const UseCases = () => {
                     <div className="use-case-trigger-icon">
                       {useCase.icon}
                     </div>
-                    <span className="text-sm font-medium">{useCase.title}</span>
+                    <span className="text-sm font-medium mt-2">{useCase.title}</span>
                   </TabsTrigger>
                 ))}
               </TabsList>
