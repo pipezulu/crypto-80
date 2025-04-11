@@ -21,7 +21,7 @@ const UseCases = () => {
     {
       id: "commercial-design",
       title: "Commercial Interior Design",
-      icon: <Briefcase className="h-7 w-7" />,
+      icon: <Briefcase />,
       description: "Identify and engage with clients needing interior design services",
       quote: "We do commercial interior. Federal is our largest client.",
       details: [
@@ -36,7 +36,7 @@ const UseCases = () => {
     {
       id: "architect-partnerships",
       title: "Architect & Designer Partnerships",
-      icon: <Users className="h-7 w-7" />,
+      icon: <Users />,
       description: "Build strong referral relationships with architects and commercial realtors",
       quote: "You won't lease a space on your own. So one is the commercial realtor networking with those people that are building clients.",
       details: [
@@ -51,7 +51,7 @@ const UseCases = () => {
     {
       id: "government-contracts",
       title: "Government Contract Opportunities",
-      icon: <FileText className="h-7 w-7" />,
+      icon: <FileText />,
       description: "Stay ahead of government contract opportunities and decision makers",
       quote: "Where I'm located is where it's called Redstone Marshall. The federal agencies make decisions, furniture, Army Corps of Engineers, Missile Command.",
       details: [
@@ -66,7 +66,7 @@ const UseCases = () => {
     {
       id: "moving-clients",
       title: "New Space Identification",
-      icon: <Building className="h-7 w-7" />,
+      icon: <Building />,
       description: "Identify companies moving to or building new office spaces",
       quote: "We try to find clients that are needing to either remodel or update or they're moving to a new space.",
       details: [
@@ -136,10 +136,12 @@ const UseCases = () => {
                     value={useCase.id}
                     className="use-case-trigger"
                   >
-                    <div className="use-case-trigger-icon">
-                      {useCase.icon}
+                    <div className="use-case-trigger-content">
+                      <div className="use-case-trigger-icon">
+                        {useCase.icon}
+                      </div>
+                      <span className="use-case-trigger-label hidden sm:block">{useCase.title}</span>
                     </div>
-                    <span className="text-base font-medium">{useCase.title}</span>
                   </TabsTrigger>
                 ))}
               </TabsList>
