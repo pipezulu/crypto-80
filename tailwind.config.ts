@@ -64,18 +64,18 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				mango: {
-					100: '#FEF7CD',
-					200: '#FDE1D3',
-					300: '#FEC6A1',
-					400: '#F97316',
-					500: '#E96C12',
+					100: '#FFEEBD',
+					200: '#FFE49B',
+					300: '#FFD478',
+					400: '#F1AB1C',
+					500: '#D99316',
 				},
 				tech: {
-					100: '#E5DEFF',
-					200: '#D3E4FD',
-					300: '#9b87f5',
-					400: '#8B5CF6',
-					500: '#7E69AB',
+					100: '#FFE49B',
+					200: '#FFDA8A',
+					300: '#F1AB1C',
+					400: '#F7941D',
+					500: '#D68B18',
 					900: '#1A1F2C',
 				}
 			},
@@ -133,8 +133,8 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-				'gradient-tech': 'linear-gradient(90deg, hsla(277, 75%, 84%, 1) 0%, hsla(297, 50%, 51%, 1) 100%)',
-				'gradient-mango': 'linear-gradient(90deg, hsla(39, 100%, 77%, 1) 0%, hsla(22, 90%, 57%, 1) 100%)',
+				'gradient-tech': 'linear-gradient(90deg, hsla(38, 100%, 53%, 1) 0%, hsla(30, 92%, 54%, 1) 100%)',
+				'gradient-mango': 'linear-gradient(90deg, hsla(42, 96%, 59%, 1) 0%, hsla(38, 85%, 47%, 1) 100%)',
 			}
 		}
 	},

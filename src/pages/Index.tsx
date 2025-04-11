@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -51,7 +52,7 @@ const Index = () => {
             >
               <div className="flex items-center justify-center" style={{ width: '500px', height: '500px' }}>
                 <SphereCanvas 
-                  color="#9b87f5" 
+                  color="#F1AB1C" 
                   particleCount={250}
                   size={500}
                   intensity={2.5}
@@ -74,9 +75,9 @@ const Index = () => {
       <section id="quote-section" className="bg-card py-12">
         <div className="container mx-auto px-4">
           <QuoteHighlight 
-            quote="We need to ensure that we hit our revenue target. And in order for us to achieve revenue target is we break it down by funnels. That is coming. And how do we ensure we have effective funnels and efficient P and L in terms of cost?"
-            author="Galen Leslie"
-            role="Segment Owner, JobStreet Express"
+            quote="We're always looking for new leads, which is always good. We're always trying to find new business. We try to find clients that are needing to either remodel or update or they're moving to a new space."
+            author="Brad Glover"
+            role="VP of Sales, Ori"
             delay={0.2}
           />
         </div>
@@ -86,7 +87,7 @@ const Index = () => {
       <section id="phases" className="py-20 relative overflow-hidden">
         <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-15">
           <SphereCanvas 
-            color="#F97316" 
+            color="#F1AB1C" 
             particleCount={180}
             size={800}
             intensity={1.2}
@@ -176,7 +177,7 @@ const Index = () => {
       <section className="py-20 bg-card relative overflow-hidden">
         <div className="absolute right-0 top-0 opacity-15">
           <SphereCanvas 
-            color="#9b87f5" 
+            color="#F1AB1C" 
             particleCount={150}
             size={600}
             intensity={1}
@@ -208,7 +209,7 @@ const Index = () => {
         <div className="absolute right-0 top-0 blur-3xl opacity-30 bg-gradient-radial-mango w-96 h-96"></div>
         <div className="absolute left-1/2 bottom-1/2 transform -translate-x-1/2 translate-y-1/2 opacity-15">
           <SphereCanvas 
-            color="#F97316" 
+            color="#F1AB1C" 
             particleCount={120}
             size={500}
             intensity={1.2}
@@ -227,7 +228,7 @@ const Index = () => {
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Lead Generation?</h2>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
               Start generating high-quality leads from day one with our proven 90-day rollout plan.
-              Let ManyMangoes help you build a powerful, omnichannel lead-gen engine.
+              Let ManyMangoes help you build a powerful, omnichannel lead-gen engine for Ori.
             </p>
             
             <Button asChild size="lg" className="bg-gradient-tech hover:opacity-90 transition-opacity">

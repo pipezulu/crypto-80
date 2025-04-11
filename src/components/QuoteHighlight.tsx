@@ -13,7 +13,7 @@ interface QuoteHighlightProps {
 const QuoteHighlight: React.FC<QuoteHighlightProps> = ({ 
   quote, 
   author, 
-  role = "JobStreet Express", 
+  role = "Ori", 
   delay = 0
 }) => {
   return (

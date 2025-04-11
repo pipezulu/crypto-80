@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -18,60 +19,60 @@ import { ArrowRight, Check } from 'lucide-react';
 const UseCases = () => {
   const useCases = [
     {
-      id: "lead-generation",
-      title: "Lead Generation",
-      description: "Generate high-quality leads from competitor job postings",
-      quote: "Our best ROIs comes from our competitor scraping... compared to social media.",
+      id: "commercial-design",
+      title: "Commercial Interior Design",
+      description: "Identify and engage with clients needing interior design services",
+      quote: "We do commercial interior. Federal is our largest client.",
       details: [
-        "Identify hiring managers from competitor job postings",
-        "Engage with personalized comments on their public content",
-        "Build relationships through meaningful conversations",
-        "Convert warm leads into meetings and demos",
-        "Provide detailed contact information for sales follow-up"
+        "Identify potential commercial and government clients planning to remodel",
+        "Connect with decision makers at the right time in their planning cycle",
+        "Build relationships through meaningful conversations before they're in-market",
+        "Provide detailed information about current office design trends and solutions",
+        "Generate meetings with facility managers and procurement officers"
       ],
-      results: "Increased conversion rates from competitor leads by 3x compared to traditional outreach methods."
+      results: "Increased engagement with key decision makers at federal agencies and commercial enterprises by identifying them before they've selected a design partner."
     },
     {
-      id: "social-monitoring",
-      title: "Social Media Monitoring",
-      description: "Never miss a mention of your brand or recruitment opportunity",
-      quote: "Every time people mention us, we can automatically reply and etc. Ensuring that we are where we can ensure every mention that mention our brand.",
+      id: "architect-partnerships",
+      title: "Architect & Designer Partnerships",
+      description: "Build strong referral relationships with architects and commercial realtors",
+      quote: "You won't lease a space on your own. So one is the commercial realtor networking with those people that are building clients.",
       details: [
-        "Monitor all social media platforms for brand mentions",
-        "Automatically respond to comments and inquiries",
-        "Identify and address potential issues before they escalate",
-        "Turn complaints into opportunities for exceptional service",
-        "Gather intelligence on market trends and competitor activity"
+        "Identify and connect with architects working on commercial projects",
+        "Build relationships with commercial realtors handling new leases",
+        "Create a consistent referral pipeline through strategic partnerships",
+        "Establish Ori as the go-to resource for furniture and interior solutions",
+        "Generate warm introductions to clients in the planning stage"
       ],
-      results: "Reduced response time from hours to minutes and increased positive brand sentiment by 40%."
+      results: "Created a reliable stream of warm leads through architect and realtor partnerships, increasing project win rates by 35%."
     },
     {
-      id: "content-strategy",
-      title: "Content Strategy & Distribution",
-      description: "Build authority and visibility across multiple platforms",
-      quote: "We need to ensure that our ROI is manageable, our CAC is healthy, our unit economic is also good.",
+      id: "government-contracts",
+      title: "Government Contract Opportunities",
+      description: "Stay ahead of government contract opportunities and decision makers",
+      quote: "Where I'm located is where it's called Redstone Marshall. The federal agencies make decisions, furniture, Army Corps of Engineers, Missile Command.",
       details: [
-        "Create engaging, industry-specific content that resonates with hiring managers",
-        "Distribute content strategically across LinkedIn, Twitter/X, and niche platforms",
-        "Drive engagement through targeted comment campaigns",
-        "Build retargeting audiences from content engagement",
-        "Convert content consumers into sales conversations"
+        "Monitor federal contract opportunities before they're publicly announced",
+        "Connect with key decision-makers in government procurement",
+        "Build relationships with government facility managers",
+        "Position Ori as the expert in government workspace design",
+        "Identify budget cycles and planning periods for new projects"
       ],
-      results: "Generated 2.5x more qualified leads with 30% lower acquisition costs through strategic content distribution."
+      results: "Gained early access to government contract opportunities, increasing bid success rates and expanding federal client portfolio."
     },
     {
-      id: "recruitment",
-      title: "Recruitment Acceleration",
-      description: "Fill positions faster with qualified candidates",
-      quote: "The job is available only for certain days because they need to fill it within X number of days.",
+      id: "moving-clients",
+      title: "New Space Identification",
+      description: "Identify companies moving to or building new office spaces",
+      quote: "We try to find clients that are needing to either remodel or update or they're moving to a new space.",
       details: [
-        "Identify and engage with potential candidates in real-time",
-        "Automate initial screening through personalized messaging",
-        "Accelerate the hiring process with instant notifications",
-        "Reduce time-to-fill for critical positions",
-        "Build a pipeline of pre-qualified candidates for future openings"
+        "Monitor funding announcements for companies likely to expand",
+        "Track commercial real estate transactions for office relocations",
+        "Connect with operations leaders during early planning phases",
+        "Provide educational content about efficient space utilization",
+        "Offer consultation services for companies in transition"
       ],
-      results: "Reduced average time-to-fill positions from 15 days to just 5 days while improving candidate quality."
+      results: "Created a proactive lead generation system that identifies companies 3-6 months before they start their furniture procurement process."
     }
   ];
 
@@ -91,7 +92,7 @@ const UseCases = () => {
               className="text-center max-w-3xl"
             >
               <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-                <span className="text-gradient">JobStreet Express</span> Use Cases
+                <span className="text-gradient">Ori</span> Use Cases
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
                 See how ManyMangoes can solve your specific challenges with our proven approach.
@@ -105,7 +106,7 @@ const UseCases = () => {
               className="flex justify-center relative w-full max-w-md"
             >
               <SphereCanvas 
-                color="#9b87f5" 
+                color="#F1AB1C" 
                 particleCount={150}
                 size={200}
                 className="mx-auto"
@@ -123,7 +124,7 @@ const UseCases = () => {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl mx-auto"
           >
-            <Tabs defaultValue="lead-generation" className="w-full">
+            <Tabs defaultValue="commercial-design" className="w-full">
               <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-8">
                 {useCases.map((useCase) => (
                   <TabsTrigger 
@@ -146,8 +147,8 @@ const UseCases = () => {
                     <CardContent>
                       <QuoteHighlight 
                         quote={useCase.quote} 
-                        author="Galen Leslie" 
-                        role="Segment Owner, JobStreet Express" 
+                        author="Brad Glover" 
+                        role="VP of Sales, Ori" 
                       />
                       
                       <div className="mt-8">
@@ -188,7 +189,7 @@ const UseCases = () => {
           >
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Lead Generation?</h2>
             <p className="text-muted-foreground mb-8">
-              ManyMangoes is ready to implement these solutions specifically for JobStreet Express.
+              ManyMangoes is ready to implement these solutions specifically for Ori.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
