@@ -14,13 +14,14 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import SphereCanvas from '@/components/SphereCanvas';
 import QuoteHighlight from '@/components/QuoteHighlight';
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, Check, BriefcaseBusiness, Users, GalleryVerticalEnd, Building } from 'lucide-react';
 
 const UseCases = () => {
   const useCases = [
     {
       id: "commercial-design",
       title: "Commercial Interior Design",
+      icon: <BriefcaseBusiness className="h-5 w-5 text-primary" />,
       description: "Identify and engage with clients needing interior design services",
       quote: "We do commercial interior. Federal is our largest client.",
       details: [
@@ -35,6 +36,7 @@ const UseCases = () => {
     {
       id: "architect-partnerships",
       title: "Architect & Designer Partnerships",
+      icon: <Users className="h-5 w-5 text-primary" />,
       description: "Build strong referral relationships with architects and commercial realtors",
       quote: "You won't lease a space on your own. So one is the commercial realtor networking with those people that are building clients.",
       details: [
@@ -49,6 +51,7 @@ const UseCases = () => {
     {
       id: "government-contracts",
       title: "Government Contract Opportunities",
+      icon: <GalleryVerticalEnd className="h-5 w-5 text-primary" />,
       description: "Stay ahead of government contract opportunities and decision makers",
       quote: "Where I'm located is where it's called Redstone Marshall. The federal agencies make decisions, furniture, Army Corps of Engineers, Missile Command.",
       details: [
@@ -63,6 +66,7 @@ const UseCases = () => {
     {
       id: "moving-clients",
       title: "New Space Identification",
+      icon: <Building className="h-5 w-5 text-primary" />,
       description: "Identify companies moving to or building new office spaces",
       quote: "We try to find clients that are needing to either remodel or update or they're moving to a new space.",
       details: [
@@ -125,24 +129,30 @@ const UseCases = () => {
             className="max-w-4xl mx-auto"
           >
             <Tabs defaultValue="commercial-design" className="w-full">
-              <TabsList className="grid grid-cols-1 md:grid-cols-4 gap-2 mb-8 use-case-tabs">
+              <TabsList className="grid grid-cols-1 md:grid-cols-4 gap-3 mb-10 use-case-tabs">
                 {useCases.map((useCase) => (
                   <TabsTrigger 
                     key={useCase.id}
                     value={useCase.id}
-                    className="use-case-trigger px-3 py-3 text-sm"
+                    className="use-case-trigger"
                   >
-                    {useCase.title}
+                    <span className="flex flex-col items-center gap-2">
+                      {useCase.icon}
+                      {useCase.title}
+                    </span>
                   </TabsTrigger>
                 ))}
               </TabsList>
               
               {useCases.map((useCase) => (
                 <TabsContent key={useCase.id} value={useCase.id}>
-                  <Card>
+                  <Card className="border border-muted/50 shadow-lg">
                     <CardHeader>
-                      <CardTitle className="text-2xl">{useCase.title}</CardTitle>
-                      <CardDescription>{useCase.description}</CardDescription>
+                      <CardTitle className="text-2xl flex items-center gap-3">
+                        {useCase.icon}
+                        {useCase.title}
+                      </CardTitle>
+                      <CardDescription className="text-base">{useCase.description}</CardDescription>
                     </CardHeader>
                     <CardContent>
                       <QuoteHighlight 
@@ -157,7 +167,7 @@ const UseCases = () => {
                           {useCase.details.map((detail, index) => (
                             <li key={index} className="flex items-start">
                               <div className="mr-3 mt-1">
-                                <Check className="h-5 w-5 text-tech-300" />
+                                <Check className="h-5 w-5 text-primary" />
                               </div>
                               <span>{detail}</span>
                             </li>
@@ -165,7 +175,7 @@ const UseCases = () => {
                         </ul>
                       </div>
                       
-                      <div className="mt-8 p-4 bg-tech-900/20 border border-tech-300/10 rounded-lg">
+                      <div className="mt-8 p-4 bg-card border border-tech-300/10 rounded-lg shadow-inner">
                         <h4 className="font-semibold mb-2">Expected Results</h4>
                         <p>{useCase.results}</p>
                       </div>
