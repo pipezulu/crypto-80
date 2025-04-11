@@ -97,12 +97,12 @@ const UseCases = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-grid py-12">
+      <section className="relative overflow-hidden bg-grid py-8">
         <div className="absolute left-1/3 top-1/4 transform -translate-x-1/2 -translate-y-1/2 blur-3xl opacity-20 bg-gradient-radial-tech w-96 h-96"></div>
         <div className="absolute right-1/3 bottom-1/4 transform translate-x-1/2 translate-y-1/2 blur-3xl opacity-20 bg-gradient-radial-mango w-96 h-96"></div>
         
-        <div className="container mx-auto px-4 py-12 relative z-10">
-          <div className="flex flex-col items-center gap-8">
+        <div className="container mx-auto px-4 py-8 relative z-10">
+          <div className="flex flex-col items-center gap-6">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -112,7 +112,7 @@ const UseCases = () => {
               <h1 className="text-4xl sm:text-5xl font-bold mb-4">
                 <span className="text-gradient">Ori</span> Use Cases
               </h1>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-xl text-muted-foreground mb-6">
                 See how ManyMangoes can solve your specific challenges with our proven LinkedIn approach.
               </p>
             </motion.div>
@@ -121,7 +121,7 @@ const UseCases = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="flex justify-center relative w-full max-w-md"
+              className="flex justify-center relative w-full max-w-md mb-8"
             >
               <SphereCanvas 
                 color="#F1AB1C" 
@@ -134,8 +134,8 @@ const UseCases = () => {
         </div>
       </section>
 
-      {/* Tabs Section */}
-      <section className="py-20 px-4 bg-card/30 backdrop-blur-sm">
+      {/* Tabs Section - Properly Spaced */}
+      <section className="py-12 px-4 bg-card/30 backdrop-blur-sm">
         <div className="container mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -143,7 +143,7 @@ const UseCases = () => {
             className="max-w-5xl mx-auto"
           >
             <Tabs defaultValue="commercial-design" className="w-full">
-              <TabsList className="use-case-tabs mb-16">
+              <TabsList className="use-case-tabs">
                 {useCases.map((useCase) => (
                   <TabsTrigger 
                     key={useCase.id}
