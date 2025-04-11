@@ -95,7 +95,7 @@ const UseCases = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pb-20">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-grid py-8">
         <div className="absolute left-1/3 top-1/4 transform -translate-x-1/2 -translate-y-1/2 blur-3xl opacity-20 bg-gradient-radial-tech w-96 h-96"></div>
@@ -135,15 +135,15 @@ const UseCases = () => {
       </section>
 
       {/* Tabs Section - Properly Spaced */}
-      <section className="py-12 px-4 bg-card/30 backdrop-blur-sm">
+      <section className="py-12 px-4 bg-card/30 backdrop-blur-sm relative">
         <div className="container mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="max-w-5xl mx-auto"
           >
-            <Tabs defaultValue="commercial-design" className="w-full">
-              <TabsList className="use-case-tabs">
+            <Tabs defaultValue="commercial-design" className="w-full flex flex-col">
+              <TabsList className="use-case-tabs mb-8">
                 {useCases.map((useCase) => (
                   <TabsTrigger 
                     key={useCase.id}
@@ -160,56 +160,58 @@ const UseCases = () => {
                 ))}
               </TabsList>
               
-              {useCases.map((useCase) => (
-                <TabsContent key={useCase.id} value={useCase.id} className="use-case-content">
-                  <Card className="border-none shadow-2xl bg-gradient-to-b from-card/80 to-card/40 backdrop-blur">
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-3xl flex items-center gap-4">
-                        <div className="bg-primary/20 p-3 rounded-full">
-                          {useCase.icon}
-                        </div>
-                        {useCase.title}
-                      </CardTitle>
-                      <CardDescription className="text-lg mt-2">{useCase.description}</CardDescription>
-                    </CardHeader>
-                    <CardContent className="space-y-8">
-                      <QuoteHighlight 
-                        quote={useCase.quote} 
-                        author="Brad Glover" 
-                        role="VP of Sales, Ori" 
-                      />
-                      
-                      <div className="mt-8">
-                        <h3 className="text-2xl font-semibold mb-6 text-gradient">How ManyMangoes' LinkedIn Strategy Can Help</h3>
-                        <ul className="space-y-4">
-                          {useCase.details.map((detail, index) => (
-                            <li key={index} className="flex items-start">
-                              <div className="mr-4 mt-1">
-                                <div className="rounded-full p-1 bg-primary/20">
-                                  <Check className="h-5 w-5 text-primary" />
+              <div className="relative">
+                {useCases.map((useCase) => (
+                  <TabsContent key={useCase.id} value={useCase.id} className="use-case-content">
+                    <Card className="border-none shadow-2xl bg-gradient-to-b from-card/80 to-card/40 backdrop-blur">
+                      <CardHeader className="pb-2">
+                        <CardTitle className="text-3xl flex items-center gap-4">
+                          <div className="bg-primary/20 p-3 rounded-full">
+                            {useCase.icon}
+                          </div>
+                          {useCase.title}
+                        </CardTitle>
+                        <CardDescription className="text-lg mt-2">{useCase.description}</CardDescription>
+                      </CardHeader>
+                      <CardContent className="space-y-8">
+                        <QuoteHighlight 
+                          quote={useCase.quote} 
+                          author="Brad Glover" 
+                          role="VP of Sales, Ori" 
+                        />
+                        
+                        <div className="mt-8">
+                          <h3 className="text-2xl font-semibold mb-6 text-gradient">How ManyMangoes' LinkedIn Strategy Can Help</h3>
+                          <ul className="space-y-4">
+                            {useCase.details.map((detail, index) => (
+                              <li key={index} className="flex items-start">
+                                <div className="mr-4 mt-1">
+                                  <div className="rounded-full p-1 bg-primary/20">
+                                    <Check className="h-5 w-5 text-primary" />
+                                  </div>
                                 </div>
-                              </div>
-                              <span className="text-base">{detail}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      <div className="mt-8 p-6 bg-muted/20 border border-primary/30 rounded-xl shadow-inner">
-                        <h4 className="font-semibold text-xl mb-4 text-primary">Expected Results from LinkedIn Strategy</h4>
-                        <p className="text-base">{useCase.results}</p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </TabsContent>
-              ))}
+                                <span className="text-base">{detail}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        
+                        <div className="mt-8 p-6 bg-muted/20 border border-primary/30 rounded-xl shadow-inner">
+                          <h4 className="font-semibold text-xl mb-4 text-primary">Expected Results from LinkedIn Strategy</h4>
+                          <p className="text-base">{useCase.results}</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </TabsContent>
+                ))}
+              </div>
             </Tabs>
           </motion.div>
         </div>
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-card">
+      <section className="py-20 bg-card mt-12">
         <div className="container mx-auto px-4">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
