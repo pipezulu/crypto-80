@@ -125,12 +125,12 @@ const UseCases = () => {
             className="max-w-4xl mx-auto"
           >
             <Tabs defaultValue="commercial-design" className="w-full">
-              <TabsList className="grid grid-cols-1 md:grid-cols-4 gap-1 mb-8">
+              <TabsList className="grid grid-cols-1 md:grid-cols-4 gap-2 mb-8 use-case-tabs">
                 {useCases.map((useCase) => (
                   <TabsTrigger 
                     key={useCase.id}
                     value={useCase.id}
-                    className="data-[state=active]:bg-tech-300/20 data-[state=active]:text-tech-300 px-2 py-3 text-sm font-medium"
+                    className="use-case-trigger px-3 py-3 text-sm"
                   >
                     {useCase.title}
                   </TabsTrigger>
