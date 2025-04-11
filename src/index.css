@@ -129,3 +129,16 @@
     -1px 1px 0 rgba(241, 171, 28, 0.3),
     1px 1px 0 rgba(241, 171, 28, 0.3);
 }
+
+/* Enhanced Tab Styles */
+.tabs-list {
+  background-color: rgba(26, 31, 44, 0.5);
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+[data-state=active].tabs-trigger {
+  background-color: rgba(241, 171, 28, 0.3);
+  color: #F1AB1C;
+  font-weight: 600;
+}

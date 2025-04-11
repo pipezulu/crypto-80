@@ -28,7 +28,7 @@ const QuoteHighlight: React.FC<QuoteHighlightProps> = ({
       </div>
       
       <div className="pt-6">
-        <p className="text-lg italic text-foreground/90 mb-4">"{quote}"</p>
+        <p className="text-lg italic text-foreground/90 mb-4 font-medium">"{quote}"</p>
         
         <div className="flex items-center">
           <div className="h-8 w-8 rounded-full bg-gradient-mango flex items-center justify-center text-tech-900 font-bold">

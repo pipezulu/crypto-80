@@ -95,7 +95,7 @@ const UseCases = () => {
                 <span className="text-gradient">Ori</span> Use Cases
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                See how ManyMangoes can solve your specific challenges with our proven approach.
+                See how ManyMangoes can solve your specific challenges with our proven LinkedIn approach.
               </p>
             </motion.div>
             
@@ -125,12 +125,12 @@ const UseCases = () => {
             className="max-w-4xl mx-auto"
           >
             <Tabs defaultValue="commercial-design" className="w-full">
-              <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-8">
+              <TabsList className="grid grid-cols-1 md:grid-cols-4 gap-1 mb-8">
                 {useCases.map((useCase) => (
                   <TabsTrigger 
                     key={useCase.id}
                     value={useCase.id}
-                    className="data-[state=active]:bg-tech-300/20 data-[state=active]:text-tech-300"
+                    className="data-[state=active]:bg-tech-300/20 data-[state=active]:text-tech-300 px-2 py-3 text-sm font-medium"
                   >
                     {useCase.title}
                   </TabsTrigger>
@@ -187,9 +187,9 @@ const UseCases = () => {
             transition={{ delay: 0.4 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Lead Generation?</h2>
+            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your LinkedIn Lead Generation?</h2>
             <p className="text-muted-foreground mb-8">
-              ManyMangoes is ready to implement these solutions specifically for Ori.
+              ManyMangoes is ready to implement these LinkedIn solutions specifically for Ori.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -17,10 +17,10 @@ const comparisons: ComparisonItem[] = [{
   linkedin: "Variable, often low quality",
   manymangoes: "Immediate traction from Day 1"
 }, {
-  feature: "Community Engagement",
+  feature: "LinkedIn Engagement",
   seo: <div className="flex justify-center"><XCircle className="h-5 w-5 text-destructive" /></div>,
-  linkedin: "One-channel, spammy outreach",
-  manymangoes: "Multi-platform visibility & trust"
+  linkedin: "One-way, generic outreach",
+  manymangoes: "Two-way quality conversations"
 }, {
   feature: "Personalization",
   seo: "Difficult to personalize",
@@ -48,7 +48,7 @@ const ComparisonTable: React.FC = () => {
             <TableHead className="w-[250px]">Feature</TableHead>
             <TableHead className="text-center">Traditional SEO</TableHead>
             <TableHead className="text-center">Typical LinkedIn Campaigns</TableHead>
-            <TableHead className="text-center bg-tech-900/30">ManyMangoes Approach</TableHead>
+            <TableHead className="text-center bg-tech-900/30">ManyMangoes LinkedIn Approach</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
