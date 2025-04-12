@@ -11,7 +11,7 @@ const UseCaseTabs: React.FC<UseCaseTabsProps> = ({ useCases }) => {
   return (
     <Tabs defaultValue={useCases[0]?.id} className="w-full">
       <div className="w-full overflow-hidden">
-        <TabsList className="horizontal-nav-tabs">
+        <TabsList className="horizontal-nav-tabs w-full">
           {useCases.map((useCase) => (
             <TabsTrigger 
               key={useCase.id}
