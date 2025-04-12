@@ -181,56 +181,23 @@
 }
 
 .horizontal-nav-tab[data-state="active"] {
-  background-color: transparent;
   color: #F1AB1C;
-  box-shadow: none;
-}
-
-.horizontal-nav-tab:hover:not([data-state="active"]) {
-  background-color: transparent;
-}
-
-.horizontal-nav-tab-icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0.5rem;
-  border-radius: 50%;
-  background-color: transparent;
-  border: none;
-  transition: all 0.2s ease;
 }
 
 .horizontal-nav-tab[data-state="active"] .horizontal-nav-tab-icon {
-  background-color: transparent;
-}
-
-.horizontal-nav-tab-icon svg {
-  width: 1.25rem;
-  height: 1.25rem;
-  color: #9A9CA8;
-  transition: all 0.2s ease;
+  border: 2px solid #F1AB1C;
+  box-shadow: 0 0 10px rgba(241, 171, 28, 0.5);
+  border-radius: 50%;
 }
 
 .horizontal-nav-tab[data-state="active"] .horizontal-nav-tab-icon svg {
   color: #F1AB1C;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
 }
 
-.horizontal-nav-content {
-  position: relative;
-  z-index: 5;
-  border-radius: 1.5rem;
-  overflow: hidden;
-}
-
-.use-case-content-container {
-  border: 1px solid rgba(241, 171, 28, 0.3);
-  border-radius: 1.5rem;
-  background-color: rgba(22, 25, 43, 0.7);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+.horizontal-nav-tab-icon svg {
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
