@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -184,7 +185,7 @@ const Phase2 = () => {
               <div className="mb-6">
                 <h4 className="font-medium mb-2 text-sm uppercase text-tech-300">Your concern:</h4>
                 <p className="italic text-muted-foreground mb-4">
-                  "If we spend one additional days to clean all the leads that is coming that we need to contact, maybe it's gone by the time that we call them."
+                  "We try to find clients that are needing to either remodel or update or they're moving to a new space. If we spend too much time on unqualified leads, we miss the ones who are ready to buy."
                 </p>
                 
                 <h4 className="font-medium mb-2 text-sm uppercase text-tech-300">Our solution:</h4>
