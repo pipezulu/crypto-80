@@ -1,3 +1,4 @@
+
 .horizontal-nav-tabs {
   display: flex;
   align-items: center;
@@ -27,13 +28,15 @@
   border: 1px solid rgba(241, 171, 28, 0.1);
   border-radius: 6px;
   height: 100%;
-  flex: 1; /* Ensure equal distribution */
+  flex: 1; /* Make each tab take equal width */
+  min-width: 0; /* Allow tabs to shrink if needed */
 }
 
 .horizontal-nav-tab-icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%; /* Make the icon container take full width of tab */
 }
 
 @media (max-width: 768px) {
