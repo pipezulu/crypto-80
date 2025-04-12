@@ -17,11 +17,11 @@ const UseCaseTabs: React.FC<UseCaseTabsProps> = ({ useCases }) => {
               key={useCase.id}
               value={useCase.id}
               className="horizontal-nav-tab"
+              aria-label={useCase.title}
             >
-              <div className="horizontal-nav-tab-icon flex-shrink-0">
+              <div className="horizontal-nav-tab-icon">
                 {useCase.icon}
               </div>
-              <span className="text-xs truncate min-w-0">{useCase.title}</span>
             </TabsTrigger>
           ))}
         </TabsList>
