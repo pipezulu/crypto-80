@@ -2,7 +2,7 @@
 .horizontal-nav-tabs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
+  grid-template-rows: repeat(2, auto);
   gap: 0.5rem;
   margin-bottom: 2rem;
   background-color: rgba(22, 25, 43, 0.9);
@@ -10,6 +10,7 @@
   border: 1px solid rgba(241, 171, 28, 0.2);
   border-radius: 8px;
   max-width: 100%;
+  width: 100%;
 }
 
 .horizontal-nav-tab {
@@ -34,6 +35,7 @@
 @media (max-width: 768px) {
   .horizontal-nav-tabs {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
     gap: 0.5rem;
     padding: 0.5rem;
   }
