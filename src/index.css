@@ -58,3 +58,36 @@
     padding: 0.25rem;
   }
 }
+
+/* Additional CSS fixes to ensure layout and responsive design work properly */
+.bg-grid {
+  position: relative;
+  background-size: 20px 20px;
+  background-image: radial-gradient(circle, #f0f0f0 1px, rgba(0, 0, 0, 0) 1px);
+}
+
+.bg-gradient-radial-tech {
+  background: radial-gradient(circle, rgba(241, 171, 28, 0.3) 0%, rgba(241, 148, 29, 0.1) 70%);
+}
+
+.bg-gradient-radial-mango {
+  background: radial-gradient(circle, rgba(255, 228, 155, 0.3) 0%, rgba(241, 171, 28, 0.1) 70%);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #F1AB1C 0%, #F7941D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.use-case-content-container {
+  transition: all 0.3s ease;
+}
+
+.horizontal-nav-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
