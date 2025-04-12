@@ -14,7 +14,7 @@ const UseCases = () => {
 
       {/* Use Cases Tabs Section */}
       <section className="py-12 px-4 bg-card/30 backdrop-blur-sm relative">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-6xl">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

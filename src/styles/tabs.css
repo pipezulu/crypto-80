@@ -24,16 +24,15 @@
 
 .horizontal-nav-tabs {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 0;
   margin-bottom: 2rem;
   background-color: rgba(22, 25, 43, 0.9);
   padding: 0.25rem;
   border: 1px solid rgba(241, 171, 28, 0.2);
   border-radius: 8px;
-  overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
+  overflow-x: visible;
   max-width: 100%;
 }
 
@@ -118,16 +117,15 @@
 
 @media (max-width: 768px) {
   .horizontal-nav-tabs {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    overflow-x: visible;
+    justify-content: center;
     padding: 0.25rem;
   }
   
   .horizontal-nav-tab {
     padding: 0.5rem;
     min-width: auto;
-    flex: 0 0 auto;
     white-space: nowrap;
   }
   
