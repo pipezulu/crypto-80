@@ -159,7 +159,6 @@ const UseCases = () => {
                     <div className="horizontal-nav-tab-icon">
                       {useCase.icon}
                     </div>
-                    <span className="text-sm font-medium">{useCase.title}</span>
                   </TabsTrigger>
                 ))}
               </TabsList>
