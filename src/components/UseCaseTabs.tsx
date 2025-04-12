@@ -10,20 +10,22 @@ interface UseCaseTabsProps {
 const UseCaseTabs: React.FC<UseCaseTabsProps> = ({ useCases }) => {
   return (
     <Tabs defaultValue={useCases[0]?.id} className="w-full">
-      <TabsList className="horizontal-nav-tabs">
-        {useCases.map((useCase) => (
-          <TabsTrigger 
-            key={useCase.id}
-            value={useCase.id}
-            className="horizontal-nav-tab"
-          >
-            <div className="horizontal-nav-tab-icon">
-              {useCase.icon}
-            </div>
-            <span className="text-xs">{useCase.title}</span>
-          </TabsTrigger>
-        ))}
-      </TabsList>
+      <div className="w-full overflow-hidden">
+        <TabsList className="horizontal-nav-tabs">
+          {useCases.map((useCase) => (
+            <TabsTrigger 
+              key={useCase.id}
+              value={useCase.id}
+              className="horizontal-nav-tab"
+            >
+              <div className="horizontal-nav-tab-icon">
+                {useCase.icon}
+              </div>
+              <span className="text-xs truncate">{useCase.title}</span>
+            </TabsTrigger>
+          ))}
+        </TabsList>
+      </div>
       
       <div className="mt-4">
         {useCases.map((useCase) => (
