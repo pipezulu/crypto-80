@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import {
@@ -16,8 +16,6 @@ import QuoteHighlight from '@/components/QuoteHighlight';
 import { ArrowRight, Check, Briefcase, Users, FileText, Building, LayoutDashboard } from 'lucide-react';
 
 const UseCases = () => {
-  const [activeTab, setActiveTab] = useState("commercial-design");
-
   const useCases = [
     {
       id: "commercial-design",
@@ -144,12 +142,7 @@ const UseCases = () => {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-5xl mx-auto"
           >
-            <Tabs 
-              defaultValue="commercial-design" 
-              value={activeTab}
-              onValueChange={setActiveTab}
-              className="horizontal-nav"
-            >
+            <Tabs defaultValue="commercial-design" className="horizontal-nav">
               <TabsList className="horizontal-nav-tabs">
                 {useCases.map((useCase) => (
                   <TabsTrigger 
@@ -160,6 +153,7 @@ const UseCases = () => {
                     <div className="horizontal-nav-tab-icon">
                       {useCase.icon}
                     </div>
+                    <span className="text-sm font-medium">{useCase.title}</span>
                   </TabsTrigger>
                 ))}
               </TabsList>
