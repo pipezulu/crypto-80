@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -133,7 +134,7 @@ const UseCases = () => {
         </div>
       </section>
 
-      {/* Tabs Section - Properly Spaced */}
+      {/* Simplified Horizontal Navigation */}
       <section className="py-12 px-4 bg-card/30 backdrop-blur-sm relative">
         <div className="container mx-auto">
           <motion.div 
@@ -141,28 +142,26 @@ const UseCases = () => {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-5xl mx-auto"
           >
-            <Tabs defaultValue="commercial-design" className="w-full flex flex-col">
-              <TabsList className="use-case-tabs">
+            <Tabs defaultValue="commercial-design" className="horizontal-nav">
+              <TabsList className="horizontal-nav-tabs">
                 {useCases.map((useCase) => (
                   <TabsTrigger 
                     key={useCase.id}
                     value={useCase.id}
-                    className="use-case-trigger"
+                    className="horizontal-nav-tab"
                   >
-                    <div className="use-case-trigger-content">
-                      <div className="use-case-trigger-icon">
-                        {useCase.icon}
-                      </div>
-                      <span className="use-case-trigger-label">{useCase.title}</span>
+                    <div className="horizontal-nav-tab-icon">
+                      {useCase.icon}
                     </div>
+                    <span className="text-sm font-medium">{useCase.title}</span>
                   </TabsTrigger>
                 ))}
               </TabsList>
               
-              <div className="mt-4 relative">
+              <div className="horizontal-nav-content">
                 {useCases.map((useCase) => (
-                  <TabsContent key={useCase.id} value={useCase.id} className="use-case-content">
-                    <Card className="border-none shadow-2xl bg-gradient-to-b from-card/80 to-card/40 backdrop-blur">
+                  <TabsContent key={useCase.id} value={useCase.id}>
+                    <Card className="use-case-content-container border-none shadow-2xl bg-gradient-to-b from-card/80 to-card/40 backdrop-blur">
                       <CardHeader className="pb-2">
                         <CardTitle className="text-3xl flex items-center gap-4">
                           <div className="bg-primary/20 p-3 rounded-full">

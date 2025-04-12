@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -184,7 +185,7 @@ const Phase1 = () => {
               <div className="mb-6">
                 <h4 className="font-medium mb-2 text-sm uppercase text-tech-300">Your challenge:</h4>
                 <p className="italic text-muted-foreground mb-4">
-                  "We need to ensure that our ROI is manageable, our CAC is healthy, our unit economic is also good."
+                  "We do commercial interior. Federal is our largest client. Where I'm located is where it's called Redstone Marshall. The federal agencies make decisions, furniture, Army Corps of Engineers, Missile Command."
                 </p>
                 
                 <h4 className="font-medium mb-2 text-sm uppercase text-tech-300">Our solution:</h4>
