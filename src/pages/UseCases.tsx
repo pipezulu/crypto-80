@@ -14,11 +14,11 @@ const UseCases = () => {
 
       {/* Use Cases Tabs Section */}
       <section className="py-12 px-4 bg-card/30 backdrop-blur-sm relative">
-        <div className="container mx-auto">
+        <div className="container mx-auto max-w-5xl">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mx-auto"
+            className="w-full"
           >
             <UseCaseTabs useCases={useCasesData} />
           </motion.div>
