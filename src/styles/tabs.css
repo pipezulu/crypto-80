@@ -12,6 +12,7 @@
   max-width: 100%;
   width: 100%;
   overflow: hidden;
+  justify-content: space-between; /* Add space between icons */
 }
 
 .horizontal-nav-tab {
@@ -42,5 +43,6 @@
     grid-template-rows: repeat(3, auto);
     gap: 0.5rem;
     padding: 0.5rem;
+    justify-content: space-between;
   }
 }
