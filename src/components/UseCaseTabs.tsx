@@ -10,7 +10,7 @@ interface UseCaseTabsProps {
 const UseCaseTabs: React.FC<UseCaseTabsProps> = ({ useCases }) => {
   return (
     <Tabs defaultValue={useCases[0]?.id} className="horizontal-nav w-full">
-      <TabsList className="horizontal-nav-tabs w-full">
+      <TabsList className="horizontal-nav-tabs">
         {useCases.map((useCase) => (
           <TabsTrigger 
             key={useCase.id}
