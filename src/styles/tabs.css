@@ -1,8 +1,8 @@
 
 .horizontal-nav-tabs {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
+  display: flex; /* Change from grid to flex */
+  align-items: center;
+  justify-content: space-between; /* Distribute icons evenly */
   gap: 0.5rem;
   margin-bottom: 2rem;
   background-color: rgba(22, 25, 43, 0.9);
@@ -12,7 +12,6 @@
   max-width: 100%;
   width: 100%;
   overflow: hidden;
-  justify-content: space-between; /* Add space between icons */
 }
 
 .horizontal-nav-tab {
@@ -29,6 +28,7 @@
   border: 1px solid rgba(241, 171, 28, 0.1);
   border-radius: 6px;
   height: 100%;
+  flex: 1; /* Ensure equal width for tabs */
 }
 
 .horizontal-nav-tab-icon {
@@ -39,10 +39,14 @@
 
 @media (max-width: 768px) {
   .horizontal-nav-tabs {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 0.5rem;
     padding: 0.5rem;
-    justify-content: space-between;
+  }
+
+  .horizontal-nav-tab {
+    flex: 0 1 calc(50% - 0.5rem); /* Two columns on mobile */
   }
 }
