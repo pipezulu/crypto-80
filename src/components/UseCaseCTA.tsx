@@ -19,12 +19,11 @@ const UseCaseCTA: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-5 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity text-lg py-6 px-8">
-              Request a Proposal
-            </Button>
-            <Button variant="outline" size="lg" className="border-2 border-primary/50 text-lg py-6 px-8 hover:bg-primary/10">
-              Schedule a Demo
-            </Button>
+            <a href="https://meet.manymangoes.com/felipe" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <Button size="lg" className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity text-lg py-6 px-8">
+                Schedule a Demo
+              </Button>
+            </a>
           </div>
         </motion.div>
       </div>
