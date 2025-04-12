@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -34,7 +33,7 @@ const Index = () => {
                   The <span className="text-gradient">ManyMangoes</span> 90-Day Rollout Plan
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8">
-                  Build a powerful, omnichannel lead-gen engine in 90 days with immediate results starting from Day 1.
+                  Transform your sales pipeline from scattered efforts to a predictable, high-converting lead generation machine that turns conversations into qualified meetings.
                 </p>
                 
                 <Button onClick={scrollToQuote} variant="outline" size="lg" className="flex items-center justify-center gap-2">
