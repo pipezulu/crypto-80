@@ -180,12 +180,12 @@ const Phase3 = () => {
               <div className="mb-6">
                 <h4 className="font-medium mb-2 text-sm uppercase text-tech-300">Your goal:</h4>
                 <p className="italic text-muted-foreground mb-4">
-                  "We try to find clients that are needing to either remodel or update or they're moving to a new space."
+                  "Right now the leads that kind of come in, I probably get on average two to three meetings a week. If we do a webinar, there's potentially anywhere from 10 to 12ish, but our typical sales cycle from point of contact to selling a machine is like a year."
                 </p>
                 
                 <h4 className="font-medium mb-2 text-sm uppercase text-tech-300">Our solution:</h4>
                 <p className="text-foreground">
-                  By Phase 3, your lead generation engine will be fully automated to identify companies planning remodels or relocations before your competitors know about them. Our system monitors company announcements, funding news, and real estate transactions to alert you to potential clients at the earliest planning stages.
+                  By Phase 3, your lead generation engine will be fully automated to identify defense OEMs exploring metal parts manufacturing solutions before your competitors know about them. Our system increases your meeting volume from 2-3 to 10-15 per week, while shortening your sales cycle by connecting you with engineering leaders earlier in their decision process.
                 </p>
               </div>
             </div>
@@ -204,7 +204,7 @@ const Phase3 = () => {
           >
             <h2 className="text-3xl font-bold mb-4">Ready to get started?</h2>
             <p className="text-muted-foreground mb-8">
-              See how ManyMangoes can help JobStreet Express with specific use cases.
+              See how ManyMangoes can help SPEE3D with specific defense OEM use cases.
             </p>
             
             <Button asChild size="lg" className="bg-gradient-tech hover:opacity-90 transition-opacity">

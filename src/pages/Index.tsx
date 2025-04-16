@@ -30,10 +30,10 @@ const Index = () => {
             >
               <div className="mb-6">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
-                  The <span className="text-gradient">ManyMangoes</span> 90-Day Rollout Plan
+                  The <span className="text-gradient">ManyMangoes</span> 90-Day Rollout Plan for <span className="text-gradient">SPEE3D</span>
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8">
-                  Transform your sales pipeline from scattered efforts to a predictable, high-converting lead generation machine that turns conversations into qualified meetings.
+                  Transform your defense OEM sales pipeline from scattered efforts to a predictable, high-converting lead generation machine that turns conversations into qualified meetings for your Cold Spray Additive Manufacturing solutions.
                 </p>
                 
                 <Button onClick={scrollToQuote} variant="outline" size="lg" className="flex items-center justify-center gap-2">
@@ -74,9 +74,9 @@ const Index = () => {
       <section id="quote-section" className="bg-card py-12">
         <div className="container mx-auto px-4">
           <QuoteHighlight 
-            quote="We're always looking for new leads, which is always good. We're always trying to find new business. We try to find clients that are needing to either remodel or update or they're moving to a new space."
-            author="Brad Glover"
-            role="VP of Sales, Ori"
+            quote="We're trying to focus on defense OEMs. Each of us have like 15 to 16 companies that we want to try to target. It's challenging to get into the right contacts with these players, especially since they cut our travel budget."
+            author="Jennifer Howe"
+            role="Sales, SPEE3D"
             delay={0.2}
           />
         </div>
@@ -227,7 +227,7 @@ const Index = () => {
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Lead Generation?</h2>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
               Start generating high-quality leads from day one with our proven 90-day rollout plan.
-              Let ManyMangoes help you build a powerful, omnichannel lead-gen engine for Ori.
+              Let ManyMangoes help you build a powerful, omnichannel lead-gen engine for SPEE3D's Cold Spray Additive Manufacturing solutions.
             </p>
             
             <Button asChild size="lg" className="bg-gradient-tech hover:opacity-90 transition-opacity">

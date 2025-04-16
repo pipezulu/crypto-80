@@ -185,12 +185,12 @@ const Phase2 = () => {
               <div className="mb-6">
                 <h4 className="font-medium mb-2 text-sm uppercase text-tech-300">Your concern:</h4>
                 <p className="italic text-muted-foreground mb-4">
-                  "We try to find clients that are needing to either remodel or update or they're moving to a new space. If we spend too much time on unqualified leads, we miss the ones who are ready to buy."
+                  "I would say maybe 4% are good leads out of a hundred. We're trying to use our connections that we have already through different companies, but it's challenging to get into the right contacts with these players."
                 </p>
                 
                 <h4 className="font-medium mb-2 text-sm uppercase text-tech-300">Our solution:</h4>
                 <p className="text-foreground">
-                  In Phase 2, we optimize your entire funnel with real-time lead qualification and prioritization. Our system flags the most promising leads for immediate outreach, ensuring no opportunities are lost due to processing delays. Your team will be able to contact hot leads within hours, not days.
+                  In Phase 2, we optimize your entire funnel with real-time lead qualification and prioritization. Our system identifies the ~4% of high-quality leads, so your limited time is spent only on defense OEM engineering leaders with genuine interest in Cold Spray Additive Manufacturing, improving your meeting quality significantly.
                 </p>
               </div>
             </div>

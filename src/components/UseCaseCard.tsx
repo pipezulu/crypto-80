@@ -39,8 +39,8 @@ const UseCaseCard: React.FC<UseCaseCardProps> = ({ useCase }) => {
       <CardContent className="space-y-8">
         <QuoteHighlight 
           quote={useCase.quote} 
-          author="Brad Glover" 
-          role="VP of Sales, Ori" 
+          author="Jennifer Howe" 
+          role="Sales, SPEE3D" 
         />
         
         <div className="mt-8">

@@ -15,7 +15,7 @@ const UseCaseCTA: React.FC = () => {
         >
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your LinkedIn Lead Generation?</h2>
           <p className="text-muted-foreground mb-10 text-lg">
-            ManyMangoes is ready to implement these LinkedIn solutions specifically for Ori.
+            ManyMangoes is ready to implement these LinkedIn solutions specifically for SPEE3D.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-5 justify-center">

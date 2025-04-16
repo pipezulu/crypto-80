@@ -185,12 +185,12 @@ const Phase1 = () => {
               <div className="mb-6">
                 <h4 className="font-medium mb-2 text-sm uppercase text-tech-300">Your challenge:</h4>
                 <p className="italic text-muted-foreground mb-4">
-                  "We do commercial interior. Federal is our largest client. Where I'm located is where it's called Redstone Marshall. The federal agencies make decisions, furniture, Army Corps of Engineers, Missile Command."
+                  "I spent the majority of my time just trying to research these companies. We used to have Zoom info, but it's super expensive and we're a very small team. They just moved us to a 4-day work week and took 20% of our pay."
                 </p>
                 
                 <h4 className="font-medium mb-2 text-sm uppercase text-tech-300">Our solution:</h4>
                 <p className="text-foreground">
-                  ManyMangoes provides real-time lead data with our proprietary engagement system that helps you track ROI and maintains healthy CAC from day one. Our targeted approach ensures you're only spending resources on prospects with high conversion potential.
+                  ManyMangoes provides real-time lead data with our proprietary engagement system that helps you track ROI and maintains healthy CAC from day one. Our data-driven approach gives you direct access to engineering leaders at defense OEMs without requiring expensive tools like Zoom Info or extensive travel.
                 </p>
               </div>
             </div>
