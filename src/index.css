@@ -6,44 +6,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 98%;
-
-    --card: 0 0% 3%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 0 0% 3%;
+    --background: 0 0% 3.9%;        // Very dark background
+    --foreground: 0 0% 98%;          // Light text for contrast
+    --card: 0 0% 3%;                 // Very dark card background
+    --card-foreground: 0 0% 98%;     
+    --popover: 0 0% 3%;              
     --popover-foreground: 0 0% 98%;
 
-    --primary: 38 89% 52%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 38 89% 52%;           // Keeping original primary color
+    --primary-foreground: 0 0% 0%;   
 
-    --secondary: 38 89% 42%;
+    --secondary: 0 0% 7%;            // Dark secondary color
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 7%;
+    --muted: 0 0% 7%;                // Muted dark color
     --muted-foreground: 0 0% 63.9%;
 
-    --accent: 38 89% 52%;
+    --accent: 38 89% 52%;            
     --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84.2% 60.2%;    
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
+    --border: 0 0% 14.9%;            // Dark border
+    --input: 0 0% 14.9%;             
     --ring: 38 89% 52%;
 
     --radius: 0.75rem;
-
-    --sidebar-background: 0 0% 3%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 38 89% 52%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 0 0% 7%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 0 0% 14.9%;
-    --sidebar-ring: 38 89% 52%;
   }
 
   .light {
@@ -84,6 +73,10 @@
     --sidebar-border: 240 10% 85%;
     --sidebar-ring: 38 85% 47%;
   }
+
+  .bg-deep-black { background-color: #0A0A0A; }
+  .bg-matte-black { background-color: #121212; }
+  .bg-soft-black { background-color: #1C1C1C; }
 }
 
 @layer base {
