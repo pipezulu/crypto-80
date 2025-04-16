@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -35,5 +36,21 @@
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Remove any badge-related script or element -->
+    <style>
+      /* Hide any potential Lovable badge elements */
+      .lovable-badge, 
+      [class*="lovable-badge"], 
+      [id*="lovable-badge"],
+      [data-lovable-badge],
+      [aria-label*="lovable"],
+      [aria-label*="Lovable"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+      }
+    </style>
   </body>
 </html>
