@@ -90,7 +90,7 @@ const Layout: React.FC<LayoutProps> = ({
         </Button>
       </div>
 
-      <div className="hidden lg:flex flex-col w-64 border-r border-border p-4 bg-deep-black">
+      <div className="hidden lg:flex flex-col w-64 border-r border-border p-4 bg-[#121212] dark:bg-[#0A0A0A]">
         <div className="mb-6 flex items-center">
           <div className="h-8 w-8 rounded-full bg-gradient-mango mr-2"></div>
           <h1 className="text-xl font-bold">
@@ -116,41 +116,41 @@ const Layout: React.FC<LayoutProps> = ({
         </div>
       </div>
 
-      {mobileNavOpen && <motion.div initial={{
-      x: '-100%'
-    }} animate={{
-      x: 0
-    }} exit={{
-      x: '-100%'
-    }} transition={{
-      type: 'spring',
-      damping: 25,
-      stiffness: 250
-    }} className="fixed inset-0 z-40 w-64 bg-deep-black border-r border-border p-4">
-          <div className="mb-6 flex items-center">
-            <div className="h-8 w-8 rounded-full bg-gradient-mango mr-2"></div>
-            <h1 className="text-xl font-bold">
-              <span className="text-gradient">ManyMangoes</span>
-            </h1>
-          </div>
-          <div className="space-y-1">
-            {navItems.map(item => <NavItem key={item.to} to={item.to} icon={item.icon} label={item.label} active={location.pathname === item.to} />)}
-          </div>
-          
-          <div className="pt-4 border-t border-border mt-6">
-            <a href="https://meet.manymangoes.com/felipe" target="_blank" rel="noopener noreferrer">
-              <Button variant="default" className="w-full bg-gradient-tech hover:opacity-90 transition-opacity">
-                <Calendar className="h-5 w-5 mr-2" />
-                Schedule a Meeting
-              </Button>
-            </a>
-          </div>
-          
-          <div className="pt-4 border-t border-border mt-4">
-            <h3 className="text-xs font-medium text-muted-foreground mb-2 px-2">Useful Links</h3>
-            {usefulLinks.map(link => <ExternalLink key={link.href} href={link.href} icon={link.icon} label={link.label} />)}
-          </div>
-        </motion.div>}
+      {mobileNavOpen && <motion.div 
+        initial={{ x: '-100%' }} 
+        animate={{ x: 0 }} 
+        exit={{ x: '-100%' }} 
+        transition={{
+          type: 'spring',
+          damping: 25,
+          stiffness: 250
+        }} 
+        className="fixed inset-0 z-40 w-64 bg-[#121212] dark:bg-[#0A0A0A] border-r border-border p-4"
+      >
+        <div className="mb-6 flex items-center">
+          <div className="h-8 w-8 rounded-full bg-gradient-mango mr-2"></div>
+          <h1 className="text-xl font-bold">
+            <span className="text-gradient">ManyMangoes</span>
+          </h1>
+        </div>
+        <div className="space-y-1">
+          {navItems.map(item => <NavItem key={item.to} to={item.to} icon={item.icon} label={item.label} active={location.pathname === item.to} />)}
+        </div>
+        
+        <div className="pt-4 border-t border-border mt-6">
+          <a href="https://meet.manymangoes.com/felipe" target="_blank" rel="noopener noreferrer">
+            <Button variant="default" className="w-full bg-gradient-tech hover:opacity-90 transition-opacity">
+              <Calendar className="h-5 w-5 mr-2" />
+              Schedule a Meeting
+            </Button>
+          </a>
+        </div>
+        
+        <div className="pt-4 border-t border-border mt-4">
+          <h3 className="text-xs font-medium text-muted-foreground mb-2 px-2">Useful Links</h3>
+          {usefulLinks.map(link => <ExternalLink key={link.href} href={link.href} icon={link.icon} label={link.label} />)}
+        </div>
+      </motion.div>}
 
       {mobileNavOpen && <div className="fixed inset-0 z-30 bg-background/80 backdrop-blur-sm lg:hidden" onClick={() => setMobileNavOpen(false)} />}
 
