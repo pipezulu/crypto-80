@@ -8,76 +8,76 @@ const useCasesData: UseCaseType[] = [
     id: "defense-oems",
     title: "Defense OEM Targeting",
     icon: <Briefcase />,
-    description: "Connect with key decision makers at defense OEMs for faster conversions",
-    quote: "Right now we're trying to focus on defense OEMs. We have an initiative to go after my top 15 companies that I want to target.",
+    description: "Strategic approach to connect with key decision makers at defense OEMs",
+    quote: "We have an initiative to focus on our top 15 companies that we want to target in the defense OEM space.",
     details: [
       "Identify heads of engineering and R&D at top defense contractors",
       "Connect with key additive manufacturing leaders at the right time in their planning cycle",
-      "Build relationships through meaningful conversations before they're in procurement phase",
-      "Provide detailed information about SPEE3D's cold spray technology advantages for defense",
-      "Generate meetings with engineering leaders at companies like Northrup Grumman, Polaris, and Oshkosh"
+      "Build relationships through meaningful conversations before procurement phase",
+      "Highlight SPEE3D's cold spray technology advantages for defense applications",
+      "Generate high-quality meetings with engineering leaders at companies like Northrop Grumman, Polaris, and Oshkosh"
     ],
-    results: "Increased engagement with key decision makers at defense OEMs by identifying them earlier in their planning cycle, leading to more qualified meetings and shorter sales cycles."
+    results: "Increased strategic engagement with defense OEM decision makers, leading to more qualified meetings and shortened sales cycles."
   },
   {
     id: "engineering-partnerships",
     title: "Engineering Partnership Network",
     icon: <Users />,
-    description: "Build strong referral relationships with engineering firms and consultants",
-    quote: "I've been in Additive since 2013. So, I'm trying to either network with other companies that I worked with to get me into the right contacts with these players.",
+    description: "Expand referral relationships with engineering firms and consultants",
+    quote: "I've been in Additive Manufacturing since 2013, working to network with companies that can provide valuable introductions.",
     details: [
-      "Identify and connect with engineering firms working on defense projects",
-      "Build relationships with consultants specializing in additive manufacturing",
-      "Create a consistent referral pipeline through strategic partnerships",
-      "Establish SPEE3D as the go-to resource for cold spray metal production solutions",
-      "Generate warm introductions to clients in the early evaluation stage"
+      "Identify and connect with engineering firms specializing in defense projects",
+      "Build strategic partnerships with additive manufacturing consultants",
+      "Create a consistent referral pipeline through targeted outreach",
+      "Position SPEE3D as the premier cold spray metal production solution provider",
+      "Generate warm introductions to potential clients in early evaluation stages"
     ],
-    results: "Created a reliable stream of qualified leads through engineering partnerships, increasing meeting quality and conversion rates by 35%."
+    results: "Developed a reliable stream of qualified leads through engineering partnerships, increasing meeting quality and conversion rates by 35%."
   },
   {
     id: "government-contracts",
     title: "Government Contract Opportunities",
     icon: <FileText />,
-    description: "Stay ahead of government contract opportunities and decision makers",
-    quote: "A lot of our projects right now, especially my projects, are government funded. So, and it's all tied up and it hasn't been released.",
+    description: "Proactive identification of government contract opportunities",
+    quote: "Many of our current projects are government-funded, but release cycles can be challenging.",
     details: [
-      "Monitor federal contract opportunities before they're publicly announced",
-      "Connect with key decision-makers in defense procurement",
-      "Build relationships with government R&D leaders",
-      "Position SPEE3D as the expert in on-demand metal part production",
-      "Identify budget cycles and planning periods for new defense projects"
+      "Monitor federal contract opportunities before public announcements",
+      "Establish connections with government procurement and R&D leaders",
+      "Track budget cycles and planning periods for new defense projects",
+      "Demonstrate SPEE3D's unique capabilities in on-demand metal part production",
+      "Develop targeted content addressing specific government manufacturing needs"
     ],
-    results: "Gained early access to government contract opportunities, increasing bid success rates and expanding federal client portfolio with a focus on defense applications."
+    results: "Gained early access to government contract opportunities, expanding federal client portfolio and increasing bid success rates."
   },
   {
     id: "manufacturing-innovation",
     title: "Manufacturing Innovation Leaders",
     icon: <Building />,
     description: "Identify companies investing in next-generation manufacturing technologies",
-    quote: "For the most part I can usually get a meeting within a week if it's not like junk. A typical cycle from point of contact to selling a machine is like a year.",
+    quote: "From initial contact to selling a machine, our typical cycle is about a year.",
     details: [
-      "Monitor innovation announcements for companies likely to invest in metal AM",
-      "Track manufacturing modernization initiatives in defense sector",
-      "Connect with R&D leaders during early evaluation phases",
+      "Track manufacturing modernization initiatives in the defense sector",
+      "Monitor innovation announcements for potential metal AM investors",
+      "Connect with R&D leaders during early technology evaluation phases",
       "Provide educational content about cold spray additive manufacturing advantages",
-      "Offer consultation services for companies transitioning to advanced manufacturing"
+      "Offer consultation services for advanced manufacturing transitions"
     ],
-    results: "Created a proactive lead generation system that identifies defense OEMs 3-6 months before they start their additive manufacturing procurement process."
+    results: "Created a proactive lead generation system identifying defense OEMs 3-6 months before their additive manufacturing procurement process."
   },
   {
     id: "existing-clients",
     title: "Existing Client Expansion",
     icon: <LayoutDashboard />,
-    description: "Identify new opportunities within existing client organizations",
-    quote: "We're really heavy in defense and education so trying to convert that into more of that OEM defense commercial space.",
+    description: "Uncover new opportunities within existing client organizations",
+    quote: "We're heavily focused on defense and education, looking to expand into the OEM defense commercial space.",
     details: [
-      "Monitor existing clients for expansion announcements or new defense contracts",
-      "Identify key stakeholders in different departments who might need metal AM solutions",
+      "Monitor existing clients for expansion opportunities and new contracts",
+      "Identify key stakeholders across different departments",
       "Create targeted content addressing specific defense industry challenges",
-      "Develop regular touchpoints to stay top-of-mind with past clients",
-      "Build a systematic approach to account-based marketing for defense OEMs"
+      "Develop strategic relationship management approaches",
+      "Implement account-based marketing for defense OEMs"
     ],
-    results: "Increased repeat business by 40% through strategic relationship management and proactive identification of new opportunities within existing defense accounts."
+    results: "Increased repeat business by 40% through strategic relationship management and proactive opportunity identification."
   }
 ];
 
