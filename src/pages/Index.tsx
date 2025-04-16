@@ -76,7 +76,7 @@ const Index = () => {
           <QuoteHighlight 
             quote="We're trying to focus on defense OEMs. Each of us have like 15 to 16 companies that we want to try to target. It's challenging to get into the right contacts with these players, especially since they cut our travel budget."
             author="Jennifer Howe"
-            role="Sales, SPEE3D"
+            role="Senior Sales Director, SPEE3D"
             delay={0.2}
           />
         </div>

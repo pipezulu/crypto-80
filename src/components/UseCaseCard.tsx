@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Check } from 'lucide-react';
 import {
@@ -40,7 +39,7 @@ const UseCaseCard: React.FC<UseCaseCardProps> = ({ useCase }) => {
         <QuoteHighlight 
           quote={useCase.quote} 
           author="Jennifer Howe" 
-          role="Sales, SPEE3D" 
+          role="Senior Sales Director, SPEE3D" 
         />
         
         <div className="mt-8">
