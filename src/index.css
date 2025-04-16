@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,20 +7,20 @@
 
 @layer base {
   :root {
-    --background: 0 0% 3.9%;        // Very dark background
-    --foreground: 0 0% 98%;          // Light text for contrast
-    --card: 0 0% 3%;                 // Very dark card background
+    --background: 0 0% 3.9%;        /* Very dark background */
+    --foreground: 0 0% 98%;          /* Light text for contrast */
+    --card: 0 0% 3%;                 /* Very dark card background */
     --card-foreground: 0 0% 98%;     
     --popover: 0 0% 3%;              
     --popover-foreground: 0 0% 98%;
 
-    --primary: 38 89% 52%;           // Keeping original primary color
+    --primary: 38 89% 52%;           /* Keeping original primary color */
     --primary-foreground: 0 0% 0%;   
 
-    --secondary: 0 0% 7%;            // Dark secondary color
+    --secondary: 0 0% 7%;            /* Dark secondary color */
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 7%;                // Muted dark color
+    --muted: 0 0% 7%;                /* Muted dark color */
     --muted-foreground: 0 0% 63.9%;
 
     --accent: 38 89% 52%;            
@@ -28,7 +29,7 @@
     --destructive: 0 84.2% 60.2%;    
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 14.9%;            // Dark border
+    --border: 0 0% 14.9%;            /* Dark border */
     --input: 0 0% 14.9%;             
     --ring: 38 89% 52%;
 
