@@ -163,32 +163,32 @@ const Phase1 = () => {
           delay: 0.3
         }} className="max-w-3xl mx-auto">
             <div className="relative bg-gradient-to-br from-tech-900 to-tech-900/60 border border-tech-500/20 rounded-lg p-8 shadow-lg">
-              <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
-                <div className="w-40 h-40 flex-shrink-0">
+              <div className="flex flex-row items-center space-x-4">
+                <div className="w-16 h-16 flex-shrink-0">
                   <img 
                     src="/lovable-uploads/0000dc08-2d3b-40c0-8c07-410960351dad.png" 
                     alt="Paul Dearlove" 
-                    className="w-full h-full object-cover rounded-full border-4 border-tech-300/30 shadow-lg"
+                    className="w-full h-full object-cover rounded-full border-2 border-tech-300/30 shadow-md"
                   />
                 </div>
                 <div className="flex-grow">
-                  <div className="mb-6">
-                    <p className="italic text-muted-foreground mb-4 mx-0 px-0 text-base">&quot;ManyMangoes has supported my team through LinkedIn lead generation. I found Isaac and the ManyMangoes team to be proactive and willing to pivot so we could get the best results. I look forward to working with Isaac in the future.&quot;</p>
-                    
-                    <div className="flex justify-end">
-                      <div className="text-right">
-                        <p className="font-medium">Paul Dearlove</p>
+                  <div className="mb-4">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="font-medium text-lg">Paul Dearlove</p>
                         <p className="text-sm text-muted-foreground">ANZ Director, SAP</p>
                       </div>
                     </div>
                     
-                    <h4 className="font-medium mt-6 mb-2 text-sm uppercase text-tech-300">How We Help:</h4>
-                    <p className="text-foreground">
-                      ManyMangoes provides real-time lead data with our proprietary engagement system that helps you track ROI and maintains healthy CAC from day one. Our data-driven approach gives you direct access to decision-makers without requiring expensive tools or extensive travel.
-                    </p>
+                    <p className="italic text-muted-foreground mt-2 text-base">&quot;ManyMangoes has supported my team through LinkedIn lead generation. I found Isaac and the ManyMangoes team to be proactive and willing to pivot so we could get the best results. I look forward to working with Isaac in the future.&quot;</p>
                   </div>
                 </div>
               </div>
+              
+              <h4 className="font-medium mt-4 mb-2 text-sm uppercase text-tech-300">How We Help:</h4>
+              <p className="text-foreground">
+                ManyMangoes provides real-time lead data with our proprietary engagement system that helps you track ROI and maintains healthy CAC from day one. Our data-driven approach gives you direct access to decision-makers without requiring expensive tools or extensive travel.
+              </p>
             </div>
           </motion.div>
         </div>
