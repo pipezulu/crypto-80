@@ -5,77 +5,77 @@ import { UseCaseType } from '@/components/UseCaseCard';
 
 const useCasesData: UseCaseType[] = [
   {
-    id: "defense-oems",
-    title: "Defense OEM Targeting",
+    id: "industry-targeting",
+    title: "Industry Leader Targeting",
     icon: <Briefcase />,
-    description: "Strategic approach to connect with key decision makers at defense OEMs",
-    quote: "We have an initiative to focus on our top 15 companies that we want to target in the defense OEM space.",
+    description: "Strategic approach to connect with key decision makers in your industry",
+    quote: "ManyMangoes has supported my team through LinkedIn lead generation. I found them to be proactive and willing to pivot so we could get the best results.",
     details: [
-      "Identify heads of engineering and R&D at top defense contractors",
-      "Connect with key additive manufacturing leaders at the right time in their planning cycle",
+      "Identify heads of key departments and decision-makers at target companies",
+      "Connect with industry leaders at the right time in their planning cycle",
       "Build relationships through meaningful conversations before procurement phase",
-      "Highlight SPEE3D's cold spray technology advantages for defense applications",
-      "Generate high-quality meetings with engineering leaders at companies like Northrop Grumman, Polaris, and Oshkosh"
+      "Highlight your unique technology advantages for industry-specific applications",
+      "Generate high-quality meetings with decision-makers at companies in your target market"
     ],
-    results: "Increased strategic engagement with defense OEM decision makers, leading to more qualified meetings and shortened sales cycles."
+    results: "Increased strategic engagement with industry decision makers, leading to more qualified meetings and shortened sales cycles."
   },
   {
-    id: "engineering-partnerships",
-    title: "Engineering Partnership Network",
+    id: "partnership-network",
+    title: "Strategic Partnership Network",
     icon: <Users />,
-    description: "Expand referral relationships with engineering firms and consultants",
-    quote: "I've been in Additive Manufacturing since 2013, working to network with companies that can provide valuable introductions.",
+    description: "Expand referral relationships with industry partners and consultants",
+    quote: "An amazing sales resource for our company that exemplifies professionalism at the highest degree. The sale leads generated were beyond our expectations.",
     details: [
-      "Identify and connect with engineering firms specializing in defense projects",
-      "Build strategic partnerships with additive manufacturing consultants",
+      "Identify and connect with partners specializing in your industry",
+      "Build strategic partnerships with industry consultants and experts",
       "Create a consistent referral pipeline through targeted outreach",
-      "Position SPEE3D as the premier cold spray metal production solution provider",
+      "Position your company as the premier solution provider in your space",
       "Generate warm introductions to potential clients in early evaluation stages"
     ],
-    results: "Developed a reliable stream of qualified leads through engineering partnerships, increasing meeting quality and conversion rates by 35%."
+    results: "Developed a reliable stream of qualified leads through strategic partnerships, increasing meeting quality and conversion rates by 35%."
   },
   {
-    id: "government-contracts",
-    title: "Government Contract Opportunities",
+    id: "contract-opportunities",
+    title: "Contract Opportunity Identification",
     icon: <FileText />,
-    description: "Proactive identification of government contract opportunities",
-    quote: "Many of our current projects are government-funded, but release cycles can be challenging.",
+    description: "Proactive identification of contract and project opportunities",
+    quote: "Whatever marketing you are doing today, my strong recommendation is that you need to immediately START experimenting with ManyMangoes if you have any intention of being the disrupter in your space.",
     details: [
-      "Monitor federal contract opportunities before public announcements",
-      "Establish connections with government procurement and R&D leaders",
-      "Track budget cycles and planning periods for new defense projects",
-      "Demonstrate SPEE3D's unique capabilities in on-demand metal part production",
-      "Develop targeted content addressing specific government manufacturing needs"
+      "Monitor contract opportunities before public announcements",
+      "Establish connections with procurement and R&D leaders",
+      "Track budget cycles and planning periods for new projects",
+      "Demonstrate your unique capabilities and solution advantages",
+      "Develop targeted content addressing specific client needs"
     ],
-    results: "Gained early access to government contract opportunities, expanding federal client portfolio and increasing bid success rates."
+    results: "Gained early access to contract opportunities, expanding client portfolio and increasing win rates."
   },
   {
-    id: "manufacturing-innovation",
-    title: "Manufacturing Innovation Leaders",
+    id: "innovation-leaders",
+    title: "Innovation Leader Targeting",
     icon: <Building />,
-    description: "Identify companies investing in next-generation manufacturing technologies",
-    quote: "From initial contact to selling a machine, our typical cycle is about a year.",
+    description: "Identify companies investing in next-generation technologies in your space",
+    quote: "Isaac was always thoughtful when it came to putting our business objectives first. He took the time to really understand what our objectives were.",
     details: [
-      "Track manufacturing modernization initiatives in the defense sector",
-      "Monitor innovation announcements for potential metal AM investors",
+      "Track modernization initiatives in your target industries",
+      "Monitor innovation announcements for potential technology investors",
       "Connect with R&D leaders during early technology evaluation phases",
-      "Provide educational content about cold spray additive manufacturing advantages",
-      "Offer consultation services for advanced manufacturing transitions"
+      "Provide educational content about your technology advantages",
+      "Offer consultation services for advanced transitions to new solutions"
     ],
-    results: "Created a proactive lead generation system identifying defense OEMs 3-6 months before their additive manufacturing procurement process."
+    results: "Created a proactive lead generation system identifying potential clients 3-6 months before their procurement process begins."
   },
   {
     id: "existing-clients",
     title: "Existing Client Expansion",
     icon: <LayoutDashboard />,
     description: "Uncover new opportunities within existing client organizations",
-    quote: "We're heavily focused on defense and education, looking to expand into the OEM defense commercial space.",
+    quote: "ManyMangoes worked closely with us to build a tailored strategy to effectively engage our target market. Their service was invaluable to our growth.",
     details: [
       "Monitor existing clients for expansion opportunities and new contracts",
       "Identify key stakeholders across different departments",
-      "Create targeted content addressing specific defense industry challenges",
+      "Create targeted content addressing specific industry challenges",
       "Develop strategic relationship management approaches",
-      "Implement account-based marketing for defense OEMs"
+      "Implement account-based marketing for key accounts"
     ],
     results: "Increased repeat business by 40% through strategic relationship management and proactive opportunity identification."
   }

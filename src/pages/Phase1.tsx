@@ -43,7 +43,7 @@ const Phase1 = () => {
                   Phase 1: <span className="text-gradient">Design & Build</span> the Engine
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8">
-                  Days 1-30: Create the foundation for your lead generation strategy and start seeing results immediately.
+                  Days 1-30: Create the foundation for your lead generation strategy and start seeing results from day one.
                 </p>
               </div>
             </motion.div>
@@ -162,19 +162,25 @@ const Phase1 = () => {
         }} className="max-w-3xl mx-auto">
             <div className="relative bg-gradient-to-br from-tech-900 to-tech-900/60 border border-tech-500/20 rounded-lg p-8 shadow-lg">
               <div className="mb-6 text-center">
-                <h3 className="text-2xl font-bold mb-2">Addressing your needs</h3>
+                <h3 className="text-2xl font-bold mb-2">Client Success Story</h3>
                 <p className="text-muted-foreground">
-                  Our approach directly solves the challenges you mentioned.
+                  Here's what our clients say about our approach.
                 </p>
               </div>
               
               <div className="mb-6">
-                <h4 className="font-medium mb-2 text-sm uppercase text-tech-300">Your challenge:</h4>
-                <p className="italic text-muted-foreground mb-4 mx-0 px-0 text-base">&quot;I spent the majority of my time just trying to research these companies.¨</p>
+                <p className="italic text-muted-foreground mb-4 mx-0 px-0 text-base">&quot;ManyMangoes has supported my team through LinkedIn lead generation. I found Isaac and the ManyMangoes team to be proactive and willing to pivot so we could get the best results. I look forward to working with Isaac in the future.&quot;</p>
                 
-                <h4 className="font-medium mb-2 text-sm uppercase text-tech-300">Our solution:</h4>
+                <div className="flex justify-end">
+                  <div className="text-right">
+                    <p className="font-medium">Paul Dearlove</p>
+                    <p className="text-sm text-muted-foreground">ANZ Director, SAP</p>
+                  </div>
+                </div>
+                
+                <h4 className="font-medium mt-6 mb-2 text-sm uppercase text-tech-300">How We Help:</h4>
                 <p className="text-foreground">
-                  ManyMangoes provides real-time lead data with our proprietary engagement system that helps you track ROI and maintains healthy CAC from day one. Our data-driven approach gives you direct access to engineering leaders at defense OEMs without requiring expensive tools like Zoom Info or extensive travel.
+                  ManyMangoes provides real-time lead data with our proprietary engagement system that helps you track ROI and maintains healthy CAC from day one. Our data-driven approach gives you direct access to decision-makers without requiring expensive tools or extensive travel.
                 </p>
               </div>
             </div>

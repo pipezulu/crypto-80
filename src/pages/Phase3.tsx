@@ -171,21 +171,27 @@ const Phase3 = () => {
           >
             <div className="relative bg-gradient-to-br from-tech-900 to-tech-900/60 border border-tech-500/20 rounded-lg p-8 shadow-lg">
               <div className="mb-6 text-center">
-                <h3 className="text-2xl font-bold mb-2">Fulfilling your needs</h3>
+                <h3 className="text-2xl font-bold mb-2">Client Success Story</h3>
                 <p className="text-muted-foreground">
-                  Our Phase 3 approach delivers on your requirements for efficient lead generation.
+                  See the impact of our complete rollout.
                 </p>
               </div>
               
               <div className="mb-6">
-                <h4 className="font-medium mb-2 text-sm uppercase text-tech-300">Your goal:</h4>
                 <p className="italic text-muted-foreground mb-4">
-                  "Right now the leads that kind of come in, I probably get on average two to three meetings a week. If we do a webinar, there's potentially anywhere from 10 to 12ish, but our typical sales cycle from point of contact to selling a machine is like a year."
+                  "Isaac & Many Mangoes were a pleasure to work with. Very professional and Isaac was always thoughtful when it came to putting our business objectives first. He took the time to really understand what our objectives were and worked closely with us to build a tailored strategy to effectively engage our target market. Thanks Isaac."
                 </p>
                 
-                <h4 className="font-medium mb-2 text-sm uppercase text-tech-300">Our solution:</h4>
+                <div className="flex justify-end">
+                  <div className="text-right">
+                    <p className="font-medium">Patrick O'Brien</p>
+                    <p className="text-sm text-muted-foreground">APAC Director, GA</p>
+                  </div>
+                </div>
+                
+                <h4 className="font-medium mt-6 mb-2 text-sm uppercase text-tech-300">Our solution:</h4>
                 <p className="text-foreground">
-                  By Phase 3, your lead generation engine will be fully automated to identify defense OEMs exploring metal parts manufacturing solutions before your competitors know about them. Our system increases your meeting volume from 2-3 to 10-15 per week, while shortening your sales cycle by connecting you with engineering leaders earlier in their decision process.
+                  By Phase 3, your lead generation engine will be fully automated to identify potential clients exploring solutions in your space before your competitors know about them. Our system can increase your meeting volume by 3-5 times, while shortening your sales cycle by connecting you with decision-makers earlier in their process.
                 </p>
               </div>
             </div>
@@ -204,7 +210,7 @@ const Phase3 = () => {
           >
             <h2 className="text-3xl font-bold mb-4">Ready to get started?</h2>
             <p className="text-muted-foreground mb-8">
-              See how ManyMangoes can help SPEE3D with specific defense OEM use cases.
+              See how ManyMangoes can help with your specific industry use cases.
             </p>
             
             <Button asChild size="lg" className="bg-gradient-tech hover:opacity-90 transition-opacity">

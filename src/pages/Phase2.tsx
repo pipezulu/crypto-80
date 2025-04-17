@@ -176,21 +176,27 @@ const Phase2 = () => {
           >
             <div className="relative bg-gradient-to-br from-tech-900 to-tech-900/60 border border-tech-500/20 rounded-lg p-8 shadow-lg">
               <div className="mb-6 text-center">
-                <h3 className="text-2xl font-bold mb-2">Addressing your priorities</h3>
+                <h3 className="text-2xl font-bold mb-2">Client Success Story</h3>
                 <p className="text-muted-foreground">
-                  Our Phase 2 approach directly addresses your specific concerns.
+                  Real results from our Phase 2 approach.
                 </p>
               </div>
               
               <div className="mb-6">
-                <h4 className="font-medium mb-2 text-sm uppercase text-tech-300">Your concern:</h4>
                 <p className="italic text-muted-foreground mb-4">
-                  "I would say maybe 4% are good leads out of a hundred. We're trying to use our connections that we have already through different companies, but it's challenging to get into the right contacts with these players."
+                  "An amazing sales resource for our company and exemplifies professionalism at the highest degree. In the time I have been working with him I can not keep up with the sale leads he has generated for me. Great resource, great attitude, hats off!"
                 </p>
                 
-                <h4 className="font-medium mb-2 text-sm uppercase text-tech-300">Our solution:</h4>
+                <div className="flex justify-end">
+                  <div className="text-right">
+                    <p className="font-medium">Ken Romo</p>
+                    <p className="text-sm text-muted-foreground">Director, EtherFAX</p>
+                  </div>
+                </div>
+                
+                <h4 className="font-medium mt-6 mb-2 text-sm uppercase text-tech-300">Our approach:</h4>
                 <p className="text-foreground">
-                  In Phase 2, we optimize your entire funnel with real-time lead qualification and prioritization. Our system identifies the ~4% of high-quality leads, so your limited time is spent only on defense OEM engineering leaders with genuine interest in Cold Spray Additive Manufacturing, improving your meeting quality significantly.
+                  In Phase 2, we optimize your entire funnel with real-time lead qualification and prioritization. Our system identifies high-quality leads so your limited time is spent only on decision-makers with genuine interest in your solutions, significantly improving your meeting quality and conversion rates.
                 </p>
               </div>
             </div>

@@ -18,10 +18,10 @@ const UseCaseHero: React.FC = () => {
             className="text-center max-w-3xl"
           >
             <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="text-gradient">SPEE3D</span> Use Cases
+              <span className="text-gradient">Industry</span> Use Cases
             </h1>
             <p className="text-xl text-muted-foreground mb-6">
-              See how ManyMangoes can solve your specific challenges in Cold Spray Additive Manufacturing with our proven LinkedIn approach.
+              See how ManyMangoes can solve your specific challenges with our proven AI-powered lead generation approach.
             </p>
           </motion.div>
           
