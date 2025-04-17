@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -90,7 +91,7 @@ const Layout: React.FC<LayoutProps> = ({
         </Button>
       </div>
 
-      <div className="hidden lg:flex flex-col w-64 border-r border-border p-4 bg-[#121212] dark:bg-[#0A0A0A]">
+      <div className="hidden lg:flex flex-col w-64 border-r border-border p-4 bg-[#121212] dark:bg-[#0A0A0A] fixed h-screen overflow-y-auto">
         <div className="mb-6 flex items-center">
           <div className="h-8 w-8 rounded-full bg-gradient-mango mr-2"></div>
           <h1 className="text-xl font-bold">
@@ -125,7 +126,7 @@ const Layout: React.FC<LayoutProps> = ({
           damping: 25,
           stiffness: 250
         }} 
-        className="fixed inset-0 z-40 w-64 bg-[#121212] dark:bg-[#0A0A0A] border-r border-border p-4"
+        className="fixed inset-0 z-40 w-64 bg-[#121212] dark:bg-[#0A0A0A] border-r border-border p-4 overflow-y-auto"
       >
         <div className="mb-6 flex items-center">
           <div className="h-8 w-8 rounded-full bg-gradient-mango mr-2"></div>
@@ -154,7 +155,7 @@ const Layout: React.FC<LayoutProps> = ({
 
       {mobileNavOpen && <div className="fixed inset-0 z-30 bg-background/80 backdrop-blur-sm lg:hidden" onClick={() => setMobileNavOpen(false)} />}
 
-      <div className="flex-1 overflow-auto">
+      <div className="flex-1 lg:ml-64 overflow-auto">
         {children}
       </div>
     </div>;
