@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -175,30 +174,34 @@ const Phase2 = () => {
             className="max-w-3xl mx-auto"
           >
             <div className="relative bg-gradient-to-br from-tech-900 to-tech-900/60 border border-tech-500/20 rounded-lg p-8 shadow-lg">
-              <div className="mb-6 text-center">
-                <h3 className="text-2xl font-bold mb-2">Client Success Story</h3>
-                <p className="text-muted-foreground">
-                  Real results from our Phase 2 approach.
-                </p>
-              </div>
-              
-              <div className="mb-6">
-                <p className="italic text-muted-foreground mb-4">
-                  "An amazing sales resource for our company and exemplifies professionalism at the highest degree. In the time I have been working with him I can not keep up with the sale leads he has generated for me. Great resource, great attitude, hats off!"
-                </p>
-                
-                <div className="flex justify-end">
-                  <div className="text-right">
-                    <p className="font-medium">Ken Romo</p>
-                    <p className="text-sm text-muted-foreground">Director, EtherFAX</p>
+              <div className="flex flex-row items-center space-x-4">
+                <div className="w-16 h-16 flex-shrink-0">
+                  <img 
+                    src="/lovable-uploads/34bfddea-0c3f-4cd2-acc4-ccc53ffc2ecf.png" 
+                    alt="Ken Romo" 
+                    className="w-full h-full object-cover rounded-full border-2 border-tech-300/30 shadow-md"
+                  />
+                </div>
+                <div className="flex-grow">
+                  <div className="mb-4">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="font-medium text-lg">Ken Romo</p>
+                        <p className="text-sm text-muted-foreground">Director, EtherFAX</p>
+                      </div>
+                    </div>
+                    
+                    <p className="italic text-muted-foreground mt-2 text-base">
+                      "An amazing sales resource for our company and exemplifies professionalism at the highest degree. In the time I have been working with him I can not keep up with the sale leads he has generated for me. Great resource, great attitude, hats off!"
+                    </p>
                   </div>
                 </div>
-                
-                <h4 className="font-medium mt-6 mb-2 text-sm uppercase text-tech-300">Our approach:</h4>
-                <p className="text-foreground">
-                  In Phase 2, we optimize your entire funnel with real-time lead qualification and prioritization. Our system identifies high-quality leads so your limited time is spent only on decision-makers with genuine interest in your solutions, significantly improving your meeting quality and conversion rates.
-                </p>
               </div>
+              
+              <h4 className="font-medium mt-4 mb-2 text-sm uppercase text-tech-300">Our approach:</h4>
+              <p className="text-foreground">
+                In Phase 2, we optimize your entire funnel with real-time lead qualification and prioritization. Our system identifies high-quality leads so your limited time is spent only on decision-makers with genuine interest in your solutions, significantly improving your meeting quality and conversion rates.
+              </p>
             </div>
           </motion.div>
         </div>
