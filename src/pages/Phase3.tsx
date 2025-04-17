@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -170,30 +171,34 @@ const Phase3 = () => {
             className="max-w-3xl mx-auto"
           >
             <div className="relative bg-gradient-to-br from-tech-900 to-tech-900/60 border border-tech-500/20 rounded-lg p-8 shadow-lg">
-              <div className="mb-6 text-center">
-                <h3 className="text-2xl font-bold mb-2">Client Success Story</h3>
-                <p className="text-muted-foreground">
-                  See the impact of our complete rollout.
-                </p>
-              </div>
-              
-              <div className="mb-6">
-                <p className="italic text-muted-foreground mb-4">
-                  "Isaac & Many Mangoes were a pleasure to work with. Very professional and Isaac was always thoughtful when it came to putting our business objectives first. He took the time to really understand what our objectives were and worked closely with us to build a tailored strategy to effectively engage our target market. Thanks Isaac."
-                </p>
-                
-                <div className="flex justify-end">
-                  <div className="text-right">
-                    <p className="font-medium">Patrick O'Brien</p>
-                    <p className="text-sm text-muted-foreground">APAC Director, GA</p>
+              <div className="flex flex-row items-center space-x-4">
+                <div className="w-16 h-16 flex-shrink-0">
+                  <img 
+                    src="/lovable-uploads/6ff5e441-31a0-4414-9ab9-976ca9e3dac1.png" 
+                    alt="Patrick O'Brien" 
+                    className="w-full h-full object-cover rounded-full border-2 border-tech-300/30 shadow-md"
+                  />
+                </div>
+                <div className="flex-grow">
+                  <div className="mb-4">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="font-medium text-lg">Patrick O'Brien</p>
+                        <p className="text-sm text-muted-foreground">APAC Director, GA</p>
+                      </div>
+                    </div>
+                    
+                    <p className="italic text-muted-foreground mt-2 text-base">
+                      "Isaac & Many Mangoes were a pleasure to work with. Very professional and Isaac was always thoughtful when it came to putting our business objectives first. He took the time to really understand what our objectives were and worked closely with us to build a tailored strategy to effectively engage our target market. Thanks Isaac."
+                    </p>
                   </div>
                 </div>
-                
-                <h4 className="font-medium mt-6 mb-2 text-sm uppercase text-tech-300">Our solution:</h4>
-                <p className="text-foreground">
-                  By Phase 3, your lead generation engine will be fully automated to identify potential clients exploring solutions in your space before your competitors know about them. Our system can increase your meeting volume by 3-5 times, while shortening your sales cycle by connecting you with decision-makers earlier in their process.
-                </p>
               </div>
+              
+              <h4 className="font-medium mt-4 mb-2 text-sm uppercase text-tech-300">Our solution:</h4>
+              <p className="text-foreground">
+                By Phase 3, your lead generation engine will be fully automated to identify potential clients exploring solutions in your space before your competitors know about them. Our system can increase your meeting volume by 3-5 times, while shortening your sales cycle by connecting you with decision-makers earlier in their process.
+              </p>
             </div>
           </motion.div>
         </div>
