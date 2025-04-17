@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
@@ -13,7 +12,7 @@ interface QuoteHighlightProps {
 const QuoteHighlight: React.FC<QuoteHighlightProps> = ({ 
   quote, 
   author, 
-  role = "Senior Sales Director, SPEE3D", 
+  role = "Industry Professional", 
   delay = 0
 }) => {
   return (
