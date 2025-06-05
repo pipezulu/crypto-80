@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import Timeline from '@/components/Timeline';
@@ -15,8 +14,8 @@ const TimelineSection = () => {
       description: "Turn your profile into a high-converting authority asset that attracts your ideal clients."
     }, 
     {
-      title: "Launch 10,000 Comment Strategy",
-      description: "Deploy up to 10,000 personalized comments/month, insight-driven and designed to drive engagement."
+      title: "Launch Commenting Strategy",
+      description: "Deploy personalized comments every month, insight-driven and designed to drive engagement."
     }, 
     {
       title: "Content Kickoff – Educate Phase",
