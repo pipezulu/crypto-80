@@ -86,7 +86,7 @@ const Index = () => {
       </section>
 
       {/* Video Testimonial Section */}
-      <section className="py-16 relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-br from-background to-card relative overflow-hidden">
         <div className="absolute right-0 bottom-0 opacity-10 z-0">
           <SphereCanvas color="#9b87f5" particleCount={80} size={300} intensity={0.8} interactive={false} />
         </div>
@@ -99,46 +99,79 @@ const Index = () => {
             className="max-w-4xl mx-auto"
           >
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold mb-4">See the Results in Action</h2>
+              <h2 className="text-3xl font-bold mb-4">Real Results, Real Rocket Fuel</h2>
               <p className="text-muted-foreground">
-                Hear from Jimi Cohen, CEO of TreeGens, about the "rocket fuel" results from our crypto X domination strategy.
+                See how our crypto X domination strategy delivered explosive growth for TreeGens
               </p>
             </div>
 
-            <div className="relative bg-gradient-to-br from-tech-900 to-tech-900/60 border border-tech-500/20 rounded-lg overflow-hidden shadow-lg">
-              {/* Video Container */}
-              <div className="relative aspect-video bg-black">
-                <iframe
-                  src="https://drive.google.com/file/d/1KLqRbrolgM31FpJBptUgl1g9Dx7OMYE2/preview"
-                  className="w-full h-full"
-                  allow="autoplay"
-                  title="Jimi Cohen Testimonial - TreeGens CEO"
-                ></iframe>
-              </div>
-              
-              {/* Testimonial Info */}
-              <div className="p-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 flex-shrink-0">
-                    <Avatar className="w-full h-full border-2 border-tech-300/30 shadow-md">
-                      <AvatarImage 
-                        src="/lovable-uploads/d40c3768-c4b5-4bd4-8cdc-b724941dd115.png" 
-                        alt="Jimi Cohen" 
-                        className="object-cover"
-                      />
-                      <AvatarFallback className="bg-gradient-mango text-foreground">JC</AvatarFallback>
-                    </Avatar>
-                  </div>
-                  <div>
-                    <p className="font-medium text-lg">Jimi Cohen</p>
-                    <p className="text-sm text-muted-foreground">CEO & Co-Founder, TreeGens</p>
+            <div className="bg-gradient-to-br from-tech-900/40 to-tech-900/20 border border-tech-500/20 rounded-xl p-8 shadow-lg backdrop-blur-sm">
+              {/* Client Info Header */}
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="w-16 h-16 flex-shrink-0">
+                  <Avatar className="w-full h-full border-2 border-tech-300/30 shadow-md">
+                    <AvatarImage 
+                      src="/lovable-uploads/0330e4ea-53b0-4853-a11a-a4168bc69f45.png" 
+                      alt="Jimi Cohen" 
+                      className="object-cover"
+                    />
+                    <AvatarFallback className="bg-gradient-mango text-foreground">JC</AvatarFallback>
+                  </Avatar>
+                </div>
+                <div>
+                  <p className="font-bold text-xl">Jimi Cohen</p>
+                  <p className="text-muted-foreground">CEO & Co-Founder, TreeGens</p>
+                  <div className="flex items-center gap-2 mt-1">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span className="text-sm text-green-400">Video Testimonial</span>
                   </div>
                 </div>
-                
-                <blockquote className="mt-4 text-lg italic text-muted-foreground">
-                  "Within three days, the followers went up by more than 700 people, which was pretty crazy. 
-                  We've been able to connect with tens of thousands of people... It's been like rocket fuel."
-                </blockquote>
+              </div>
+              
+              {/* Video Preview Card */}
+              <div className="relative bg-black rounded-lg overflow-hidden mb-6 group cursor-pointer">
+                <div className="aspect-video relative">
+                  <img 
+                    src="/lovable-uploads/0330e4ea-53b0-4853-a11a-a4168bc69f45.png" 
+                    alt="Jimi Cohen Video Testimonial" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
+                    <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
+                      <Play className="w-8 h-8 text-background ml-1" fill="currentColor" />
+                    </div>
+                  </div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="bg-black/70 backdrop-blur-sm rounded px-3 py-2">
+                      <p className="text-white text-sm font-medium">Watch: "It's been like rocket fuel"</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Key Quote */}
+              <blockquote className="text-lg italic text-center mb-6 text-muted-foreground border-l-4 border-primary pl-4">
+                "Within three days, the followers went up by more than 700 people, which was pretty crazy. 
+                We've been able to connect with tens of thousands of people... It's been like rocket fuel."
+              </blockquote>
+              
+              {/* Results Highlights */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="text-center bg-tech-900/20 rounded-lg p-4">
+                  <div className="text-2xl font-bold text-gradient">700+</div>
+                  <div className="text-sm text-muted-foreground">New Followers</div>
+                  <div className="text-xs text-muted-foreground">In 3 Days</div>
+                </div>
+                <div className="text-center bg-tech-900/20 rounded-lg p-4">
+                  <div className="text-2xl font-bold text-gradient">20K</div>
+                  <div className="text-sm text-muted-foreground">People Connected</div>
+                  <div className="text-xs text-muted-foreground">Total Reach</div>
+                </div>
+                <div className="text-center bg-tech-900/20 rounded-lg p-4">
+                  <div className="text-2xl font-bold text-gradient">🚀</div>
+                  <div className="text-sm text-muted-foreground">Rocket Fuel</div>
+                  <div className="text-xs text-muted-foreground">Growth Rate</div>
+                </div>
               </div>
             </div>
           </motion.div>
