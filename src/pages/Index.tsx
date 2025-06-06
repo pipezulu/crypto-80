@@ -7,7 +7,8 @@ import SphereCanvas from '@/components/SphereCanvas';
 import PhaseCard from '@/components/PhaseCard';
 import QuoteHighlight from '@/components/QuoteHighlight';
 import ComparisonTable from '@/components/ComparisonTable';
-import { ArrowRight, BarChart3, LineChart, Rocket, ArrowDown } from 'lucide-react';
+import { ArrowRight, BarChart3, LineChart, Rocket, ArrowDown, Play } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const Index = () => {
   const scrollToQuote = () => {
@@ -81,6 +82,66 @@ const Index = () => {
             role="$50M+ TVL Protocol"
             delay={0.2}
           />
+        </div>
+      </section>
+
+      {/* Video Testimonial Section */}
+      <section className="py-16 relative overflow-hidden">
+        <div className="absolute right-0 bottom-0 opacity-10 z-0">
+          <SphereCanvas color="#9b87f5" particleCount={80} size={300} intensity={0.8} interactive={false} />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ delay: 0.3 }} 
+            className="max-w-4xl mx-auto"
+          >
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold mb-4">See the Results in Action</h2>
+              <p className="text-muted-foreground">
+                Hear from Jimi Cohen, CEO of TreeGens, about the "rocket fuel" results from our crypto X domination strategy.
+              </p>
+            </div>
+
+            <div className="relative bg-gradient-to-br from-tech-900 to-tech-900/60 border border-tech-500/20 rounded-lg overflow-hidden shadow-lg">
+              {/* Video Container */}
+              <div className="relative aspect-video bg-black">
+                <iframe
+                  src="https://drive.google.com/file/d/1KLqRbrolgM31FpJBptUgl1g9Dx7OMYE2/preview"
+                  className="w-full h-full"
+                  allow="autoplay"
+                  title="Jimi Cohen Testimonial - TreeGens CEO"
+                ></iframe>
+              </div>
+              
+              {/* Testimonial Info */}
+              <div className="p-6">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 flex-shrink-0">
+                    <Avatar className="w-full h-full border-2 border-tech-300/30 shadow-md">
+                      <AvatarImage 
+                        src="/lovable-uploads/d40c3768-c4b5-4bd4-8cdc-b724941dd115.png" 
+                        alt="Jimi Cohen" 
+                        className="object-cover"
+                      />
+                      <AvatarFallback className="bg-gradient-mango text-foreground">JC</AvatarFallback>
+                    </Avatar>
+                  </div>
+                  <div>
+                    <p className="font-medium text-lg">Jimi Cohen</p>
+                    <p className="text-sm text-muted-foreground">CEO & Co-Founder, TreeGens</p>
+                  </div>
+                </div>
+                
+                <blockquote className="mt-4 text-lg italic text-muted-foreground">
+                  "Within three days, the followers went up by more than 700 people, which was pretty crazy. 
+                  We've been able to connect with tens of thousands of people... It's been like rocket fuel."
+                </blockquote>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
