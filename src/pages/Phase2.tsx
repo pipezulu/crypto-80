@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -13,12 +14,8 @@ const Phase2 = () => {
       description: "Analyze month 1 data to sharpen audience targeting and double down on high-performing segments."
     },
     {
-      title: "Content Acceleration",
-      description: "Scale to 2–3 posts/week and add formats like carousels, storytelling, FAQs, and behind-the-scenes content."
-    },
-    {
       title: "Comment Engine Optimization",
-      description: "Refine distribution based on engagement and increase frequency of high-performing platform activities."
+      description: "Refine distribution based on engagement data and increase frequency of high-performing platform activities."
     },
     {
       title: "Convert Phase: Retargeting + Automation",
@@ -98,7 +95,7 @@ const Phase2 = () => {
           >
             <h2 className="text-3xl font-bold mb-4">What We Do in Phase 2</h2>
             <p className="text-muted-foreground">
-              In days 31-60, we leverage data from Phase 1 to optimize targeting, enhance content, and implement advanced conversion strategies.
+              In days 31-60, we leverage data from Phase 1 to optimize targeting, enhance engagement strategies, and implement advanced conversion systems.
             </p>
           </motion.div>
           
@@ -136,7 +133,7 @@ const Phase2 = () => {
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Deeper Engagement</h3>
                 <p className="text-sm text-muted-foreground">
-                  Increased mid-funnel engagement with your content
+                  Increased mid-funnel engagement and meaningful conversations
                 </p>
               </div>
               
