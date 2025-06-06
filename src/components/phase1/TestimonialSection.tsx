@@ -21,19 +21,19 @@ const TestimonialSection = () => {
             <div className="flex flex-row items-center space-x-4">
               <div className="w-16 h-16 flex-shrink-0">
                 <div className="w-full h-full bg-gradient-mango rounded-full border-2 border-tech-300/30 shadow-md flex items-center justify-center">
-                  <span className="text-2xl">₿</span>
+                  <span className="text-2xl">🌳</span>
                 </div>
               </div>
               <div className="flex-grow">
                 <div className="mb-4">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="font-medium text-lg">Anonymous DeFi Founder</p>
-                      <p className="text-sm text-muted-foreground">$100M+ Protocol TVL</p>
+                      <p className="font-medium text-lg">Jimi Cohen</p>
+                      <p className="text-sm text-muted-foreground">CEO & Co-Founder, TreeGens</p>
                     </div>
                   </div>
                   
-                  <p className="italic text-muted-foreground mt-2 text-base">&quot;We went from ghost mode to having every major crypto account engaging with our announcements. The X domination strategy got us in front of tier-1 VCs and whale traders. ROI was insane.&quot;</p>
+                  <p className="italic text-muted-foreground mt-2 text-base">&quot;Within three days, the followers went up by more than 700 people, which was pretty crazy. We've been able to connect with tens of thousands of people, about 20,000 so far. It's been like rocket fuel.&quot;</p>
                 </div>
               </div>
             </div>

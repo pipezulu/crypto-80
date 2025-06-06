@@ -172,23 +172,21 @@ const Phase3 = () => {
             <div className="relative bg-gradient-to-br from-tech-900 to-tech-900/60 border border-tech-500/20 rounded-lg p-8 shadow-lg">
               <div className="flex flex-row items-center space-x-4">
                 <div className="w-16 h-16 flex-shrink-0">
-                  <img 
-                    src="/lovable-uploads/6ff5e441-31a0-4414-9ab9-976ca9e3dac1.png" 
-                    alt="Patrick O'Brien" 
-                    className="w-full h-full object-cover rounded-full border-2 border-tech-300/30 shadow-md"
-                  />
+                  <div className="w-full h-full bg-gradient-mango rounded-full border-2 border-tech-300/30 shadow-md flex items-center justify-center">
+                    <span className="text-2xl">🌳</span>
+                  </div>
                 </div>
                 <div className="flex-grow">
                   <div className="mb-4">
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="font-medium text-lg">Patrick O'Brien</p>
-                        <p className="text-sm text-muted-foreground">APAC Director, GA</p>
+                        <p className="font-medium text-lg">Jimi Cohen</p>
+                        <p className="text-sm text-muted-foreground">CEO & Co-Founder, TreeGens</p>
                       </div>
                     </div>
                     
                     <p className="italic text-muted-foreground mt-2 text-base">
-                      "Isaac & Many Mangoes were a pleasure to work with. Very professional and Isaac was always thoughtful when it came to putting our business objectives first. He took the time to really understand what our objectives were and worked closely with us to build a tailored strategy to effectively engage our target market. Thanks Isaac."
+                      "I think this is gonna be the most successful marketing campaign of the season. We've gone from a few people to now dozens of people that are engaged. Not just the people doing these engagements, but also quality control and data management."
                     </p>
                   </div>
                 </div>

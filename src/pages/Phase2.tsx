@@ -172,23 +172,21 @@ const Phase2 = () => {
             <div className="relative bg-gradient-to-br from-tech-900 to-tech-900/60 border border-tech-500/20 rounded-lg p-8 shadow-lg">
               <div className="flex flex-row items-center space-x-4">
                 <div className="w-16 h-16 flex-shrink-0">
-                  <img 
-                    src="/lovable-uploads/34bfddea-0c3f-4cd2-acc4-ccc53ffc2ecf.png" 
-                    alt="Ken Romo" 
-                    className="w-full h-full object-cover rounded-full border-2 border-tech-300/30 shadow-md"
-                  />
+                  <div className="w-full h-full bg-gradient-mango rounded-full border-2 border-tech-300/30 shadow-md flex items-center justify-center">
+                    <span className="text-2xl">🌳</span>
+                  </div>
                 </div>
                 <div className="flex-grow">
                   <div className="mb-4">
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="font-medium text-lg">Ken Romo</p>
-                        <p className="text-sm text-muted-foreground">Director, EtherFAX</p>
+                        <p className="font-medium text-lg">Jimi Cohen</p>
+                        <p className="text-sm text-muted-foreground">CEO & Co-Founder, TreeGens</p>
                       </div>
                     </div>
                     
                     <p className="italic text-muted-foreground mt-2 text-base">
-                      "An amazing sales resource for our company and exemplifies professionalism at the highest degree. In the time I have been working with him I can not keep up with the sale leads he has generated for me. Great resource, great attitude, hats off!"
+                      "The ManyMangoes team was able to get all of the comments actually generated for each of the people that are making those comments at scale. It was amazing to see literally all these comments populated to make it really straightforward for the engagement team."
                     </p>
                   </div>
                 </div>
