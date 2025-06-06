@@ -8,10 +8,33 @@ import QuoteHighlight from '@/components/QuoteHighlight';
 import ComparisonTable from '@/components/ComparisonTable';
 import { ArrowRight, BarChart3, LineChart, Rocket, ArrowDown, Play } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
+import { LineChart as RechartsLineChart, Line, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 
 const Index = () => {
   const scrollToQuote = () => {
     document.getElementById('quote-section')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const chartData = [
+    { day: 'Day 1', followers: 1000, awareness: 500 },
+    { day: 'Day 2', followers: 1200, awareness: 800 },
+    { day: 'Day 3', followers: 1700, awareness: 1500 },
+    { day: 'Day 4', followers: 2100, awareness: 2200 },
+    { day: 'Day 5', followers: 2800, awareness: 3100 },
+    { day: 'Day 6', followers: 3200, awareness: 4000 },
+    { day: 'Day 7', followers: 3900, awareness: 5200 },
+  ];
+
+  const chartConfig = {
+    followers: {
+      label: "Followers",
+      color: "hsl(var(--primary))",
+    },
+    awareness: {
+      label: "Awareness",
+      color: "hsl(var(--mango))",
+    },
   };
 
   return (
@@ -105,16 +128,46 @@ const Index = () => {
             </div>
 
             <div className="relative bg-gradient-to-br from-tech-900 to-tech-900/60 border border-tech-500/20 rounded-lg overflow-hidden shadow-lg">
-              {/* Video Container with Custom Preview */}
-              <div className="relative aspect-video bg-black group cursor-pointer">
-                {/* Custom Preview Image */}
-                <div 
-                  className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                  style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=1200&h=675&fit=crop&crop=center')`
-                  }}
-                >
-                  <div className="absolute inset-0 bg-black/40"></div>
+              {/* Chart Container with Growth Visualization */}
+              <div className="relative aspect-video bg-gradient-to-br from-tech-900/90 to-tech-800/90 group cursor-pointer">
+                {/* Chart Background */}
+                <div className="absolute inset-0 p-8">
+                  <ChartContainer config={chartConfig} className="w-full h-full">
+                    <RechartsLineChart data={chartData}>
+                      <XAxis 
+                        dataKey="day" 
+                        axisLine={false}
+                        tickLine={false}
+                        tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}
+                      />
+                      <YAxis 
+                        axisLine={false}
+                        tickLine={false}
+                        tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}
+                      />
+                      <ChartTooltip content={<ChartTooltipContent />} />
+                      <Line 
+                        type="monotone" 
+                        dataKey="followers" 
+                        stroke="hsl(var(--primary))" 
+                        strokeWidth={3}
+                        dot={{ fill: 'hsl(var(--primary))', strokeWidth: 2, r: 4 }}
+                      />
+                      <Line 
+                        type="monotone" 
+                        dataKey="awareness" 
+                        stroke="hsl(var(--mango))" 
+                        strokeWidth={3}
+                        dot={{ fill: 'hsl(var(--mango))', strokeWidth: 2, r: 4 }}
+                      />
+                    </RechartsLineChart>
+                  </ChartContainer>
+                </div>
+                
+                {/* Chart Title Overlay */}
+                <div className="absolute top-4 left-4 z-10">
+                  <h3 className="text-xl font-bold text-foreground mb-1">X.com Growth Results</h3>
+                  <p className="text-sm text-muted-foreground">7-Day Campaign Performance</p>
                 </div>
                 
                 {/* Play Button Overlay */}
