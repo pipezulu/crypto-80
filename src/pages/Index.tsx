@@ -106,11 +106,29 @@ const Index = () => {
             </div>
 
             <div className="relative bg-gradient-to-br from-tech-900 to-tech-900/60 border border-tech-500/20 rounded-lg overflow-hidden shadow-lg">
-              {/* Video Container */}
-              <div className="relative aspect-video bg-black">
+              {/* Video Container with Custom Preview */}
+              <div className="relative aspect-video bg-black group cursor-pointer">
+                {/* Custom Preview Image */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                  style={{
+                    backgroundImage: `url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=1200&h=675&fit=crop&crop=center')`
+                  }}
+                >
+                  <div className="absolute inset-0 bg-black/40"></div>
+                </div>
+                
+                {/* Play Button Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="bg-primary/90 rounded-full p-4 group-hover:bg-primary transition-colors">
+                    <Play className="h-8 w-8 text-primary-foreground ml-1" />
+                  </div>
+                </div>
+                
+                {/* Hidden iframe for actual video */}
                 <iframe
                   src="https://drive.google.com/file/d/1KLqRbrolgM31FpJBptUgl1g9Dx7OMYE2/preview"
-                  className="w-full h-full"
+                  className="w-full h-full opacity-0 absolute inset-0 group-hover:opacity-100 transition-opacity duration-300"
                   allow="autoplay"
                   title="Jimi Cohen Testimonial - TreeGens CEO"
                 ></iframe>
