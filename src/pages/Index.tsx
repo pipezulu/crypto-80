@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import SphereCanvas from '@/components/SphereCanvas';
 import PhaseCard from '@/components/PhaseCard';
-import QuoteHighlight from '@/components/QuoteHighlight';
 import ComparisonTable from '@/components/ComparisonTable';
 import { ArrowRight, BarChart3, LineChart, Rocket, ArrowDown, Play } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
@@ -12,8 +11,8 @@ import { ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/
 import { LineChart as RechartsLineChart, Line, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 
 const Index = () => {
-  const scrollToQuote = () => {
-    document.getElementById('quote-section')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToVideo = () => {
+    document.getElementById('video-section')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const chartData = [
@@ -61,9 +60,9 @@ const Index = () => {
                   Get your announcements, launches, and alpha in front of the right crypto community.
                 </p>
                 
-                <Button onClick={scrollToQuote} variant="outline" size="lg" className="flex items-center justify-center gap-2">
+                <Button onClick={scrollToVideo} variant="outline" size="lg" className="flex items-center justify-center gap-2">
                   <ArrowDown className="h-5 w-5" />
-                  <span className="sr-only">Scroll to quote</span>
+                  <span className="sr-only">Scroll to video</span>
                 </Button>
               </div>
             </motion.div>
@@ -95,20 +94,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Quote Section */}
-      <section id="quote-section" className="bg-card py-12">
-        <div className="container mx-auto px-4">
-          <QuoteHighlight 
-            quote="In crypto, visibility equals survival. If you're not dominating the conversation on X, you're invisible. ManyMangoes puts your project where the alpha hunters are looking."
-            author="Anonymous DeFi Founder"
-            role="$50M+ TVL Protocol"
-            delay={0.2}
-          />
-        </div>
-      </section>
-
       {/* Video Testimonial Section */}
-      <section className="py-16 relative overflow-hidden">
+      <section id="video-section" className="py-16 relative overflow-hidden">
         <div className="absolute right-0 bottom-0 opacity-10 z-0">
           <SphereCanvas color="#9b87f5" particleCount={80} size={300} intensity={0.8} interactive={false} />
         </div>
