@@ -66,7 +66,7 @@ const UseCaseCard: React.FC<UseCaseCardProps> = ({ useCase }) => {
         </div>
         
         <div className="mt-8">
-          <h3 className="text-2xl font-semibold mb-6 text-gradient">How ManyMangoes' LinkedIn Strategy Can Help</h3>
+          <h3 className="text-2xl font-semibold mb-6 text-gradient">How ManyMangoes' X Strategy Delivers Alpha</h3>
           <ul className="space-y-4">
             {useCase.details.map((detail, index) => (
               <li key={index} className="flex items-start">
@@ -82,7 +82,7 @@ const UseCaseCard: React.FC<UseCaseCardProps> = ({ useCase }) => {
         </div>
         
         <div className="mt-8 p-6 bg-muted/20 border border-primary/30 rounded-xl shadow-inner">
-          <h4 className="font-semibold text-xl mb-4 text-primary">Expected Results from LinkedIn Strategy</h4>
+          <h4 className="font-semibold text-xl mb-4 text-primary">Expected Results from Crypto X Domination</h4>
           <p className="text-base">{useCase.results}</p>
         </div>
       </CardContent>

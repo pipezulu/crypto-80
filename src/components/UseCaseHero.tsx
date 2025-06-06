@@ -18,10 +18,10 @@ const UseCaseHero: React.FC = () => {
             className="text-center max-w-3xl"
           >
             <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="text-gradient">Industry</span> Use Cases
+              <span className="text-gradient">Crypto</span> Use Cases
             </h1>
             <p className="text-xl text-muted-foreground mb-6">
-              See how ManyMangoes can solve your specific challenges with our proven AI-powered lead generation approach.
+              See how ManyMangoes dominates X.com to deliver alpha for crypto protocols, DAOs, and Web3 builders with our proven engagement strategy.
             </p>
           </motion.div>
           
