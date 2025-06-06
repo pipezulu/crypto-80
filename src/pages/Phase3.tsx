@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -46,7 +45,7 @@ const Phase3 = () => {
                   Phase 3: <span className="text-gradient">Scale & Automate</span>
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8">
-                  Days 61-90: Amplify results by 5-10x and build a predictable lead generation machine.
+                  Weeks 3-4: Amplify results by 5-10x and build a predictable lead generation machine.
                 </p>
               </div>
             </motion.div>
@@ -95,7 +94,7 @@ const Phase3 = () => {
           >
             <h2 className="text-3xl font-bold mb-4">What We Do in Phase 3</h2>
             <p className="text-muted-foreground">
-              In the final 30 days, we focus on scaling what works, automating processes, and creating systems for long-term success.
+              In weeks 3-4, we focus on scaling what works, automating processes, and creating systems for long-term success.
             </p>
           </motion.div>
           
@@ -114,7 +113,7 @@ const Phase3 = () => {
             transition={{ delay: 0.2 }}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="text-3xl font-bold mb-4 text-center">⚡ Results in Month 3</h2>
+            <h2 className="text-3xl font-bold mb-4 text-center">⚡ Results in Weeks 3-4</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
               <div className="bg-tech-900/20 border border-tech-300/10 rounded-lg p-6 text-center">

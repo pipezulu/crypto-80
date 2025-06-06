@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -11,7 +10,7 @@ const Phase2 = () => {
   const timelineItems = [
     {
       title: "Targeting Refinement",
-      description: "Analyze month 1 data to sharpen audience targeting and double down on high-performing segments."
+      description: "Analyze week 1 data to sharpen audience targeting and double down on high-performing segments."
     },
     {
       title: "Comment Engine Optimization",
@@ -46,7 +45,7 @@ const Phase2 = () => {
                   Phase 2: <span className="text-gradient">Optimize & Personalize</span>
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8">
-                  Days 31-60: Refine your strategy based on real data and enhance lead quality.
+                  Week 2: Refine your strategy based on real data and enhance lead quality.
                 </p>
               </div>
             </motion.div>
@@ -95,7 +94,7 @@ const Phase2 = () => {
           >
             <h2 className="text-3xl font-bold mb-4">What We Do in Phase 2</h2>
             <p className="text-muted-foreground">
-              In days 31-60, we leverage data from Phase 1 to optimize targeting, enhance engagement strategies, and implement advanced conversion systems.
+              In week 2, we leverage data from Phase 1 to optimize targeting, enhance engagement strategies, and implement advanced conversion systems.
             </p>
           </motion.div>
           
@@ -114,7 +113,7 @@ const Phase2 = () => {
             transition={{ delay: 0.2 }}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="text-3xl font-bold mb-4 text-center">⚡ Results in Month 2</h2>
+            <h2 className="text-3xl font-bold mb-4 text-center">⚡ Results in Week 2</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
               <div className="bg-tech-900/20 border border-mango-400/10 rounded-lg p-6 text-center">

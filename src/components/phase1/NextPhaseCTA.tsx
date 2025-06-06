@@ -17,7 +17,7 @@ const NextPhaseCTA = () => {
         >
           <h2 className="text-3xl font-bold mb-4">Ready to scale the engagement?</h2>
           <p className="text-muted-foreground mb-8">
-            See how we optimize targeting and amplify results in Phase 2 of crypto X domination.
+            See how we optimize targeting and amplify results in Phase 2 of your monthly crypto X domination plan.
           </p>
           
           <Button asChild size="lg" className="bg-gradient-tech hover:opacity-90 transition-opacity">
