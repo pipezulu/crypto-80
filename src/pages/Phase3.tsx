@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import SphereCanvas from '@/components/SphereCanvas';
 import Timeline from '@/components/Timeline';
 import { ArrowRight } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const Phase3 = () => {
   const timelineItems = [
@@ -172,9 +173,14 @@ const Phase3 = () => {
             <div className="relative bg-gradient-to-br from-tech-900 to-tech-900/60 border border-tech-500/20 rounded-lg p-8 shadow-lg">
               <div className="flex flex-row items-center space-x-4">
                 <div className="w-16 h-16 flex-shrink-0">
-                  <div className="w-full h-full bg-gradient-mango rounded-full border-2 border-tech-300/30 shadow-md flex items-center justify-center">
-                    <span className="text-2xl">🌳</span>
-                  </div>
+                  <Avatar className="w-full h-full border-2 border-tech-300/30 shadow-md">
+                    <AvatarImage 
+                      src="/lovable-uploads/0000dc08-2d3b-40c0-8c07-410960351dad.png" 
+                      alt="Jimi Cohen" 
+                      className="object-cover"
+                    />
+                    <AvatarFallback className="bg-gradient-mango text-foreground">JC</AvatarFallback>
+                  </Avatar>
                 </div>
                 <div className="flex-grow">
                   <div className="mb-4">
