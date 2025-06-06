@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -93,7 +92,11 @@ const Layout: React.FC<LayoutProps> = ({
 
       <div className="hidden lg:flex flex-col w-64 border-r border-border p-4 bg-[#121212] dark:bg-[#0A0A0A] fixed h-screen overflow-y-auto">
         <div className="mb-6 flex items-center">
-          <div className="h-8 w-8 rounded-full bg-gradient-mango mr-2"></div>
+          <img 
+            src="/lovable-uploads/34bfddea-0c3f-4cd2-acc4-ccc53ffc2ecf.png" 
+            alt="ManyMangoes Logo" 
+            className="h-8 w-8 rounded-full mr-2"
+          />
           <h1 className="text-xl font-bold">
             <span className="text-gradient">ManyMangoes</span>
           </h1>
@@ -129,7 +132,11 @@ const Layout: React.FC<LayoutProps> = ({
         className="fixed inset-0 z-40 w-64 bg-[#121212] dark:bg-[#0A0A0A] border-r border-border p-4 overflow-y-auto"
       >
         <div className="mb-6 flex items-center">
-          <div className="h-8 w-8 rounded-full bg-gradient-mango mr-2"></div>
+          <img 
+            src="/lovable-uploads/34bfddea-0c3f-4cd2-acc4-ccc53ffc2ecf.png" 
+            alt="ManyMangoes Logo" 
+            className="h-8 w-8 rounded-full mr-2"
+          />
           <h1 className="text-xl font-bold">
             <span className="text-gradient">ManyMangoes</span>
           </h1>
