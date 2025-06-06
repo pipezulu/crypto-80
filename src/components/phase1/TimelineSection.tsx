@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import Timeline from '@/components/Timeline';
@@ -6,24 +7,24 @@ import SphereCanvas from '@/components/SphereCanvas';
 const TimelineSection = () => {
   const timelineItems = [
     {
-      title: "Persona & Data Strategy",
-      description: "Leverage 1 trillion datapoints to define hyper-targeted personas and identify your audience on LinkedIn."
+      title: "ICP & Targeting Setup",
+      description: "Deploy advanced targeting using bio analysis, hashtags, topics, and cross-platform crypto intelligence to identify your ideal crypto community."
     }, 
     {
-      title: "LinkedIn Profile Optimization",
-      description: "Turn your profile into a high-converting authority asset that attracts your ideal clients."
+      title: "X.com Account Optimization",
+      description: "Transform your X profile into a crypto authority magnet that attracts degens, traders, and serious investors."
     }, 
     {
-      title: "Launch Commenting Strategy",
-      description: "Deploy personalized comments every month, insight-driven and designed to drive engagement."
+      title: "Launch Comment Blitz",
+      description: "Deploy 30,000 personalized comments across crypto X conversations - every announcement gets maximum visibility."
     }, 
     {
-      title: "Content Kickoff – Educate Phase",
-      description: "Launch first weekly content (1–2x/week) focused on insights, case studies, and FAQs."
+      title: "DM Engagement Campaign",
+      description: "Execute 15,000 targeted DMs to high-value crypto profiles (500 daily within X account limits)."
     }, 
     {
-      title: "Infrastructure Setup",
-      description: "Implement tracking, setup retargeting pixels, and build live dashboards to monitor performance."
+      title: "Performance Tracking",
+      description: "Implement real-time dashboards to monitor engagement rates, reply quality, and business generation from crypto community."
     }
   ];
 
@@ -39,10 +40,10 @@ const TimelineSection = () => {
           animate={{ opacity: 1, y: 0 }} 
           className="max-w-3xl mx-auto mb-12"
         >
-          <h2 className="text-3xl font-bold mb-4">What We Do in Phase 1</h2>
+          <h2 className="text-3xl font-bold mb-4">What We Execute in Phase 1</h2>
           <p className="text-muted-foreground">
-            In the first 30 days, we'll establish the foundation of your lead generation engine, 
-            focusing on data-driven targeting and visibility.
+            In the first month, we establish your dominance on crypto X with aggressive engagement 
+            and precision targeting of the most valuable crypto community members.
           </p>
         </motion.div>
         

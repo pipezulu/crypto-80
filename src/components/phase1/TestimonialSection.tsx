@@ -20,29 +20,29 @@ const TestimonialSection = () => {
           <div className="relative bg-gradient-to-br from-tech-900 to-tech-900/60 border border-tech-500/20 rounded-lg p-8 shadow-lg">
             <div className="flex flex-row items-center space-x-4">
               <div className="w-16 h-16 flex-shrink-0">
-                <img 
-                  src="/lovable-uploads/0000dc08-2d3b-40c0-8c07-410960351dad.png" 
-                  alt="Paul Dearlove" 
-                  className="w-full h-full object-cover rounded-full border-2 border-tech-300/30 shadow-md"
-                />
+                <div className="w-full h-full bg-gradient-mango rounded-full border-2 border-tech-300/30 shadow-md flex items-center justify-center">
+                  <span className="text-2xl">₿</span>
+                </div>
               </div>
               <div className="flex-grow">
                 <div className="mb-4">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="font-medium text-lg">Paul Dearlove</p>
-                      <p className="text-sm text-muted-foreground">ANZ Director, SAP</p>
+                      <p className="font-medium text-lg">Anonymous DeFi Founder</p>
+                      <p className="text-sm text-muted-foreground">$100M+ Protocol TVL</p>
                     </div>
                   </div>
                   
-                  <p className="italic text-muted-foreground mt-2 text-base">&quot;ManyMangoes has supported my team through LinkedIn lead generation. I found Isaac and the ManyMangoes team to be proactive and willing to pivot so we could get the best results. I look forward to working with Isaac in the future.&quot;</p>
+                  <p className="italic text-muted-foreground mt-2 text-base">&quot;We went from ghost mode to having every major crypto account engaging with our announcements. The X domination strategy got us in front of tier-1 VCs and whale traders. ROI was insane.&quot;</p>
                 </div>
               </div>
             </div>
             
-            <h4 className="font-medium mt-4 mb-2 text-sm uppercase text-tech-300">How We Help:</h4>
+            <h4 className="font-medium mt-4 mb-2 text-sm uppercase text-tech-300">How We Deliver:</h4>
             <p className="text-foreground">
-              ManyMangoes provides real-time lead data with our proprietary engagement system that helps you track ROI and maintains healthy CAC from day one. Our data-driven approach gives you direct access to decision-makers without requiring expensive tools or extensive travel.
+              ManyMangoes deploys surgical precision targeting using advanced crypto community intelligence. 
+              Our system identifies and engages the exact people who matter for your project - from DeFi degens 
+              to institutional players - ensuring every comment and DM drives real business value.
             </p>
           </div>
         </motion.div>

@@ -18,10 +18,11 @@ const HeroSection = () => {
           >
             <div className="mb-6">
               <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-                Phase 1: <span className="text-gradient">Design & Build</span> the Engine
+                Phase 1: <span className="text-gradient">Blast & Engage</span> the Crypto Community
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Days 1-30: Create the foundation for your lead generation strategy and start seeing results from day one.
+                Month 1: Deploy 30,000 strategic comments and 15,000 targeted DMs to dominate crypto X conversations 
+                and put your project in front of the right people.
               </p>
             </div>
           </motion.div>

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -30,10 +31,11 @@ const Index = () => {
             >
               <div className="mb-6">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
-                  The <span className="text-gradient">ManyMangoes</span> 90-Day Rollout Plan
+                  Dominate <span className="text-gradient">Crypto X</span> with 30K Comments Monthly
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8">
-                  Transform your sales pipeline from scattered efforts to a predictable, high-converting lead generation machine that turns conversations into qualified meetings for your products and services.
+                  The most aggressive X.com engagement strategy for crypto projects. 30,000 targeted comments + 15,000 DMs monthly. 
+                  Get your announcements, launches, and alpha in front of the right crypto community.
                 </p>
                 
                 <Button onClick={scrollToQuote} variant="outline" size="lg" className="flex items-center justify-center gap-2">
@@ -60,8 +62,8 @@ const Index = () => {
                 />
                 <div className="absolute z-10">
                   <div className="text-center bg-background/30 backdrop-blur-sm px-8 py-6 rounded-full shadow-lg border border-primary/20">
-                    <h3 className="font-bold text-4xl text-gradient">5-10x</h3>
-                    <p className="text-sm text-muted-foreground">Output After 90 Days</p>
+                    <h3 className="font-bold text-4xl text-gradient">30K</h3>
+                    <p className="text-sm text-muted-foreground">Comments/Month</p>
                   </div>
                 </div>
               </div>
@@ -74,16 +76,16 @@ const Index = () => {
       <section id="quote-section" className="bg-card py-12">
         <div className="container mx-auto px-4">
           <QuoteHighlight 
-            quote="Whatever marketing you are doing today, with whatever degree of success, my strong recommendation is that you need to immediately START experimenting with ManyMangoes if you have any intention of being the disrupter in your space rather than being disrupted!"
-            author="Ray Wolf"
-            role="CEO, Televero Health"
+            quote="In crypto, visibility equals survival. If you're not dominating the conversation on X, you're invisible. ManyMangoes puts your project where the alpha hunters are looking."
+            author="Anonymous DeFi Founder"
+            role="$50M+ TVL Protocol"
             delay={0.2}
           />
         </div>
       </section>
 
-      {/* Phases Section */}
-      <section id="phases" className="py-20 relative overflow-hidden">
+      {/* Strategy Section */}
+      <section id="strategy" className="py-20 relative overflow-hidden">
         <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-15">
           <SphereCanvas 
             color="#F1AB1C" 
@@ -101,10 +103,11 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-center max-w-3xl mx-auto mb-12"
           >
-            <h2 className="text-3xl font-bold mb-4">Our 90-Day Phased Approach</h2>
+            <h2 className="text-3xl font-bold mb-4">The Ultimate Crypto X Domination Strategy</h2>
             <p className="text-muted-foreground">
-              Results start Day 1 (awareness + leads). After 90 days of optimization and 
-              amplification, we can 5–10x output based on ROI performance.
+              Powered by advanced ICP targeting using bio analysis, hashtag monitoring, topic tracking, 
+              and cross-platform data from our LinkedIn intelligence. We find and engage the exact crypto 
+              community that matters for your project.
             </p>
           </motion.div>
           
@@ -113,17 +116,16 @@ const Index = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              id="phase-1-card"
             >
               <PhaseCard 
                 phase={1}
-                title="Design & Build the Engine"
-                description="Days 1-30: Create the foundation for your lead generation strategy"
+                title="Blast & Engage"
+                description="Month 1: Launch 30K targeted comments + 15K DMs to crypto community"
                 link="/phase-1"
                 outcomes={[
-                  "Surge in profile views, comments, DMs",
-                  "Your brand in all the right conversations",
-                  "Visibility delivering measurable returns"
+                  "30,000 strategic comments on crypto posts",
+                  "15,000 DMs to high-value targets",
+                  "Massive awareness for announcements"
                 ]}
                 delay={0.1}
               />
@@ -133,17 +135,16 @@ const Index = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              id="phase-2-card"
             >
               <PhaseCard 
                 phase={2}
-                title="Optimize & Personalize"
-                description="Days 31-60: Refine and enhance your lead generation process"
+                title="Optimize & Scale"
+                description="Month 2: Refine targeting and amplify engagement based on performance"
                 link="/phase-2"
                 outcomes={[
-                  "Improved lead quality",
-                  "Increased mid-funnel engagement",
-                  "More conversations turn into meetings"
+                  "Enhanced ICP targeting accuracy",
+                  "Improved response rates",
+                  "Stronger community connections"
                 ]}
                 delay={0.2}
               />
@@ -153,17 +154,16 @@ const Index = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              id="phase-3-card"
             >
               <PhaseCard 
                 phase={3}
-                title="Scale & Automate"
-                description="Days 61-90: Amplify results and create predictable growth"
+                title="Dominate & Convert"
+                description="Month 3+: Sustained dominance with conversion-focused messaging"
                 link="/phase-3"
                 outcomes={[
-                  "5-10x reach, leads, and meetings",
-                  "Omnichannel dominance",
-                  "Consistent lead flow and sales pipeline"
+                  "Consistent crypto community presence",
+                  "High-converting engagement flows",
+                  "Predictable business generation"
                 ]}
                 delay={0.3}
               />
@@ -172,7 +172,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Comparison Section */}
+      {/* What We Target Section */}
       <section className="py-20 bg-card relative overflow-hidden">
         <div className="absolute right-0 top-0 opacity-15">
           <SphereCanvas 
@@ -192,13 +192,30 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-center max-w-3xl mx-auto mb-12"
           >
-            <h2 className="text-3xl font-bold mb-4">Why This Outperforms Others</h2>
+            <h2 className="text-3xl font-bold mb-4">Who We Target in Crypto X</h2>
             <p className="text-muted-foreground">
-              See how ManyMangoes' approach delivers superior results compared to traditional methods.
+              Our proprietary ICP system identifies and engages the most valuable crypto community members.
             </p>
           </motion.div>
           
-          <ComparisonTable />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-tech-900/20 border border-tech-300/10 rounded-lg p-6 text-center">
+              <h3 className="text-lg font-semibold mb-2">Bio Analysis</h3>
+              <p className="text-sm text-muted-foreground">DeFi traders, NFT collectors, protocol founders, crypto VCs</p>
+            </div>
+            <div className="bg-tech-900/20 border border-tech-300/10 rounded-lg p-6 text-center">
+              <h3 className="text-lg font-semibold mb-2">Topic Tracking</h3>
+              <p className="text-sm text-muted-foreground">Active in discussions about your specific blockchain/niche</p>
+            </div>
+            <div className="bg-tech-900/20 border border-tech-300/10 rounded-lg p-6 text-center">
+              <h3 className="text-lg font-semibold mb-2">Hashtag Monitoring</h3>
+              <p className="text-sm text-muted-foreground">#DeFi #Web3 #NFT #Crypto followers and contributors</p>
+            </div>
+            <div className="bg-tech-900/20 border border-tech-300/10 rounded-lg p-6 text-center">
+              <h3 className="text-lg font-semibold mb-2">Cross-Platform Intel</h3>
+              <p className="text-sm text-muted-foreground">LinkedIn data cross-referenced for validated crypto professionals</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -224,15 +241,15 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             className="bg-card border border-border rounded-xl p-8 max-w-4xl mx-auto text-center shadow-lg"
           >
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Lead Generation?</h2>
+            <h2 className="text-3xl font-bold mb-4">Ready to Own Crypto X?</h2>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Start generating high-quality leads from day one with our proven 90-day rollout plan.
-              Let ManyMangoes help you build a powerful, omnichannel lead-gen engine that delivers consistent results.
+              Stop being invisible in the crypto conversation. Start dominating X.com with 30,000 strategic 
+              comments and 15,000 targeted DMs monthly. Every announcement, launch, and alpha gets maximum exposure.
             </p>
             
             <Button asChild size="lg" className="bg-gradient-tech hover:opacity-90 transition-opacity">
               <Link to="/phase-1">
-                Explore the 90-Day Plan
+                Explore the X Domination Strategy
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>

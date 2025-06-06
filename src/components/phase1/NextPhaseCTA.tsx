@@ -15,9 +15,9 @@ const NextPhaseCTA = () => {
           transition={{ delay: 0.4 }} 
           className="text-center max-w-3xl mx-auto"
         >
-          <h2 className="text-3xl font-bold mb-4">Ready to continue the journey?</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready to scale the engagement?</h2>
           <p className="text-muted-foreground mb-8">
-            See how we optimize and enhance your lead generation in Phase 2.
+            See how we optimize targeting and amplify results in Phase 2 of crypto X domination.
           </p>
           
           <Button asChild size="lg" className="bg-gradient-tech hover:opacity-90 transition-opacity">
