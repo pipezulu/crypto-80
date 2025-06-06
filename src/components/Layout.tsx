@@ -93,7 +93,7 @@ const Layout: React.FC<LayoutProps> = ({
       <div className="hidden lg:flex flex-col w-64 border-r border-border p-4 bg-[#121212] dark:bg-[#0A0A0A] fixed h-screen overflow-y-auto">
         <div className="mb-6 flex items-center">
           <img 
-            src="/lovable-uploads/34bfddea-0c3f-4cd2-acc4-ccc53ffc2ecf.png" 
+            src="/lovable-uploads/52c612bd-2293-4262-a18a-71feff878292.png" 
             alt="ManyMangoes Logo" 
             className="h-8 w-8 rounded-full mr-2"
           />
@@ -133,7 +133,7 @@ const Layout: React.FC<LayoutProps> = ({
       >
         <div className="mb-6 flex items-center">
           <img 
-            src="/lovable-uploads/34bfddea-0c3f-4cd2-acc4-ccc53ffc2ecf.png" 
+            src="/lovable-uploads/52c612bd-2293-4262-a18a-71feff878292.png" 
             alt="ManyMangoes Logo" 
             className="h-8 w-8 rounded-full mr-2"
           />
