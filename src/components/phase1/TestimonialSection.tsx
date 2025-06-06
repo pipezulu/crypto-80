@@ -23,7 +23,7 @@ const TestimonialSection = () => {
               <div className="w-16 h-16 flex-shrink-0">
                 <Avatar className="w-full h-full border-2 border-tech-300/30 shadow-md">
                   <AvatarImage 
-                    src="/lovable-uploads/0000dc08-2d3b-40c0-8c07-410960351dad.png" 
+                    src="/lovable-uploads/d40c3768-c4b5-4bd4-8cdc-b724941dd115.png" 
                     alt="Jimi Cohen" 
                     className="object-cover"
                   />
