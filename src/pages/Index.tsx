@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -93,19 +92,6 @@ const Index = () => {
               </div>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Quote Section */}
-      <section id="quote-section" className="bg-card py-12">
-        <div className="container mx-auto px-4">
-          <QuoteHighlight 
-            quote="We're not the first place you go to like go speculate and make money. We want to impress upon people the ability to have durable returns around our coin and its ability to be an index for the future of the planet."
-            author="David Fortson"
-            role="Chief Growth Officer"
-            company="Regen Network"
-            delay={0.2}
-          />
         </div>
       </section>
 
