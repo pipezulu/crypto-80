@@ -17,7 +17,7 @@ const QuoteHighlight: React.FC<QuoteHighlightProps> = ({
   author, 
   role = "Industry Professional", 
   delay = 0,
-  authorImage = "/lovable-uploads/d5d13221-9da4-4738-92aa-96651a2cd6c6.png"
+  authorImage = "/lovable-uploads/a2e05055-65c7-46f5-91c0-27d2078f7c9f.png"
 }) => {
   return (
     <motion.div
