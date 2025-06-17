@@ -100,8 +100,8 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <QuoteHighlight 
             quote="In crypto, visibility equals survival. If you're not dominating the conversation on X, you're invisible. ManyMangoes puts your project where the alpha hunters are looking."
-            author="Anonymous DeFi Founder"
-            role="$50M+ TVL Protocol"
+            author="Isaac Cohen"
+            role="Founder of ManyMangoes"
             delay={0.2}
           />
         </div>
