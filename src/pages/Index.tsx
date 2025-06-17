@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -442,25 +441,9 @@ const Index = () => {
       <section className="py-16 bg-muted/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <QuoteHighlight 
-              quote="We can do a lot of damage for a lot less than that. And it'll give you enough data. If we can get some proven track record out of the gates early, then I don't mind reaching for more capital."
-              author="Isaac Cohen (Mr. Mango)"
-              role="Founder"
-              company="ManyMangoes"
-              delay={0.2}
-            />
             
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="text-center mt-8"
-            >
-              <p className="text-muted-foreground text-lg">
-                This is exactly what we deliver: proven results at budget-friendly prices, 
-                with clear data to justify scaling up your investment.
-              </p>
-            </motion.div>
+            
+            
           </div>
         </div>
       </section>
