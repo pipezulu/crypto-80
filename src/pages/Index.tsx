@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -9,7 +10,6 @@ import { ArrowRight, BarChart3, LineChart, Rocket, ArrowDown, Play } from 'lucid
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
 import { LineChart as RechartsLineChart, Line, XAxis, YAxis, ResponsiveContainer } from 'recharts';
-import QuoteHighlight from '@/components/QuoteHighlight';
 
 const Index = () => {
   const scrollToQuote = () => {
