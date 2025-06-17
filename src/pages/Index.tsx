@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import SphereCanvas from '@/components/SphereCanvas';
 import PhaseCard from '@/components/PhaseCard';
-import QuoteHighlight from '@/components/QuoteHighlight';
 import ComparisonTable from '@/components/ComparisonTable';
 import { ArrowRight, BarChart3, LineChart, Rocket, ArrowDown, Play } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
 import { LineChart as RechartsLineChart, Line, XAxis, YAxis, ResponsiveContainer } from 'recharts';
+import QuoteHighlight from '@/components/QuoteHighlight';
 
 const Index = () => {
   const scrollToQuote = () => {
