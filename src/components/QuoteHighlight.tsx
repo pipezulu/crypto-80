@@ -10,6 +10,7 @@ interface QuoteHighlightProps {
   role?: string;
   delay?: number;
   authorImage?: string;
+  company?: string;
 }
 
 const QuoteHighlight: React.FC<QuoteHighlightProps> = ({ 
@@ -17,7 +18,8 @@ const QuoteHighlight: React.FC<QuoteHighlightProps> = ({
   author, 
   role = "Industry Professional", 
   delay = 0,
-  authorImage = "/lovable-uploads/a2e05055-65c7-46f5-91c0-27d2078f7c9f.png"
+  authorImage = "/lovable-uploads/a2e05055-65c7-46f5-91c0-27d2078f7c9f.png",
+  company
 }) => {
   return (
     <motion.div
@@ -46,7 +48,7 @@ const QuoteHighlight: React.FC<QuoteHighlightProps> = ({
           </Avatar>
           <div className="ml-3">
             <p className="font-medium">{author}</p>
-            <p className="text-sm text-muted-foreground">{role}</p>
+            <p className="text-sm text-muted-foreground">{role}{company && `, ${company}`}</p>
           </div>
         </div>
       </div>
