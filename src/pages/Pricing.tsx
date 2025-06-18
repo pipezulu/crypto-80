@@ -57,7 +57,7 @@ const Pricing = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <Card className="h-full border-border hover:border-primary/50 transition-all duration-300">
+            <Card className="h-full border-border hover:border-primary/50 transition-all duration-300 flex flex-col">
               <CardHeader className="text-center pb-8">
                 <CardTitle className="text-2xl mb-2">Monthly Plan</CardTitle>
                 <CardDescription className="text-base">Perfect for testing the waters</CardDescription>
@@ -66,8 +66,8 @@ const Pricing = () => {
                   <span className="text-muted-foreground ml-2">/month</span>
                 </div>
               </CardHeader>
-              <CardContent>
-                <div className="space-y-4 mb-8">
+              <CardContent className="flex-1 flex flex-col">
+                <div className="space-y-4 flex-1">
                   {features.map((feature, index) => (
                     <div key={index} className="flex items-start gap-3">
                       <div className="text-primary mt-0.5">{feature.icon}</div>
@@ -75,7 +75,7 @@ const Pricing = () => {
                     </div>
                   ))}
                 </div>
-                <Button className="w-full bg-gradient-tech hover:opacity-90 transition-opacity">
+                <Button className="w-full bg-gradient-tech hover:opacity-90 transition-opacity mt-8">
                   Get Started Monthly
                 </Button>
               </CardContent>
@@ -87,7 +87,7 @@ const Pricing = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Card className="h-full border-primary relative overflow-hidden">
+            <Card className="h-full border-primary relative overflow-hidden flex flex-col">
               <div className="absolute top-0 left-0 right-0 bg-gradient-tech text-center py-2">
                 <span className="text-sm font-medium text-white">MOST POPULAR</span>
               </div>
@@ -102,8 +102,8 @@ const Pricing = () => {
                   Save $2,000 vs monthly
                 </div>
               </CardHeader>
-              <CardContent>
-                <div className="space-y-4 mb-8">
+              <CardContent className="flex-1 flex flex-col">
+                <div className="space-y-4 flex-1">
                   {features.map((feature, index) => (
                     <div key={index} className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-primary mt-0.5" />
@@ -115,7 +115,7 @@ const Pricing = () => {
                     <span className="text-sm font-medium">Priority support & dedicated account management</span>
                   </div>
                 </div>
-                <Button className="w-full bg-gradient-tech hover:opacity-90 transition-opacity">
+                <Button className="w-full bg-gradient-tech hover:opacity-90 transition-opacity mt-8">
                   Start Quarterly Plan
                 </Button>
               </CardContent>
