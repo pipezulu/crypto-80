@@ -8,17 +8,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 export interface UseCaseType {
   id: string;
   title: string;
   icon: React.ReactNode;
   description: string;
-  quote: string;
-  authorName: string;
-  authorRole: string;
-  authorImage: string;
   details: string[];
   results: string;
 }
@@ -40,31 +35,6 @@ const UseCaseCard: React.FC<UseCaseCardProps> = ({ useCase }) => {
         <CardDescription className="text-lg mt-2">{useCase.description}</CardDescription>
       </CardHeader>
       <CardContent className="space-y-8">
-        <div className="relative bg-gradient-to-br from-tech-900 to-tech-900/60 border border-tech-500/20 rounded-lg p-6 shadow-lg">
-          <div className="flex flex-row items-center space-x-4">
-            <div className="w-12 h-12 flex-shrink-0">
-              <Avatar className="border-2 border-tech-300/30 shadow-md">
-                <AvatarImage src={useCase.authorImage} alt={useCase.authorName} />
-                <AvatarFallback>{useCase.authorName.charAt(0)}</AvatarFallback>
-              </Avatar>
-            </div>
-            <div className="flex-grow">
-              <div>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="font-medium">{useCase.authorName}</p>
-                    <p className="text-xs text-muted-foreground">{useCase.authorRole}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <p className="italic text-muted-foreground mt-4 text-base">
-            "{useCase.quote}"
-          </p>
-        </div>
-        
         <div className="mt-8">
           <h3 className="text-2xl font-semibold mb-6 text-gradient">How ManyMangoes' X Strategy Delivers Alpha</h3>
           <ul className="space-y-4">
