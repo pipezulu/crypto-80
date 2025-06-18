@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Zap, Target, MessageSquare, Users, TrendingUp, Shield } from 'lucide-react';
@@ -75,9 +74,11 @@ const Pricing = () => {
                     </div>
                   ))}
                 </div>
-                <Button className="w-full bg-gradient-tech hover:opacity-90 transition-opacity mt-8">
-                  Get Started Monthly
-                </Button>
+                <a href="https://subscriptions.manymangoes.com.au/b/28E9AU8BH37z6pD84p3wQ0k" target="_blank" rel="noopener noreferrer" className="mt-8">
+                  <Button className="w-full bg-gradient-tech hover:opacity-90 transition-opacity">
+                    Get Started Monthly
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           </motion.div>
@@ -115,9 +116,11 @@ const Pricing = () => {
                     <span className="text-sm font-medium">Priority support & dedicated account management</span>
                   </div>
                 </div>
-                <Button className="w-full bg-gradient-tech hover:opacity-90 transition-opacity mt-8">
-                  Start Quarterly Plan
-                </Button>
+                <a href="https://subscriptions.manymangoes.com.au/b/28E9AU8BH37z6pD84p3wQ0k" target="_blank" rel="noopener noreferrer" className="mt-8">
+                  <Button className="w-full bg-gradient-tech hover:opacity-90 transition-opacity">
+                    Start Quarterly Plan
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           </motion.div>
