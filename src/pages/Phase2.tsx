@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -12,7 +11,7 @@ const Phase2 = () => {
   const timelineItems = [
     {
       title: "Targeting Refinement",
-      description: "Analyze week 1 data to sharpen audience targeting and double down on high-performing segments."
+      description: "Analyze week 1 data to sharpen audience targeting and double down on high-performing segments that drive wallet creation."
     },
     {
       title: "Comment Engine Optimization",
@@ -20,11 +19,11 @@ const Phase2 = () => {
     },
     {
       title: "Convert Phase: Retargeting + Automation",
-      description: "Launch retargeting campaigns to warm audiences and implement automated follow-ups and nurture flows."
+      description: "Launch retargeting campaigns to warm audiences and implement automated follow-ups focused on wallet creation."
     },
     {
       title: "Sales Enablement",
-      description: "Build CRM workflows, lead handoff systems, and provide messaging templates and conversion scripts."
+      description: "Build CRM workflows, lead handoff systems, and provide messaging templates optimized for wallet conversion."
     }
   ];
 
@@ -47,7 +46,7 @@ const Phase2 = () => {
                   Phase 2: <span className="text-gradient">Optimize & Personalize</span>
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8">
-                  Week 2: Refine your strategy based on real data and enhance lead quality.
+                  Week 2: Refine your strategy based on real data and enhance wallet creation quality.
                 </p>
               </div>
             </motion.div>
@@ -124,7 +123,7 @@ const Phase2 = () => {
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Lead Quality</h3>
                 <p className="text-sm text-muted-foreground">
-                  Significant improvement in lead quality and relevance
+                  Significant improvement in lead quality and wallet creation potential
                 </p>
               </div>
               
@@ -142,9 +141,9 @@ const Phase2 = () => {
                 <div className="bg-gradient-radial-mango h-16 w-16 mx-auto flex items-center justify-center rounded-full mb-4">
                   <div className="text-2xl font-bold">3</div>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">More Meetings</h3>
+                <h3 className="text-lg font-semibold mb-2">More Wallets</h3>
                 <p className="text-sm text-muted-foreground">
-                  Conversations consistently converting to sales meetings
+                  Conversations consistently converting to new wallet creation
                 </p>
               </div>
             </div>
@@ -201,7 +200,7 @@ const Phase2 = () => {
               
               <h4 className="font-medium mt-4 mb-2 text-sm uppercase text-tech-300">Our approach:</h4>
               <p className="text-foreground">
-                In Phase 2, we optimize your entire funnel with real-time lead qualification and prioritization. Our system identifies high-quality leads so your limited time is spent only on decision-makers with genuine interest in your solutions, significantly improving your meeting quality and conversion rates.
+                In Phase 2, we optimize your entire funnel with real-time lead qualification and prioritization. Our system identifies high-quality leads so your limited time is spent only on decision-makers with genuine interest in your solutions, significantly improving your wallet creation rates and conversion quality.
               </p>
             </div>
           </motion.div>
@@ -219,7 +218,7 @@ const Phase2 = () => {
           >
             <h2 className="text-3xl font-bold mb-4">Ready to scale your results?</h2>
             <p className="text-muted-foreground mb-8">
-              See how we amplify your lead generation by 5-10x in Phase 3.
+              See how we amplify your wallet creation by 5-10x in Phase 3.
             </p>
             
             <Button asChild size="lg" className="bg-gradient-tech hover:opacity-90 transition-opacity">

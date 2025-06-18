@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -12,7 +11,7 @@ const Phase3 = () => {
   const timelineItems = [
     {
       title: "Full Funnel Automation",
-      description: "Automate the path from comment → connection → conversation → meeting, so sales calendars begin to fill predictably."
+      description: "Automate the path from comment → connection → conversation → wallet creation, so new customer acquisition becomes predictable."
     },
     {
       title: "Comment Strategy Amplification",
@@ -20,7 +19,7 @@ const Phase3 = () => {
     },
     {
       title: "Ad Budget Scaling",
-      description: "Expand retargeting and conversion ads, optimizing messaging and creatives based on engagement data."
+      description: "Expand retargeting and conversion ads, optimizing messaging and creatives based on engagement data to drive wallet creation."
     },
     {
       title: "Reporting + Handoff",
@@ -47,7 +46,7 @@ const Phase3 = () => {
                   Phase 3: <span className="text-gradient">Scale & Automate</span>
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8">
-                  Weeks 3-4: Amplify results by 5-10x and build a predictable lead generation machine.
+                  Weeks 3-4: Amplify results by 5-10x and build a predictable wallet creation machine.
                 </p>
               </div>
             </motion.div>
@@ -96,7 +95,7 @@ const Phase3 = () => {
           >
             <h2 className="text-3xl font-bold mb-4">What We Do in Phase 3</h2>
             <p className="text-muted-foreground">
-              In weeks 3-4, we focus on scaling what works, automating processes, and creating systems for long-term success.
+              In weeks 3-4, we focus on scaling what works, automating processes, and creating systems for long-term wallet creation success.
             </p>
           </motion.div>
           
@@ -124,7 +123,7 @@ const Phase3 = () => {
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Amplified Results</h3>
                 <p className="text-sm text-muted-foreground">
-                  5x–10x increase in reach, leads, and booked meetings
+                  5x–10x increase in reach, leads, and new wallets created
                 </p>
               </div>
               
@@ -144,7 +143,7 @@ const Phase3 = () => {
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Predictable Pipeline</h3>
                 <p className="text-sm text-muted-foreground">
-                  Consistent lead flow and sales pipeline growth
+                  Consistent lead flow and new wallet creation growth
                 </p>
               </div>
             </div>
@@ -201,7 +200,7 @@ const Phase3 = () => {
               
               <h4 className="font-medium mt-4 mb-2 text-sm uppercase text-tech-300">Our solution:</h4>
               <p className="text-foreground">
-                By Phase 3, your lead generation engine will be fully automated to identify potential clients exploring solutions in your space before your competitors know about them. Our system can increase your meeting volume by 3-5 times, while shortening your sales cycle by connecting you with decision-makers earlier in their process.
+                By Phase 3, your wallet creation engine will be fully automated to identify potential clients exploring solutions in your space before your competitors know about them. Our system can increase your new wallet creation by 3-5 times, while shortening your customer acquisition cycle by connecting you with decision-makers earlier in their process.
               </p>
             </div>
           </motion.div>
