@@ -21,12 +21,12 @@ const ResultCard: React.FC<ResultCardProps> = ({ number, title, description }) =
 const ResultsSection = () => {
   const results = [
     {
-      number: "30K",
+      number: "15K",
       title: "Strategic Comments",
       description: "Your announcements and alpha visible across every major crypto conversation"
     },
     {
-      number: "15K",
+      number: "10K",
       title: "Targeted DMs",
       description: "Direct outreach to whales, traders, and decision-makers in crypto"
     },
