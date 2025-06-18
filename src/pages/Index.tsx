@@ -53,10 +53,10 @@ const Index = () => {
             >
               <div className="mb-6">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
-                  Dominate <span className="text-gradient">Crypto X</span> with 30K Comments Monthly
+                  Dominate <span className="text-gradient">Crypto X</span> with 15K Comments Monthly
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8">
-                  The most aggressive X.com engagement strategy for crypto projects. 30,000 targeted comments + 15,000 DMs monthly. 
+                  The most aggressive X.com engagement strategy for crypto projects. 15,000 targeted comments + 10,000 DMs monthly. 
                   Get your announcements, launches, and alpha in front of the right crypto community - not pump-and-dump degens, but quality investors who care about real value.
                 </p>
                 
@@ -84,7 +84,7 @@ const Index = () => {
                 />
                 <div className="absolute z-10">
                   <div className="text-center bg-background/30 backdrop-blur-sm px-8 py-6 rounded-full shadow-lg border border-primary/20">
-                    <h3 className="font-bold text-4xl text-gradient">30K</h3>
+                    <h3 className="font-bold text-4xl text-gradient">15K</h3>
                     <p className="text-sm text-muted-foreground">Comments/Month</p>
                   </div>
                 </div>
@@ -338,11 +338,11 @@ const Index = () => {
               <PhaseCard 
                 phase={1}
                 title="Blast & Engage"
-                description="Month 1: Launch 30K targeted comments + 15K DMs to crypto community"
+                description="Month 1: Launch 15K targeted comments + 10K DMs to crypto community"
                 link="/phase-1"
                 outcomes={[
-                  "30,000 strategic comments on crypto posts",
-                  "15,000 DMs to high-value targets",
+                  "15,000 strategic comments on crypto posts",
+                  "10,000 DMs to high-value targets",
                   "Massive awareness for announcements"
                 ]}
                 delay={0.1}
@@ -472,8 +472,8 @@ const Index = () => {
           >
             <h2 className="text-3xl font-bold mb-4">Ready to Own Crypto X Like Regen Network?</h2>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Stop being invisible in the crypto conversation. Start dominating X.com with 30,000 strategic 
-              comments and 15,000 targeted DMs monthly. Every announcement, launch, and alpha gets maximum exposure 
+              Stop being invisible in the crypto conversation. Start dominating X.com with 15,000 strategic 
+              comments and 10,000 targeted DMs monthly. Every announcement, launch, and alpha gets maximum exposure 
               to the right audience - not pump-and-dump degens, but quality investors who align with your values.
             </p>
             
