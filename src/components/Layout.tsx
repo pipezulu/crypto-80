@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Home, LineChart, Rocket, UsersRound, Settings, ChevronRight, Menu, X, Calendar, Star, Check } from 'lucide-react';
+import { Home, LineChart, Rocket, UsersRound, Settings, ChevronRight, Menu, X, Calendar, Star, Check, DollarSign } from 'lucide-react';
 
 interface NavItemProps {
   to: string;
@@ -71,6 +71,10 @@ const Layout: React.FC<LayoutProps> = ({
     to: '/use-cases',
     icon: <UsersRound className="h-5 w-5" />,
     label: 'Use Cases'
+  }, {
+    to: '/pricing',
+    icon: <DollarSign className="h-5 w-5" />,
+    label: 'Pricing'
   }];
 
   const usefulLinks = [{

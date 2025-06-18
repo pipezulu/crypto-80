@@ -11,6 +11,7 @@ import Phase1 from "./pages/Phase1";
 import Phase2 from "./pages/Phase2";
 import Phase3 from "./pages/Phase3";
 import UseCases from "./pages/UseCases";
+import Pricing from "./pages/Pricing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,6 +41,7 @@ const App = () => (
             <Route path="/phase-2" element={<Phase2 />} />
             <Route path="/phase-3" element={<Phase3 />} />
             <Route path="/use-cases" element={<UseCases />} />
+            <Route path="/pricing" element={<Pricing />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
