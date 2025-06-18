@@ -16,11 +16,11 @@ const TimelineSection = () => {
     }, 
     {
       title: "Launch Comment Blitz",
-      description: "Deploy 30,000 personalized comments across crypto X conversations - every announcement gets maximum visibility."
+      description: "Deploy 15,000 personalized comments across crypto X conversations - every announcement gets maximum visibility."
     }, 
     {
       title: "DM Engagement Campaign",
-      description: "Execute 15,000 targeted DMs to high-value crypto profiles (500 daily within X account limits)."
+      description: "Execute 10,000 targeted DMs to high-value crypto profiles (333 daily within X account limits)."
     }, 
     {
       title: "Performance Tracking",

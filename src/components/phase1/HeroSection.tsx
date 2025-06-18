@@ -21,7 +21,7 @@ const HeroSection = () => {
                 Phase 1: <span className="text-gradient">Blast & Engage</span> the Crypto Community
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Month 1: Deploy 30,000 strategic comments and 15,000 targeted DMs to dominate crypto X conversations 
+                Month 1: Deploy 15,000 strategic comments and 10,000 targeted DMs to dominate crypto X conversations 
                 and put your project in front of the right people.
               </p>
             </div>
