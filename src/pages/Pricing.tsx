@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Zap, Target, MessageSquare, Users, TrendingUp, Shield, User, Building2 } from 'lucide-react';
@@ -132,7 +133,7 @@ const Pricing = () => {
                   <span className="text-4xl font-bold text-blue-500">$15,000</span>
                   <span className="text-muted-foreground ml-2">/quarter</span>
                 </div>
-                <div className="text-sm text-blue-500 font-medium mt-1">
+                <div className="text-sm text-green-500 font-medium mt-1">
                   Save $1,500 vs monthly
                 </div>
               </CardHeader>
