@@ -74,9 +74,9 @@ const LinkedInUseCases = () => {
       description: "Identify companies investing in next-generation technologies in your space",
       testimonial: {
         quote: "We asked Isaac and the ManyMangoes team to help us identify and approach relevant senior executives to introduce them to a sales opportunity. Although the timelines were very short, Isaac and his team turned the project around very quickly, and put out our message to far more people than we were expecting. Isaac's client communication is second-to-none, and he really cares about the project outcome and suggested many ways in which the process could be improved. We will certainly use ManyMangoes again.",
-        author: "Steve Morrell",
+        author: "Steve Morell",
         role: "Insightful Analysis of the Contact Centre and CX Industries",
-        avatar: "/lovable-uploads/d9a238f5-75b3-469a-a585-4c59b5675887.png"
+        avatar: "/lovable-uploads/0dc4c857-9bd1-4249-b0f8-2d3ba18b9d05.png"
       },
       benefits: [
         "Track modernization initiatives in your target industries",
