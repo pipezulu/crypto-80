@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Zap, Target, MessageSquare, Users, TrendingUp, Shield, User, Building2 } from 'lucide-react';
@@ -95,7 +94,7 @@ const Pricing = () => {
                   <span className="text-4xl font-bold text-gradient">$19,500</span>
                   <span className="text-muted-foreground ml-2">/quarter</span>
                 </div>
-                <div className="text-sm text-primary font-medium mt-1">
+                <div className="text-sm text-green-500 font-medium mt-1">
                   Save $3,000 vs monthly
                 </div>
               </CardHeader>
@@ -108,7 +107,7 @@ const Pricing = () => {
                     </div>
                   ))}
                 </div>
-                <a href="https://meet.manymangoes.com/felipe" target="_blank" rel="noopener noreferrer" className="mt-6">
+                <a href="https://subscriptions.manymangoes.com.au/b/6oUdRa9FL6jL3dr2K53wQ0l" target="_blank" rel="noopener noreferrer" className="mt-6">
                   <Button className="w-full bg-gradient-tech hover:opacity-90 transition-opacity">
                     Start Now - Proposal A
                   </Button>
