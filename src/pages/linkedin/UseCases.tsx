@@ -96,7 +96,7 @@ const LinkedInUseCases = () => {
         quote: "Isaac and the Many Mangoes team were a breeze to work with. Very reliable and exceeded my expectations by a long shot. Anyone who has the opportunity to work with the sales guru will be very pleased with the outcome.",
         author: "Chris Michael",
         role: "Increasing Digital Footprints through Mosfa Web Solutions",
-        avatar: "/lovable-uploads/18590a58-8efd-4320-9c50-7c99544dec2b.png"
+        avatar: "/lovable-uploads/d36db95d-f796-49f7-9648-306fa769aee4.png"
       },
       benefits: [
         "Monitor existing clients for expansion opportunities and new contracts",
