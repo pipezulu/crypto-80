@@ -171,7 +171,7 @@ const Pricing = () => {
                 <span className="text-5xl font-bold text-gradient">$34,500</span>
                 <span className="text-muted-foreground ml-2 text-lg">/quarter</span>
               </div>
-              <div className="text-lg text-primary font-medium mb-6">
+              <div className="text-lg text-green-500 font-medium mb-6">
                 Save $4,500 total vs individual plans
               </div>
               <p className="text-muted-foreground mb-6 leading-relaxed">
