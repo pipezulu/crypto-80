@@ -56,7 +56,7 @@ const LinkedInUseCases = () => {
         quote: "The work with Manymangoes has started to expand my network and specifically target key positions in UK marketplace accounts. It enables me to qualify accounts that have an interest in what we are doing at Aqua either in the present or in the future. The automated capability when tuned correctly saves me time and is starting to help build a picture of the accounts that have a need for our assistance.",
         author: "Trevor Camp",
         role: "Cloud Native Privilege Access Management",
-        avatar: "/lovable-uploads/1d39c9fb-21b1-4eb6-a979-6e6e303d9529.png"
+        avatar: "/lovable-uploads/0c528752-0291-4d43-be01-1b59927877a0.png"
       },
       benefits: [
         "Monitor contract opportunities before public announcements",
