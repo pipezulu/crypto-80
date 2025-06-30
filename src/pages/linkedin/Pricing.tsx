@@ -145,7 +145,7 @@ const LinkedInPricing = () => {
                     </div>
                   ))}
                 </div>
-                <a href="https://meet.manymangoes.com/felipe" target="_blank" rel="noopener noreferrer" className="mt-6">
+                <a href="https://subscriptions.manymangoes.com.au/b/3cIcN66tzdMd9BPesN3wQ0m" target="_blank" rel="noopener noreferrer" className="mt-6">
                   <Button className="w-full bg-gradient-tech hover:opacity-90 transition-opacity">
                     Start Now - Proposal B
                   </Button>
