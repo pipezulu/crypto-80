@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Zap, Target, MessageSquare, Users, TrendingUp, Shield, User, Building2 } from 'lucide-react';
@@ -170,6 +169,9 @@ const LinkedInPricing = () => {
               <div className="mb-6">
                 <span className="text-5xl font-bold text-gradient">$34,500</span>
                 <span className="text-muted-foreground ml-2 text-lg">/quarter</span>
+              </div>
+              <div className="text-lg text-primary font-medium mb-6">
+                Save $4,500 total vs individual plans
               </div>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Dominate both X (Twitter) and LinkedIn with comprehensive social media automation. 

@@ -99,8 +99,8 @@ const Pricing = () => {
                   Save $3,000 vs monthly
                 </div>
               </CardHeader>
-              <CardContent className="flex-1">
-                <div className="space-y-3">
+              <CardContent className="flex-1 flex flex-col">
+                <div className="space-y-3 flex-1">
                   {twitterFeatures.map((feature, index) => (
                     <div key={index} className="flex items-start gap-3">
                       <Check className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
@@ -108,6 +108,11 @@ const Pricing = () => {
                     </div>
                   ))}
                 </div>
+                <a href="https://meet.manymangoes.com/felipe" target="_blank" rel="noopener noreferrer" className="mt-6">
+                  <Button className="w-full bg-gradient-tech hover:opacity-90 transition-opacity">
+                    Start Now - Proposal A
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           </motion.div>
@@ -132,8 +137,8 @@ const Pricing = () => {
                   Save $1,500 vs monthly
                 </div>
               </CardHeader>
-              <CardContent className="flex-1">
-                <div className="space-y-3">
+              <CardContent className="flex-1 flex flex-col">
+                <div className="space-y-3 flex-1">
                   {linkedinFeatures.map((feature, index) => (
                     <div key={index} className="flex items-start gap-3">
                       <Check className="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0" />
@@ -141,6 +146,11 @@ const Pricing = () => {
                     </div>
                   ))}
                 </div>
+                <a href="https://meet.manymangoes.com/felipe" target="_blank" rel="noopener noreferrer" className="mt-6">
+                  <Button className="w-full bg-gradient-tech hover:opacity-90 transition-opacity">
+                    Start Now - Proposal B
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           </motion.div>
@@ -160,6 +170,9 @@ const Pricing = () => {
               <div className="mb-6">
                 <span className="text-5xl font-bold text-gradient">$34,500</span>
                 <span className="text-muted-foreground ml-2 text-lg">/quarter</span>
+              </div>
+              <div className="text-lg text-primary font-medium mb-6">
+                Save $4,500 total vs individual plans
               </div>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Dominate both X (Twitter) and LinkedIn with comprehensive social media automation. 
