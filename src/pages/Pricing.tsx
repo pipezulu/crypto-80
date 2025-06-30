@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Zap, Target, MessageSquare, Users, TrendingUp, Shield } from 'lucide-react';
@@ -50,47 +51,16 @@ const Pricing = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="flex justify-center max-w-2xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <Card className="h-full border-border hover:border-primary/50 transition-all duration-300 flex flex-col">
-              <CardHeader className="text-center pb-8">
-                <CardTitle className="text-2xl mb-2">Monthly Plan</CardTitle>
-                <CardDescription className="text-base">Perfect for testing the waters</CardDescription>
-                <div className="mt-4">
-                  <span className="text-5xl font-bold text-gradient">$7,500</span>
-                  <span className="text-muted-foreground ml-2">/month</span>
-                </div>
-              </CardHeader>
-              <CardContent className="flex-1 flex flex-col">
-                <div className="space-y-4 flex-1">
-                  {features.map((feature, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <div className="text-primary mt-0.5">{feature.icon}</div>
-                      <span className="text-sm">{feature.text}</span>
-                    </div>
-                  ))}
-                </div>
-                <a href="https://subscriptions.manymangoes.com.au/b/28E9AU8BH37z6pD84p3wQ0k" target="_blank" rel="noopener noreferrer" className="mt-8">
-                  <Button className="w-full bg-gradient-tech hover:opacity-90 transition-opacity">
-                    Get Started Monthly
-                  </Button>
-                </a>
-              </CardContent>
-            </Card>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            className="w-full"
           >
             <Card className="h-full border-primary relative overflow-hidden flex flex-col">
               <div className="absolute top-0 left-0 right-0 bg-gradient-tech text-center py-2">
-                <span className="text-sm font-medium text-white">MOST POPULAR</span>
+                <span className="text-sm font-medium text-white">BEST VALUE</span>
               </div>
               <CardHeader className="text-center pb-8 pt-12">
                 <CardTitle className="text-2xl mb-2">Quarterly Plan</CardTitle>
@@ -100,7 +70,7 @@ const Pricing = () => {
                   <span className="text-muted-foreground ml-2">/quarter</span>
                 </div>
                 <div className="text-sm text-primary font-medium mt-2">
-                  Save $2,000 vs monthly
+                  Save $3,000 vs monthly
                 </div>
               </CardHeader>
               <CardContent className="flex-1 flex flex-col">
