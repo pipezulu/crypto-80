@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -98,6 +97,10 @@ const Layout: React.FC<LayoutProps> = ({
     to: '/linkedin/use-cases',
     icon: <UsersRound className="h-5 w-5" />,
     label: 'Use Cases'
+  }, {
+    to: '/linkedin/pricing',
+    icon: <DollarSign className="h-5 w-5" />,
+    label: 'Pricing'
   }];
 
   const usefulLinks = [{
