@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -17,6 +16,7 @@ import LinkedInPhase1 from "./pages/linkedin/Phase1";
 import LinkedInPhase2 from "./pages/linkedin/Phase2";
 import LinkedInPhase3 from "./pages/linkedin/Phase3";
 import LinkedInUseCases from "./pages/linkedin/UseCases";
+import LinkedInPricing from "./pages/linkedin/Pricing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -55,6 +55,7 @@ const App = () => (
             <Route path="/linkedin/phase-2" element={<LinkedInPhase2 />} />
             <Route path="/linkedin/phase-3" element={<LinkedInPhase3 />} />
             <Route path="/linkedin/use-cases" element={<LinkedInUseCases />} />
+            <Route path="/linkedin/pricing" element={<LinkedInPricing />} />
             
             <Route path="*" element={<NotFound />} />
           </Routes>
