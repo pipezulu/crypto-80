@@ -36,7 +36,7 @@ const LinkedInUseCases = () => {
         quote: "Our LinkedIn campaign during the Summer Holiday of 2022 was very successful... Isaac and his team as well as the ManyMangoes platform did the trick... It delivered many relevant and valuable contacts from all over Europe. I would recommend working with ManyMangoes and Isaac and his team to anyone!",
         author: "Stephanus Vermeulen",
         role: "Hybrid Co Creative Director/Strategy",
-        avatar: "/lovable-uploads/34bfddea-0c3f-4cd2-acc4-ccc53ffc2ecf.png"
+        avatar: "/lovable-uploads/387967ac-eab6-4477-9be3-be4fe5135972.png"
       },
       benefits: [
         "Identify and connect with partners specializing in your industry",
