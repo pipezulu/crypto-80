@@ -85,7 +85,7 @@ const LinkedInOverview = () => {
                 <div className="w-16 h-16 flex-shrink-0">
                   <Avatar className="w-full h-full border-2 border-tech-300/30 shadow-md">
                     <AvatarImage 
-                      src="/lovable-uploads/85d048d0-49cf-468c-b5ad-6f208e86e7a5.png" 
+                      src="/lovable-uploads/90ea1cf4-b03c-4538-8b67-cd19122bdfbb.png" 
                       alt="Ray Wolf" 
                       className="object-cover"
                     />
