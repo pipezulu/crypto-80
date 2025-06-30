@@ -9,7 +9,7 @@ const LinkedInPricing = () => {
   const features = [
     {
       icon: <MessageSquare className="h-5 w-5" />,
-      text: "AI-powered outreach to 2,000+ qualified prospects monthly"
+      text: "AI-powered outreach to qualified prospects monthly"
     },
     {
       icon: <Users className="h-5 w-5" />,
