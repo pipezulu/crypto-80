@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -180,7 +179,7 @@ const LinkedInPhase2 = () => {
                 <div className="w-16 h-16 flex-shrink-0">
                   <Avatar className="w-full h-full border-2 border-tech-300/30 shadow-md">
                     <AvatarImage 
-                      src="/lovable-uploads/db9d7df0-0ea7-445a-8e6f-f284d83985c1.png" 
+                      src="/lovable-uploads/26db5a7f-32af-42cb-b599-71fefa1489bf.png" 
                       alt="Ken Romo" 
                       className="object-cover"
                     />
