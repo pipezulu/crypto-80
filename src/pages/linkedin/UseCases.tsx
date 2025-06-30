@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -17,7 +16,7 @@ const LinkedInUseCases = () => {
         quote: "We have been using Many Mangoes for the last 3 months, to help identify, connect with and make aware, and then setup meetings for me, using LinkedIn. It has been very successful with Many Mangoes driving the whole process from planning, execution to successful introduction. We now have a pipeline of new business opportunities in Australia and New Zealand, thanks to Isaac and his team.",
         author: "Brian O'Doherty",
         role: "Growth Acceleration and Market Entry for ambitious IT companies",
-        avatar: "/lovable-uploads/0305c1b5-5e0d-40d9-bef7-27c89f18fb2f.png"
+        avatar: "/lovable-uploads/fd1d40bc-168b-4507-8abd-92ab7f41da71.png"
       },
       benefits: [
         "Identify heads of key departments and decision-makers at target companies",
