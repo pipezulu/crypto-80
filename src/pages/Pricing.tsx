@@ -181,7 +181,7 @@ const Pricing = () => {
                 <Zap className="h-5 w-5 text-primary mt-0.5" />
                 <span className="text-sm font-medium">Priority support & dedicated account management across both platforms</span>
               </div>
-              <a href="https://meet.manymangoes.com/felipe" target="_blank" rel="noopener noreferrer">
+              <a href="https://subscriptions.manymangoes.com.au/b/aFafZi9FLcI915jbgB3wQ0n" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-gradient-tech hover:opacity-90 transition-opacity text-lg px-8 py-6">
                   Start Complete Social Domination
                 </Button>
